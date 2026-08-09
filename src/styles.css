@@ -1,0 +1,139 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Nakima design system — Nordic editorial health magazine.
+ * Brand: deep forest green ink, cream paper, sage panels, orange accent.
+ * Serif display (Playfair Display) + sans body (Inter).
+ * All colors in oklch. Never hardcode hex in components.
+ */
+
+@theme inline {
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Nakima brand tokens */
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
+  --color-clay: var(--clay);          /* legacy alias -> orange accent */
+  --color-orange: var(--clay);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Nakima palette */
+  --paper: oklch(0.985 0.005 85);           /* #FDFCFB warm cream */
+  --ink: oklch(0.225 0.028 155);            /* #1A2A22 deep forest ink */
+  --ink-soft: oklch(0.225 0.028 155 / 0.7);
+  --sage: oklch(0.93 0.012 145);            /* #E8EDE7 sage panel */
+  --sage-deep: oklch(0.82 0.02 145);
+  --clay: oklch(0.68 0.18 45);              /* contrasting orange accent */
+
+  /* Semantic mapping */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--ink);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--paper);
+  --secondary: var(--sage);
+  --secondary-foreground: var(--ink);
+  --muted: var(--sage);
+  --muted-foreground: oklch(0.225 0.028 155 / 0.6);
+  --accent: var(--clay);
+  --accent-foreground: var(--paper);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: var(--paper);
+  --border: oklch(0.225 0.028 155 / 0.12);
+  --input: oklch(0.225 0.028 155 / 0.15);
+  --ring: var(--clay);
+}
+
+.dark {
+  --background: var(--ink);
+  --foreground: var(--paper);
+  --card: oklch(0.28 0.028 155);
+  --card-foreground: var(--paper);
+  --popover: oklch(0.28 0.028 155);
+  --popover-foreground: var(--paper);
+  --primary: var(--paper);
+  --primary-foreground: var(--ink);
+  --secondary: oklch(0.32 0.028 155);
+  --secondary-foreground: var(--paper);
+  --muted: oklch(0.32 0.028 155);
+  --muted-foreground: oklch(0.985 0.005 85 / 0.65);
+  --accent: var(--clay);
+  --accent-foreground: var(--paper);
+  --border: oklch(1 0 0 / 0.12);
+  --input: oklch(1 0 0 / 0.15);
+  --ring: var(--clay);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Rotating hero word animation — cycles through 3 services.
+   6s total, 2s per word. Each word visible ~1.6s, then slides out; the next
+   word slides in from below. Offsets stagger them so only one shows at a time. */
+@keyframes nakima-word-cycle {
+  0%             { transform: translateY(100%);  opacity: 0; }
+  4%             { transform: translateY(0);     opacity: 1; }
+  29%            { transform: translateY(0);     opacity: 1; }
+  33%            { transform: translateY(-100%); opacity: 0; }
+  100%           { transform: translateY(-100%); opacity: 0; }
+}
+.nakima-word-1 { animation: nakima-word-cycle 6s cubic-bezier(0.7, 0, 0.3, 1) infinite; animation-delay: 0s; }
+.nakima-word-2 { animation: nakima-word-cycle 6s cubic-bezier(0.7, 0, 0.3, 1) infinite; animation-delay: -4s; }
+.nakima-word-3 { animation: nakima-word-cycle 6s cubic-bezier(0.7, 0, 0.3, 1) infinite; animation-delay: -2s; }
+
+
+@media (prefers-reduced-motion: reduce) {
+  .nakima-word-1, .nakima-word-2, .nakima-word-3 { animation: none; }
+  .nakima-word-2, .nakima-word-3 { display: none; }
+}
