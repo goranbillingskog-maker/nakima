@@ -34,8 +34,21 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      let req = request;
+      const url = new URL(request.url);
+
+      // Fix Nitro 3 Vercel preset rewrite bug where request URL path becomes /__server
+      if (url.pathname === "/__server" || url.pathname.endsWith("/__server")) {
+        const originalPath =
+          request.headers.get("x-matched-path") ||
+          request.headers.get("x-forwarded-uri") ||
+          "/";
+        const newUrl = new URL(originalPath, request.url);
+        req = new Request(newUrl.toString(), request);
+      }
+
       const handler = await getServerEntry();
-      const response = await handler.fetch(request, env, ctx);
+      const response = await handler.fetch(req, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);
     } catch (error) {
       console.error(error);
