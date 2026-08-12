@@ -34,18 +34,20 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
-      let req = request;
       const url = new URL(request.url);
 
-      // Fix Nitro 3 Vercel preset rewrite bug where request URL path becomes /__server
-      if (url.pathname === "/__server" || url.pathname.endsWith("/__server")) {
-        const originalPath =
+      // Extract true requested path (handling Vercel rewrites and full origin URLs)
+      let pathname = url.pathname;
+      if (pathname === "/__server" || pathname.endsWith("/__server")) {
+        pathname =
           request.headers.get("x-matched-path") ||
           request.headers.get("x-forwarded-uri") ||
           "/";
-        const newUrl = new URL(originalPath, request.url);
-        req = new Request(newUrl.toString(), request);
       }
+
+      // Re-create request with clean localhost origin URL so Nitro/h3 router extracts pathname '/' cleanly
+      const localUrl = `http://localhost${pathname.startsWith("/") ? "" : "/"}${pathname}${url.search}`;
+      const req = new Request(localUrl, request);
 
       const handler = await getServerEntry();
       const response = await handler.fetch(req, env, ctx);
