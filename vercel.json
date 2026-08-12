@@ -1,7 +1,8 @@
 {
+  "outputDirectory": "dist/client",
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!assets/|favicon.ico|robots.txt|llms.txt).*)",
       "destination": "/api/index"
     }
   ]
