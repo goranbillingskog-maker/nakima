@@ -1,5 +1,5 @@
-import { DATASET_UPDATED_AT, cities } from "@/lib/clinics-data";
-import { fetchAllClinicsForSitemap } from "@/lib/db";
+import { DATASET_UPDATED_AT, cities } from "./clinics-data";
+import { fetchAllClinicsForSitemap } from "./db";
 
 export interface SitemapEntry {
   path: string;
