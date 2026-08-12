@@ -9,7 +9,9 @@ export default defineConfig({
   },
   plugins: [
     tanstackStart({
-      server: { entry: "src/server.ts" },
+      nitro: {
+        preset: "node-server",
+      },
     }),
     react(),
     tailwindcss(),
