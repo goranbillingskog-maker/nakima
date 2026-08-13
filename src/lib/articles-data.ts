@@ -304,7 +304,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "Det här är en av de vanligaste frågorna — och svaret är mer nyanserat än många tror. Enligt Skatteverkets regler för 2026 är gränsen för skattefritt friskvårdsbidrag 5 000 kr per anställd och yr, men inte all behandling hos naprapat eller kiropraktor räknas som friskvård:"
+        text: "Det här är en av de vanligaste frågorna — och svaret är mer nyanserat än många tror. Enligt Skatteverkets regler för 2026 är gränsen för skattefritt friskvårdsbidrag 5 000 kr per anställd och år, men inte all behandling hos naprapat eller kiropraktor räknas som friskvård:"
       },
       {
         type: "list",
