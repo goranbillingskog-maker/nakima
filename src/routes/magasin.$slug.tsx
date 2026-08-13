@@ -159,21 +159,25 @@ function ArticlePage() {
                     ))}
                   </ul>
                 );
-              case "cta":
+              case "cta": {
+                const isMassage = section.text?.toLowerCase().includes("massör") || section.text?.toLowerCase().includes("massage");
+                const targetService = isMassage ? "massage" : "naprapat";
+                const questionText = isMassage ? "Behöver du boka en massagebehandling?" : "Behöver du träffa en professionell terapeut?";
                 return (
                   <div key={idx} className="my-10 p-8 border border-orange bg-orange/5 text-center">
                     <p className="font-serif text-xl text-ink mb-4">
-                      Behöver du träffa en professionell terapeut?
+                      {questionText}
                     </p>
                     <Link
                       to="/$service/$city"
-                      params={{ service: "naprapat", city: "stockholm" }}
+                      params={{ service: targetService, city: "stockholm" }}
                       className="inline-block bg-ink text-paper px-8 py-3 font-bold uppercase text-xs tracking-[0.2em] hover:bg-orange transition-colors"
                     >
                       {section.text}
                     </Link>
                   </div>
                 );
+              }
               default:
                 return null;
             }

@@ -602,7 +602,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "It är viktigt att vara ärlig om begränsningarna: de flesta studier på området är relativt små, och massage undersöks sällan med samma rigorösa metodik som läkemedelsstudier. Massage bör ses som ett komplement till, inte en ersättning för, behandling av kliniska tillstånd som ångestsyndrom, klinisk depression eller kroniska smärttillstånd — sök alltid vård för dessa hos läkare eller psykolog. Effekten varierar också mellan individer, och en enskild session ger sällan bestående förändring utan återkommande behandling."
+        text: "Det är viktigt att vara ärlig om begränsningarna: de flesta studier på området är relativt små, och massage undersöks sällan med samma rigorösa metodik som läkemedelsstudier. Massage bör ses som ett komplement till, inte en ersättning för, behandling av kliniska tillstånd som ångestsyndrom, klinisk depression eller kroniska smärttillstånd — sök alltid vård för dessa hos läkare eller psykolog. Effekten varierar också mellan individer, och en enskild session ger sällan bestående förändring utan återkommande behandling."
       },
       {
         type: "h2",
