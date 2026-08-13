@@ -217,7 +217,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "Dese symtom ska aldrig vänta till nästa dag. Sök akut vård direkt om något av ovanstående inträffar."
+        text: "Dessa symtom ska aldrig vänta till nästa dag. Sök akut vård direkt om något av ovanstående inträffar."
       },
       {
         type: "h2",

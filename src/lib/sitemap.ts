@@ -21,6 +21,8 @@ export async function buildSitemapEntries(): Promise<SitemapEntry[]> {
   const entries: SitemapEntry[] = [
     { path: "/", lastmod: datasetLastmod, changefreq: "weekly", priority: "1.0" },
     { path: "/magasin", lastmod: "2026-08-13", changefreq: "weekly", priority: "0.8" },
+    { path: "/ansvarsfriskrivning", lastmod: "2026-08-13", changefreq: "monthly", priority: "0.4" },
+    { path: "/integritetspolicy", lastmod: "2026-08-13", changefreq: "monthly", priority: "0.4" },
   ];
 
   // Add magazine articles

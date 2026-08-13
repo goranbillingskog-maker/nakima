@@ -192,6 +192,18 @@ function ArticlePage() {
             ))}
           </dl>
         </div>
+
+        {/* Disclaimer */}
+        <div className="mt-16 pt-8 border-t border-ink/10 text-xs text-ink-soft/80 leading-relaxed">
+          <p className="mb-2">
+            <strong>Om innehållet:</strong> Den här artikeln är allmän hälsoinformation, framtagen redaktionellt av Nakima, och ersätter inte medicinsk rådgivning, diagnos eller behandling från läkare eller annan legitimerad vårdgivare. Reagera aldrig på egen hand vid akuta eller allvarliga symtom — kontakta 1177 för sjukvårdsrådgivning eller ring 112 vid livshotande tillstånd. Nakima ansvarar inte för beslut som fattas enbart baserat på innehållet i denna artikel.
+          </p>
+          {article.slug === "vad-kostar-en-naprapat-2026" && (
+            <p>
+              Prisuppgifter och skatteregler i denna artikel är vägledande och kan ändras. Kontrollera alltid aktuellt pris med kliniken och aktuella regler med Skatteverket eller din arbetsgivare innan du bokar.
+            </p>
+          )}
+        </div>
       </article>
 
       {/* Footer */}
@@ -225,7 +237,8 @@ function ArticlePage() {
               <ul className="space-y-3 text-sm text-sage/80">
                 <li><span className="opacity-60 cursor-default" title="Kommer snart">Om Nakima</span></li>
                 <li><span className="opacity-60 cursor-default" title="Kommer snart">Kontakta oss</span></li>
-                <li><span className="opacity-60 cursor-default" title="Kommer snart">Integritetspolicy</span></li>
+                <li><Link to="/integritetspolicy" className="hover:text-paper transition-colors">Integritetspolicy</Link></li>
+                <li><Link to="/ansvarsfriskrivning" className="hover:text-paper transition-colors">Ansvarsfriskrivning</Link></li>
               </ul>
             </div>
           </div>

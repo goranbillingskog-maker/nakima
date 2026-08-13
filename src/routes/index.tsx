@@ -266,7 +266,8 @@ function Home() {
               <ul className="space-y-3 text-sm text-sage/80">
                 <li><span className="opacity-60 cursor-default" title="Kommer snart">Om Nakima</span></li>
                 <li><span className="opacity-60 cursor-default" title="Kommer snart">Kontakta oss</span></li>
-                <li><span className="opacity-60 cursor-default" title="Kommer snart">Integritetspolicy</span></li>
+                <li><Link to="/integritetspolicy" className="hover:text-paper transition-colors">Integritetspolicy</Link></li>
+                <li><Link to="/ansvarsfriskrivning" className="hover:text-paper transition-colors">Ansvarsfriskrivning</Link></li>
               </ul>
             </div>
           </div>

@@ -10,6 +10,8 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AnsvarsfriskrivningRouteImport } from './routes/ansvarsfriskrivning'
+import { Route as IntegritetspolicyRouteImport } from './routes/integritetspolicy'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServiceCityRouteImport } from './routes/$service.$city'
 import { Route as MagasinIndexRouteImport } from './routes/magasin.index'
@@ -20,6 +22,16 @@ import { Route as ServiceCityClinicRouteImport } from './routes/$service.$city.$
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnsvarsfriskrivningRoute = AnsvarsfriskrivningRouteImport.update({
+  id: '/ansvarsfriskrivning',
+  path: '/ansvarsfriskrivning',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IntegritetspolicyRoute = IntegritetspolicyRouteImport.update({
+  id: '/integritetspolicy',
+  path: '/integritetspolicy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -55,6 +67,8 @@ const ServiceCityClinicRoute = ServiceCityClinicRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ansvarsfriskrivning': typeof AnsvarsfriskrivningRoute
+  '/integritetspolicy': typeof IntegritetspolicyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$service/$city': typeof ServiceCityRouteWithChildren
   '/magasin/$slug': typeof MagasinSlugRoute
@@ -64,6 +78,8 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ansvarsfriskrivning': typeof AnsvarsfriskrivningRoute
+  '/integritetspolicy': typeof IntegritetspolicyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/magasin/$slug': typeof MagasinSlugRoute
   '/magasin': typeof MagasinIndexRoute
@@ -73,6 +89,8 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ansvarsfriskrivning': typeof AnsvarsfriskrivningRoute
+  '/integritetspolicy': typeof IntegritetspolicyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$service/$city': typeof ServiceCityRouteWithChildren
   '/magasin/$slug': typeof MagasinSlugRoute
@@ -84,6 +102,8 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/ansvarsfriskrivning'
+    | '/integritetspolicy'
     | '/sitemap.xml'
     | '/$service/$city'
     | '/magasin/$slug'
@@ -93,6 +113,8 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/ansvarsfriskrivning'
+    | '/integritetspolicy'
     | '/sitemap.xml'
     | '/magasin/$slug'
     | '/magasin'
@@ -101,6 +123,8 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/ansvarsfriskrivning'
+    | '/integritetspolicy'
     | '/sitemap.xml'
     | '/$service/$city'
     | '/magasin/$slug'
@@ -111,6 +135,8 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AnsvarsfriskrivningRoute: typeof AnsvarsfriskrivningRoute
+  IntegritetspolicyRoute: typeof IntegritetspolicyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ServiceCityRoute: typeof ServiceCityRouteWithChildren
   MagasinSlugRoute: typeof MagasinSlugRoute
@@ -124,6 +150,20 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ansvarsfriskrivning': {
+      id: '/ansvarsfriskrivning'
+      path: '/ansvarsfriskrivning'
+      fullPath: '/ansvarsfriskrivning'
+      preLoaderRoute: typeof AnsvarsfriskrivningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/integritetspolicy': {
+      id: '/integritetspolicy'
+      path: '/integritetspolicy'
+      fullPath: '/integritetspolicy'
+      preLoaderRoute: typeof IntegritetspolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -187,6 +227,8 @@ const ServiceCityRouteWithChildren = ServiceCityRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AnsvarsfriskrivningRoute: AnsvarsfriskrivningRoute,
+  IntegritetspolicyRoute: IntegritetspolicyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ServiceCityRoute: ServiceCityRouteWithChildren,
   MagasinSlugRoute: MagasinSlugRoute,

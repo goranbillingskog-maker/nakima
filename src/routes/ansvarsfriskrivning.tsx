@@ -1,26 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { articles } from "@/lib/articles-data";
 
-export const Route = createFileRoute("/magasin/")({
-  component: MagasinIndex,
+export const Route = createFileRoute("/ansvarsfriskrivning")({
+  component: AnsvarsfriskrivningPage,
   head: () => ({
     meta: [
-      { title: "Magasinet – Nakima" },
+      { title: "Ansvarsfriskrivning | Nakima" },
       {
         name: "description",
-        content: "Djuplodande hälsojournalistik och expertartiklar om ryggskott, ergonomi, priser för naprapater och mycket mer.",
-      },
-      { property: "og:title", content: "Magasinet – Nakima" },
-      {
-        property: "og:description",
-        content: "Djuplodande hälsojournalistik och expertartiklar om ryggskott, ergonomi, priser för naprapater och mycket mer.",
+        content: "Ansvarsfriskrivning och villkor för användning av Nakimas redaktionella guider och klinikkatalog.",
       },
     ],
-    links: [{ rel: "canonical", href: "/magasin" }],
+    links: [{ rel: "canonical", href: "/ansvarsfriskrivning" }],
   }),
 });
 
-function MagasinIndex() {
+function AnsvarsfriskrivningPage() {
   return (
     <div className="min-h-screen bg-paper text-ink font-sans">
       {/* Nav */}
@@ -29,7 +23,7 @@ function MagasinIndex() {
           Nakima<span className="text-orange">.</span>
         </Link>
         <div className="hidden md:flex items-center gap-10 text-sm font-medium uppercase tracking-widest">
-          <Link to="/magasin" className="text-orange transition-colors">Magasin</Link>
+          <Link to="/magasin" className="hover:text-orange transition-colors">Magasin</Link>
           <a href="/#stader" className="hover:text-orange transition-colors">Sök klinik</a>
           <span className="text-ink/50 cursor-default" title="Kommer snart">För kliniker</span>
         </div>
@@ -38,57 +32,56 @@ function MagasinIndex() {
         </span>
       </nav>
 
-      {/* Hero Header */}
-      <header className="max-w-7xl mx-auto px-6 pt-12 pb-16">
-        <span className="inline-block bg-sage text-ink px-3 py-1 text-[10px] font-bold uppercase tracking-widest mb-6">
-          Kunskap & Guide
-        </span>
-        <h1 className="font-serif text-5xl md:text-7xl leading-[1.05] tracking-tight mb-6">
-          Nakima Magasin
+      {/* Content */}
+      <article className="max-w-3xl mx-auto px-6 py-16">
+        <h1 className="font-serif text-4xl md:text-5xl tracking-tight mb-8">
+          Ansvarsfriskrivning
         </h1>
-        <p className="text-lg text-ink-soft max-w-2xl leading-relaxed">
-          Vi förenar expertis inom manuell medicin med djuplodande hälsojournalistik för att hjälpa dig förstå din kropp och hitta rätt behandling.
+        <p className="text-xs uppercase tracking-widest text-ink-soft mb-12">
+          Senast uppdaterad: 13 augusti 2026
         </p>
-      </header>
 
-      {/* Article Grid */}
-      <section className="bg-sage py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8">
-            {articles.map((a) => (
-              <Link 
-                to="/magasin/$slug" 
-                params={{ slug: a.slug }} 
-                key={a.slug} 
-                className="group block"
-              >
-                <article>
-                  <div className="w-full aspect-[16/10] mb-6 overflow-hidden bg-card">
-                    <img
-                      src={a.image}
-                      alt={a.title}
-                      loading="lazy"
-                      width={1024}
-                      height={640}
-                      className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
-                    />
-                  </div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-orange block mb-3">
-                    {a.tag}
-                  </span>
-                  <h3 className="text-xl font-serif mb-3 text-ink group-hover:text-orange transition-colors">
-                    {a.title}
-                  </h3>
-                  <p className="text-sm text-ink-soft leading-relaxed mb-4">{a.excerpt}</p>
-                  <span className="inline-block text-xs font-bold uppercase tracking-widest border-b border-ink/40 pb-1 text-ink group-hover:border-orange group-hover:text-orange transition-colors">
-                    Läs artikel →
-                  </span>
-                </article>
-              </Link>
-            ))}
-          </div>
+        <div className="prose prose-ink max-w-none space-y-8 text-ink-soft leading-relaxed">
+          <p>
+            Nakima är en redaktionell guide och katalogtjänst för naprapater, kiropraktorer och massörer i Sverige. Vi vill vara tydliga med vad vi ansvarar för — och inte.
+          </p>
+
+          <section>
+            <h2 className="font-serif text-2xl text-ink mb-3">Klinikinformation</h2>
+            <p>
+              Uppgifter om kliniker (adress, öppettider, priser, tjänster) samlas in redaktionellt och uppdateras löpande, men kan ändras utan att vi hinner uppdatera i tid. Kontrollera alltid aktuell information direkt med kliniken innan du bokar tid.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-serif text-2xl text-ink mb-3">Legitimation</h2>
+            <p>
+              Vi anger när en klinik uppges drivas av personal legitimerad hos Socialstyrelsen, men Nakima utför ingen fortlöpande kontroll av enskilda behandlares legitimationsstatus. Du kan själv verifiera legitimation via Socialstyrelsens register (HOSP).
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-serif text-2xl text-ink mb-3">Bokning hos tredje part</h2>
+            <p>
+              Bokning sker ofta via klinikens eller en tredje parts bokningssystem (t.ex. Bokadirekt). Nakima är inte part i avtalet mellan dig och kliniken och ansvarar inte för bokning, betalning, avbokning eller kvaliteten på given behandling.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-serif text-2xl text-ink mb-3">Redaktionellt innehåll (magasinet)</h2>
+            <p>
+              Artiklarna i Nakimas magasin är allmän information framtagen redaktionellt och ersätter inte medicinsk, juridisk eller ekonomisk rådgivning. Se separat innehållsdisclaimer på respektive artikel.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-serif text-2xl text-ink mb-3">Ansvarsbegränsning</h2>
+            <p>
+              Nakima lämnas i befintligt skick ("as is"). I den utsträckning lagen tillåter ansvarar Nakima inte för direkta eller indirekta skador som uppstår genom användning av tjänsten, inklusive men inte begränsat till felaktig klinikinformation, uteblivna bokningar eller beslut fattade baserat på det redaktionella innehållet.
+            </p>
+          </section>
         </div>
-      </section>
+      </article>
 
       {/* Footer */}
       <footer id="for-kliniker" className="bg-ink text-paper pt-20 pb-12 mt-24">
@@ -121,8 +114,7 @@ function MagasinIndex() {
               <ul className="space-y-3 text-sm text-sage/80">
                 <li><span className="opacity-60 cursor-default" title="Kommer snart">Om Nakima</span></li>
                 <li><span className="opacity-60 cursor-default" title="Kommer snart">Kontakta oss</span></li>
-                <li><Link to="/integritetspolicy" className="hover:text-paper transition-colors">Integritetspolicy</Link></li>
-                <li><Link to="/ansvarsfriskrivning" className="hover:text-paper transition-colors">Ansvarsfriskrivning</Link></li>
+                <li><span className="opacity-60 cursor-default" title="Kommer snart">Integritetspolicy</span></li>
               </ul>
             </div>
           </div>
