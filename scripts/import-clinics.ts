@@ -44,7 +44,7 @@ function parseCsvLine(text: string): string[] {
 }
 
 async function run() {
-  const csvPath = path.resolve(__dirname, "../nakima-alla-kliniker.csv");
+  const csvPath = path.resolve(process.cwd(), "../nakima-alla-kliniker.csv");
   if (!fs.existsSync(csvPath)) {
     console.error(`CSV file not found at: ${csvPath}`);
     process.exit(1);

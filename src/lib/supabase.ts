@@ -1,8 +1,16 @@
 import { createClient } from "@supabase/supabase-js";
 
-// Fetch from environment variables (checking both Vite import.meta and standard process.env for Node compatibility)
-const supabaseUrl = (typeof import.meta.env !== "undefined" ? import.meta.env.VITE_SUPABASE_URL : "") || process.env.VITE_SUPABASE_URL || "";
-const supabaseAnonKey = (typeof import.meta.env !== "undefined" ? import.meta.env.VITE_SUPABASE_ANON_KEY : "") || process.env.VITE_SUPABASE_ANON_KEY || "";
+const supabaseUrl =
+  (typeof import.meta.env !== "undefined" && import.meta.env.VITE_SUPABASE_URL) ||
+  process.env.VITE_SUPABASE_URL ||
+  process.env.SUPABASE_URL ||
+  "";
+const supabaseAnonKey =
+  (typeof import.meta.env !== "undefined" && import.meta.env.VITE_SUPABASE_ANON_KEY) ||
+  process.env.VITE_SUPABASE_ANON_KEY ||
+  process.env.SUPABASE_ANON_KEY ||
+  process.env.SUPABASE_SERVICE_ROLE_KEY ||
+  "";
 
 export const supabase = supabaseUrl && supabaseAnonKey
   ? createClient(supabaseUrl, supabaseAnonKey)

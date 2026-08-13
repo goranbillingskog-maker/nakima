@@ -6,6 +6,7 @@
  * YYYY-MM-DD, or the date is in the future. Run with:
  * `bun run scripts/validate-sitemap.ts`
  */
+import "dotenv/config";
 import {
   buildSitemapEntries,
   validateSitemapEntries,
