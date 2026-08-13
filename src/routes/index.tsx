@@ -1,10 +1,8 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import heroClinic from "@/assets/hero-clinic.jpg";
-import articleNacke from "@/assets/article-nacke.jpg";
-import articleRygg from "@/assets/article-rygg.jpg";
-import articlePris from "@/assets/article-pris.jpg";
 import { cities as allCities, getCityClinicCount } from "@/lib/clinics-data";
+import { articles } from "@/lib/articles-data";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -18,27 +16,6 @@ const cities = allCities.map((c) => ({
   count: getCityClinicCount(c.slug),
 }));
 
-
-const articles = [
-  {
-    tag: "Ergonomi",
-    title: "Därför får vi nacksmärta av kontorsarbete",
-    excerpt: "Expertens 5 bästa tips för att undvika 'gamnacke' under arbetsdagen.",
-    image: articleNacke,
-  },
-  {
-    tag: "Behandling",
-    title: "Ryggskott: När ska man söka hjälp?",
-    excerpt: "Vi reder ut skillnaden mellan vanlig stelhet och akut lumbago.",
-    image: articleRygg,
-  },
-  {
-    tag: "Patientguide",
-    title: "Vad kostar en naprapat 2026?",
-    excerpt: "Prisguiden: friskvårdsbidrag, försäkringar och genomsnittliga priser.",
-    image: articlePris,
-  },
-];
 
 function Home() {
   const navigate = useNavigate();
@@ -80,7 +57,7 @@ function Home() {
           Nakima<span className="text-orange">.</span>
         </Link>
         <div className="hidden md:flex items-center gap-10 text-sm font-medium uppercase tracking-widest">
-          <a href="#magasin" className="hover:text-orange transition-colors">Magasin</a>
+          <Link to="/magasin" className="hover:text-orange transition-colors">Magasin</Link>
           <a href="#stader" className="hover:text-orange transition-colors">Sök klinik</a>
           <span className="text-ink/50 cursor-default" title="Kommer snart">För kliniker</span>
         </div>
@@ -174,34 +151,41 @@ function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-end mb-12">
             <h2 className="text-3xl md:text-4xl font-serif">Senaste från magasinet</h2>
-            <span
-              className="text-xs font-bold uppercase tracking-widest border-b border-ink/40 pb-1 text-ink-soft cursor-default"
-              title="Kommer snart"
+            <Link
+              to="/magasin"
+              className="text-xs font-bold uppercase tracking-widest border-b border-ink/40 pb-1 text-ink-soft hover:text-orange hover:border-orange transition-colors"
             >
               Läs alla artiklar
-            </span>
+            </Link>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {articles.map((a) => (
-              <article key={a.title} className="group">
-                <div className="w-full aspect-[16/10] mb-6 overflow-hidden bg-card">
-                  <img
-                    src={a.image}
-                    alt={a.title}
-                    loading="lazy"
-                    width={1024}
-                    height={640}
-                    className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
-                  />
-                </div>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-orange block mb-3">
-                  {a.tag}
-                </span>
-                <h3 className="text-xl font-serif mb-3">
-                  {a.title}
-                </h3>
-                <p className="text-sm text-ink-soft leading-relaxed">{a.excerpt}</p>
-              </article>
+              <Link 
+                to="/magasin/$slug" 
+                params={{ slug: a.slug }} 
+                key={a.slug} 
+                className="group block"
+              >
+                <article>
+                  <div className="w-full aspect-[16/10] mb-6 overflow-hidden bg-card">
+                    <img
+                      src={a.image}
+                      alt={a.title}
+                      loading="lazy"
+                      width={1024}
+                      height={640}
+                      className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                    />
+                  </div>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-orange block mb-3">
+                    {a.tag}
+                  </span>
+                  <h3 className="text-xl font-serif mb-3 text-ink group-hover:text-orange transition-colors">
+                    {a.title}
+                  </h3>
+                  <p className="text-sm text-ink-soft leading-relaxed">{a.excerpt}</p>
+                </article>
+              </Link>
             ))}
           </div>
         </div>

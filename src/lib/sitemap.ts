@@ -10,11 +10,28 @@ export interface SitemapEntry {
 
 export const SITEMAP_BASE_URL = "https://nakima.se";
 
+const articleMetadata = [
+  { slug: "darfor-far-vi-nacksmarta-av-kontorsarbete", datePublished: "2026-08-13" },
+  { slug: "ryggskott-nar-ska-man-soka-hjalp", datePublished: "2026-08-13" },
+  { slug: "vad-kostar-en-naprapat-2026", datePublished: "2026-08-13" },
+];
+
 export async function buildSitemapEntries(): Promise<SitemapEntry[]> {
   const datasetLastmod = DATASET_UPDATED_AT;
   const entries: SitemapEntry[] = [
     { path: "/", lastmod: datasetLastmod, changefreq: "weekly", priority: "1.0" },
+    { path: "/magasin", lastmod: "2026-08-13", changefreq: "weekly", priority: "0.8" },
   ];
+
+  // Add magazine articles
+  for (const article of articleMetadata) {
+    entries.push({
+      path: `/magasin/${article.slug}`,
+      lastmod: article.datePublished,
+      changefreq: "monthly",
+      priority: "0.7",
+    });
+  }
 
   // Try to load clinics from Supabase
   let dbClinics = [];

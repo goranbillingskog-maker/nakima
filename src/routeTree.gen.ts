@@ -12,6 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServiceCityRouteImport } from './routes/$service.$city'
+import { Route as MagasinIndexRouteImport } from './routes/magasin.index'
+import { Route as MagasinSlugRouteImport } from './routes/magasin.$slug'
 import { Route as ServiceCityIndexRouteImport } from './routes/$service.$city.index'
 import { Route as ServiceCityClinicRouteImport } from './routes/$service.$city.$clinic'
 
@@ -30,6 +32,16 @@ const ServiceCityRoute = ServiceCityRouteImport.update({
   path: '/$service/$city',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MagasinIndexRoute = MagasinIndexRouteImport.update({
+  id: '/magasin/',
+  path: '/magasin/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MagasinSlugRoute = MagasinSlugRouteImport.update({
+  id: '/magasin/$slug',
+  path: '/magasin/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServiceCityIndexRoute = ServiceCityIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -45,12 +57,16 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$service/$city': typeof ServiceCityRouteWithChildren
+  '/magasin/$slug': typeof MagasinSlugRoute
+  '/magasin/': typeof MagasinIndexRoute
   '/$service/$city/$clinic': typeof ServiceCityClinicRoute
   '/$service/$city/': typeof ServiceCityIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/magasin/$slug': typeof MagasinSlugRoute
+  '/magasin': typeof MagasinIndexRoute
   '/$service/$city/$clinic': typeof ServiceCityClinicRoute
   '/$service/$city': typeof ServiceCityIndexRoute
 }
@@ -59,6 +75,8 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$service/$city': typeof ServiceCityRouteWithChildren
+  '/magasin/$slug': typeof MagasinSlugRoute
+  '/magasin/': typeof MagasinIndexRoute
   '/$service/$city/$clinic': typeof ServiceCityClinicRoute
   '/$service/$city/': typeof ServiceCityIndexRoute
 }
@@ -68,15 +86,25 @@ export interface FileRouteTypes {
     | '/'
     | '/sitemap.xml'
     | '/$service/$city'
+    | '/magasin/$slug'
+    | '/magasin/'
     | '/$service/$city/$clinic'
     | '/$service/$city/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sitemap.xml' | '/$service/$city/$clinic' | '/$service/$city'
+  to:
+    | '/'
+    | '/sitemap.xml'
+    | '/magasin/$slug'
+    | '/magasin'
+    | '/$service/$city/$clinic'
+    | '/$service/$city'
   id:
     | '__root__'
     | '/'
     | '/sitemap.xml'
     | '/$service/$city'
+    | '/magasin/$slug'
+    | '/magasin/'
     | '/$service/$city/$clinic'
     | '/$service/$city/'
   fileRoutesById: FileRoutesById
@@ -85,6 +113,8 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ServiceCityRoute: typeof ServiceCityRouteWithChildren
+  MagasinSlugRoute: typeof MagasinSlugRoute
+  MagasinIndexRoute: typeof MagasinIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -108,6 +138,20 @@ declare module '@tanstack/react-router' {
       path: '/$service/$city'
       fullPath: '/$service/$city'
       preLoaderRoute: typeof ServiceCityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/magasin/': {
+      id: '/magasin/'
+      path: '/magasin'
+      fullPath: '/magasin/'
+      preLoaderRoute: typeof MagasinIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/magasin/$slug': {
+      id: '/magasin/$slug'
+      path: '/magasin/$slug'
+      fullPath: '/magasin/$slug'
+      preLoaderRoute: typeof MagasinSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$service/$city/': {
@@ -145,6 +189,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ServiceCityRoute: ServiceCityRouteWithChildren,
+  MagasinSlugRoute: MagasinSlugRoute,
+  MagasinIndexRoute: MagasinIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
