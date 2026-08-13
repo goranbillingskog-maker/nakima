@@ -1,6 +1,10 @@
 import articleNacke from "@/assets/article-nacke.jpg";
 import articleRygg from "@/assets/article-rygg.jpg";
 import articlePris from "@/assets/article-pris.jpg";
+import massageClassic from "@/assets/massage-classic.jpg";
+import massagePrice from "@/assets/massage-price.jpg";
+import massageStress from "@/assets/massage-stress.jpg";
+
 
 export interface ArticleFaq {
   q: string;
@@ -339,5 +343,284 @@ export const articles: Article[] = [
         text: "Jämför naprapatkliniker och priser i din stad →"
       }
     ]
+  },
+  {
+    slug: "olika-typer-av-massage-vilken-passar-dig",
+    title: "Olika typer av massage – vilken passar dig?",
+    tag: "Guide",
+    excerpt: "Klassisk massage, idrottsmassage, djupvävnadsmassage eller triggerpunktsbehandling? Här är skillnaderna — och vilken som passar dina behov.",
+    image: massageClassic,
+    byline: "Nakima redaktionen",
+    datePublished: "2026-08-13",
+    metaTitle: "Olika typer av massage – vilken passar dig? | Nakima",
+    metaDescription: "Klassisk massage, idrottsmassage, djupvävnadsmassage eller triggerpunktsbehandling? Här är skillnaderna — och vilken som passar dina behov.",
+    faqs: [
+      {
+        q: "Vilken massagetyp är bäst mot stress?",
+        a: "Klassisk massage är oftast bäst lämpad för avslappning och stresslindring, eftersom tekniken är mjukare och syftar till allmän avslappning snarare än djup muskelbearbetning."
+      },
+      {
+        q: "Gör djupvävnadsmassage ont?",
+        a: "Den kan kännas obekväm eller ömtålig under själva behandlingen eftersom trycket är djupare, men ska inte kännas skarpt smärtsam. Säg alltid till din terapeut om trycket känns för starkt."
+      },
+      {
+        q: "Kan jag kombinera olika massagetyper i samma behandling?",
+        a: "Ja, many terapeuter anpassar tekniken utifrån dina behov under samma pass — beskriv gärna vad du är ute efter (avslappning, specifik smärta, träningsåterhämtning) när du bokar."
+      },
+      {
+        q: "Hur ofta bör man ta massage?",
+        a: "Det beror på syftet. Vid allmän avslappning räcker ofta en gång i månaden; vid aktiv rehabilitering eller intensiv träning kan tätare behandling, till exempel varannan vecka, ge bättre effekt. Rådgör med din terapeut."
+      }
+    ],
+    content: [
+      {
+        type: "p",
+        text: "\"Massage\" är ett brett paraplybegrepp som rymmer allt från avslappnande helkroppsbehandling till målinriktad idrottsmassage för elitidrottare. Väljer du fel typ blir resultatet ofta en trevlig men ganska verkningslös timme — väljer du rätt kan det göra skillnad för både återhämtning, rörlighet och stressnivå. Här går vi igenom de vanligaste typerna som erbjuds på svenska kliniker, och vem de passar bäst för."
+      },
+      {
+        type: "h2",
+        text: "Klassisk massage (svensk massage)"
+      },
+      {
+        type: "p",
+        text: "Klassisk massage är den mest kända formen och grunden som de flesta andra tekniker bygger vidare på. Den kombinerar stryktekniker (effleurage), knådning (petrissage) och lättare tryckpunktsarbete för att öka blodcirkulationen, minska muskelspänning och ge allmän avslappning."
+      },
+      {
+        type: "p",
+        text: "Passar dig som: vill varva ner, minska vardagsstress eller ha en första introduktion till massage utan att det ska kännas för intensivt."
+      },
+      {
+        type: "h2",
+        text: "Idrottsmassage"
+      },
+      {
+        type: "p",
+        text: "Idrottsmassage är mer djupgående och riktad än klassisk massage, med fokus på att förebygga skador, förbättra rörlighet och snabba upp återhämtning efter träning. Tekniken kan kännas kraftfullare i stunden, men målet är en mer funktionell och rörlig kropp snarare än ren avslappning."
+      },
+      {
+        type: "p",
+        text: "Passar dig som: tränar regelbundet, tävlar, eller har återkommande belastningsbesvär kopplat till träning."
+      },
+      {
+        type: "h2",
+        text: "Djupvävnadsmassage"
+      },
+      {
+        type: "p",
+        text: "Djupvävnadsmassage arbetar med djupare lager av muskulatur och bindväv än klassisk massage, ofta med långsammare och mer koncentrerat tryck. Den kan kännas obekväm i stunden men syftar till att lösa upp djupt sittande spänningar och sammanväxningar i muskulaturen."
+      },
+      {
+        type: "p",
+        text: "Passar dig som: har kronisk stelhet eller djupt sittande spänningar som inte släpper med lättare massage."
+      },
+      {
+        type: "h2",
+        text: "Triggerpunktsbehandling"
+      },
+      {
+        type: "p",
+        text: "Triggerpunktsbehandling fokuserar på specifika ömma punkter i muskulaturen som kan stråla ut smärta till andra delar av kroppen — till exempel en punkt i nacken som ger huvudvärk. Terapeuten håller ett fast tryck på punkten i 60–90 sekunder för att minska spänningen och förbättra cirkulationen lokalt."
+      },
+      {
+        type: "p",
+        text: "Passar dig som: har återkommande, specifikt lokaliserad smärta eller spänningshuvudvärk kopplad till muskulaturen."
+      },
+      {
+        type: "h2",
+        text: "Så väljer du rätt"
+      },
+      {
+        type: "p",
+        text: "Osäker på vad som passar dig? En bra tumregel: vill du varva ner — välj klassisk massage. Tränar du hårt och vill återhämta dig snabbare — välj idrottsmassage. Har du kronisk stelhet på ett specifikt ställe — fråga efter djupvävnads- eller triggerpunktsbehandling. Många kliniker erbjuder också en kombination anpassad efter dina besvär vid bokning — beskriv gärna vad du är ute efter när du bokar tid."
+      },
+      {
+        type: "p",
+        text: "Behöver du hitta en massör nära dig?"
+      },
+      {
+        type: "cta",
+        text: "Hitta massör i din stad →"
+      }
+    ]
+  },
+  {
+    slug: "vad-kostar-massage-2026",
+    title: "Vad kostar massage 2026?",
+    tag: "Patientguide",
+    excerpt: "Prisguide 2026: vad kostar klassisk massage, vilka behandlingar täcks av friskvårdsbidraget, och vad påverkar priset.",
+    image: massagePrice,
+    byline: "Nakima redaktionen",
+    datePublished: "2026-08-13",
+    metaTitle: "Vad kostar massage 2026? | Nakima",
+    metaDescription: "Prisguide 2026: vad kostar klassisk massage, vilka behandlingar täcks av friskvårdsbidraget, och vad påverkar priset.",
+    faqs: [
+      {
+        q: "Vad kostar en 60 minuters massage 2026?",
+        a: "Generellt mellan 600 och 1 100 kr, med ett vanligt genomsnitt kring 800–900 kr, beroende på klinik, stad och typ av massage."
+      },
+      {
+        q: "Täcker friskvårdsbidraget massage?",
+        a: "Oftast ja, om massagen är av generellt avslappnande karaktär och inte behandlar en diagnostiserad skada. Massage som behandlar en specifik skada kan räknas som sjukvård och falla utanför bidraget — kontrollera med din arbetsgivare och kliniken."
+      },
+      {
+        q: "Är massage billigare än naprapatbehandling?",
+        a: "Priserna överlappar generellt (massage 600–1 100 kr, naprapatbehandling 550–900 kr), men massage har fördelen att oftare täckas av friskvårdsbidraget fullt ut."
+      },
+      {
+        q: "Varför varierar priset så mycket mellan kliniker?",
+        a: "Läge, terapeutens erfarenhet, behandlingstid och typ av massage är de faktorer som påverkar mest. Spa-anläggningar och centrala storstadslägen tenderar att ligga i det högre spannet."
+      }
+    ],
+    content: [
+      {
+        type: "p",
+        text: "Massage är en av de behandlingar där priset varierar som mest beroende på var i landet du befinner dig, vilken typ av massage du väljer och hur länge behandlingen pågår. Den goda nyheten: massage är också den behandling inom manuell medicin som oftast går att få helt eller delvis finansierad via friskvårdsbidraget — till skillnad från naprapati och kiropraktik."
+      },
+      {
+        type: "h2",
+        text: "Vad kostar en massagebehandling?"
+      },
+      {
+        type: "p",
+        text: "En klassisk massage på 60 minuter kostar generellt mellan 600 och 1 100 kr i Sverige, med ett vanligt genomsnitt kring 800–900 kr beroende på klinik och stad. Kortare behandlingar (30 minuter) ligger ofta i spannet 400–600 kr, medan längre eller mer specialiserade behandlingar (till exempel 90 minuters djupvävnadsmassage) kan kosta 1 200 kr eller mer."
+      },
+      {
+        type: "list",
+        items: [
+          "30 minuter: cirka 400–600 kr",
+          "60 minuter: cirka 600–1 100 kr",
+          "90 minuter: cirka 900–1 400 kr"
+        ]
+      },
+      {
+        type: "p",
+        text: "Prisnivån beror bland annat på klinikens läge (centrala storstadslägen och spa-anläggningar tar ofta mer betalt), terapeutens erfarenhet och om behandlingen är en standardmassage eller en mer specialiserad teknik."
+      },
+      {
+        type: "h2",
+        text: "Friskvårdsbidrag — massagens stora fördel"
+      },
+      {
+        type: "p",
+        text: "Till skillnad från naprapati och kiropraktik, som Skatteverket oftast klassar som hälso- och sjukvård när de behandlar en specifik skada, räknas generell avslappnande massage i regel som friskvård — förutsatt att den inte behandlar en diagnostiserad skada eller ett sjukdomstillstånd. Det innebär att massage för avslappning och allmänt välbefinnande oftast går att betala med friskvårdsbidraget, upp till det skattefria maxbeloppet på 5 000 kr per anställd och år (2026 års gräns)."
+      },
+      {
+        type: "p",
+        text: "Tumregeln från Skatteverket: aktiviteten ska ha ett tydligt inslag av motion eller hälsovård, och massage som \"generell mjukgörande behandling\" uppfyller normalt det kravet. Massage som specifikt syftar till att behandla en diagnostiserad skada kan däremot räknas som sjukvård och falla utanför bidraget — fråga kliniken om osäkerhet."
+      },
+      {
+        type: "h2",
+        text: "Vad påverkar priset mer i detalj?"
+      },
+      {
+        type: "list",
+        items: [
+          "Behandlingstid. Längre pass kostar mer, men ofta relativt mindre per minut än korta pass.",
+          "Typ av massage. Standardiserad klassisk massage är oftast billigast; specialiserade tekniker (idrottsmassage, djupvävnad, lymfmassage) kostar ofta mer.",
+          "Läge. Storstadskliniker och spa-miljöer har generellt högre priser än förortskliniker.",
+          "Terapeutens erfarenhet och certifiering. Mer erfarna eller specialiserade terapeuter tar ofta ut ett högre pris."
+        ]
+      },
+      {
+        type: "h2",
+        text: "Så hittar du rätt pris för dig"
+      },
+      {
+        type: "p",
+        text: "Jämför prisnivå och recensioner för massörer i din stad, och fråga alltid kliniken direkt om aktuellt pris innan du bokar, eftersom priser uppdateras löpande."
+      },
+      {
+        type: "cta",
+        text: "Jämför massörer och priser i din stad →"
+      }
+    ]
+  },
+  {
+    slug: "massage-mot-stress-och-spanningar",
+    title: "Massage mot stress och spänningar – vad säger forskningen?",
+    tag: "Hälsa",
+    excerpt: "Kan massage faktiskt sänka stressnivåerna? Vi går igenom vad forskningen visar om massage, kortisol och muskelspänningar.",
+    image: massageStress,
+    byline: "Nakima redaktionen",
+    datePublished: "2026-08-13",
+    metaTitle: "Massage mot stress och spänningar – vad säger forskningen? | Nakima",
+    metaDescription: "Kan massage faktiskt sänka stressnivåerna? Vi går igenom vad forskningen visar om massage, kortisol och muskelspänningar.",
+    faqs: [
+      {
+        q: "Sänker massage verkligen kortisolnivåerna?",
+        a: "Studier tyder på det — en ofta citerad studie visade en genomsnittlig minskning på 31 procent efter en enda massagebehandling. Effekten är dock uppmätt i studiemiljö och kan variera i vardagen."
+      },
+      {
+        q: "Kan massage bota ångest eller depression?",
+        a: "Nej. Massage kan bidra till avslappning och må-bra-känsla, men ersätter inte behandling av kliniska tillstånd som ångestsyndrom eller depression. Sök vård hos läkare eller psykolog för dessa besvär."
+      },
+      {
+        q: "Hur ofta behöver jag ta massage för att se effekt på stress?",
+        a: "Studier på spänningshuvudvärk visade tydligast effekt vid regelbunden behandling över tid, inte enstaka tillfällen. Många upplever ändå omedelbar avslappning redan efter en session."
+      },
+      {
+        q: "Är effekten av massage på stress bara \"placebo\"?",
+        a: "Mätbara fysiologiska förändringar (kortisol, blodflöde, endorfinnivåer) har uppmätts i studier, vilket talar för en verklig fysiologisk effekt utöver ren upplevelse — men fler och större studier behövs för säkrare slutsatser."
+      }
+    ],
+    content: [
+      {
+        type: "p",
+        text: "Massage marknadsförs ofta som ett sätt att \"koppla av\" — men finns det faktiskt mätbara effekter bakom känslan av avslappning, eller är det bara en skön stund? Forskningen ger faktiskt visst stöd för att massage påverkar kroppen mätbart, inte bara upplevelsemässigt. Här går vi igenom vad studierna visar — och var gränserna för kunskapen går."
+      },
+      {
+        type: "h2",
+        text: "Vad händer i kroppen vid massage?"
+      },
+      {
+        type: "p",
+        text: "Beröring och tryck mot hud och muskler stimulerar nervsystemet på ett sätt som kan öka utsöndringen av kroppens egna må-bra-hormoner, bland annat endorfiner, som har smärtstillande effekt. Samtidigt vidgas blodkärlen lokalt, vilket ökar blodflödet till den bearbetade muskulaturen och kan bidra till att muskelspänningar släpper."
+      },
+      {
+        type: "h2",
+        text: "Vad visar forskningen om stresshormoner?"
+      },
+      {
+        type: "p",
+        text: "En ofta citerad amerikansk studie, publicerad i Journal of Alternative and Complementary Medicine, undersökte effekten av en enda massagebehandling och fann att nivåerna av stresshormonet kortisol sjönk med i genomsnitt 31 procent efter behandlingen, samtidigt som nivåerna av serotonin och dopamin — signalsubstanser kopplade till välbefinnande — ökade. Resultaten pekar på att massage kan ha en mätbar, om än kortvarig, effekt på kroppens stressresponssystem."
+      },
+      {
+        type: "p",
+        text: "Det är värt å notera att det här är resultat från en enskild session i en kontrollerad studiemiljö — hur väl effekten håller i sig över tid, och hur den ser ut i vardagen utanför en studiemiljö, är mindre utforskat."
+      },
+      {
+        type: "h2",
+        text: "Effekt på muskelspänningar och spänningshuvudvärk"
+      },
+      {
+        type: "p",
+        text: "Flera studier har undersökt massage specifikt för spänningshuvudvärk, som ofta hänger ihop med muskelspänningar i nacke och axlar. I en amerikansk studie på personer med spänningshuvudvärk minskade antalet huvudvärksepisoder per vecka från drygt sex till två efter en period med regelbunden massage, och episodernas längd minskade med omkring hälften. Det tyder på att massage — utöver den akuta avslappningskänslan — kan ha effekt på återkommande, spänningsrelaterade besvär vid upprepad behandling."
+      },
+      {
+        type: "h2",
+        text: "Vad forskningen inte visar"
+      },
+      {
+        type: "p",
+        text: "It är viktigt att vara ärlig om begränsningarna: de flesta studier på området är relativt små, och massage undersöks sällan med samma rigorösa metodik som läkemedelsstudier. Massage bör ses som ett komplement till, inte en ersättning för, behandling av kliniska tillstånd som ångestsyndrom, klinisk depression eller kroniska smärttillstånd — sök alltid vård för dessa hos läkare eller psykolog. Effekten varierar också mellan individer, och en enskild session ger sällan bestående förändring utan återkommande behandling."
+      },
+      {
+        type: "h2",
+        text: "Sammanfattning"
+      },
+      {
+        type: "p",
+        text: "Sammantaget ger forskningen ett rimligt stöd för att massage kan sänka stresshormonnivåer och lindra spänningsrelaterade besvär som spänningshuvudvärk, särskilt vid regelbunden behandling. Det är ett vetenskapligt rimligt komplement till andra sätt att hantera stress och muskelspänning — snarare än ett mirakelmedel eller en ersättning för professionell vård vid allvarligare besvär."
+      },
+      {
+        type: "p",
+        text: "Vill du prova själv?"
+      },
+      {
+        type: "cta",
+        text: "Hitta massör nära dig →"
+      }
+    ]
   }
 ];
+

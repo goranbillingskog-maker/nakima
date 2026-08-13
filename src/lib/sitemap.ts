@@ -14,6 +14,9 @@ const articleMetadata = [
   { slug: "darfor-far-vi-nacksmarta-av-kontorsarbete", datePublished: "2026-08-13" },
   { slug: "ryggskott-nar-ska-man-soka-hjalp", datePublished: "2026-08-13" },
   { slug: "vad-kostar-en-naprapat-2026", datePublished: "2026-08-13" },
+  { slug: "olika-typer-av-massage-vilken-passar-dig", datePublished: "2026-08-13" },
+  { slug: "vad-kostar-massage-2026", datePublished: "2026-08-13" },
+  { slug: "massage-mot-stress-och-spanningar", datePublished: "2026-08-13" },
 ];
 
 export async function buildSitemapEntries(): Promise<SitemapEntry[]> {
