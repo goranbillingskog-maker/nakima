@@ -89,8 +89,7 @@ function Home() {
             <span className="not-italic font-normal">nära dig.</span>
           </h1>
           <p className="text-lg text-ink-soft max-w-xl mb-10 leading-relaxed">
-            Nakima förenar expertis inom manuell medicin med djuplodande hälsojournalistik.
-            Vi hjälper dig förstå din kropp och hitta rätt hjälp när den strejkar.
+            Nakima samlar granskade naprapater, kiropraktorer och massörer i Sverige – och hjälper dig förstå din kropp med tydliga, pålitliga guider. Hitta rätt hjälp när den strejkar.
           </p>
 
           {/* Search widget */}
