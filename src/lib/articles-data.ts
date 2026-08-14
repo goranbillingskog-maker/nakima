@@ -365,7 +365,7 @@ export const articles: Article[] = [
       },
       {
         q: "Kan jag kombinera olika massagetyper i samma behandling?",
-        a: "Ja, many terapeuter anpassar tekniken utifrån dina behov under samma pass — beskriv gärna vad du är ute efter (avslappning, specifik smärta, träningsåterhämtning) när du bokar."
+        a: "Ja, många terapeuter anpassar tekniken utifrån dina behov under samma pass — beskriv gärna vad du är ute efter (avslappning, specifik smärta, träningsåterhämtning) när du bokar."
       },
       {
         q: "Hur ofta bör man ta massage?",
@@ -432,10 +432,6 @@ export const articles: Article[] = [
       {
         type: "p",
         text: "Osäker på vad som passar dig? En bra tumregel: vill du varva ner — välj klassisk massage. Tränar du hårt och vill återhämta dig snabbare — välj idrottsmassage. Har du kronisk stelhet på ett specifikt ställe — fråga efter djupvävnads- eller triggerpunktsbehandling. Många kliniker erbjuder också en kombination anpassad efter dina besvär vid bokning — beskriv gärna vad du är ute efter när du bokar tid."
-      },
-      {
-        type: "p",
-        text: "Behöver du hitta en massör nära dig?"
       },
       {
         type: "cta",
@@ -586,7 +582,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "Det är värt å notera att det här är resultat från en enskild session i en kontrollerad studiemiljö — hur väl effekten håller i sig över tid, och hur den ser ut i vardagen utanför en studiemiljö, är mindre utforskat."
+        text: "Det är värt att notera att det här är resultat från en enskild session i en kontrollerad studiemiljö — hur väl effekten håller i sig över tid, och hur den ser ut i vardagen utanför en studiemiljö, är mindre utforskat."
       },
       {
         type: "h2",
@@ -611,10 +607,6 @@ export const articles: Article[] = [
       {
         type: "p",
         text: "Sammantaget ger forskningen ett rimligt stöd för att massage kan sänka stresshormonnivåer och lindra spänningsrelaterade besvär som spänningshuvudvärk, särskilt vid regelbunden behandling. Det är ett vetenskapligt rimligt komplement till andra sätt att hantera stress och muskelspänning — snarare än ett mirakelmedel eller en ersättning för professionell vård vid allvarligare besvär."
-      },
-      {
-        type: "p",
-        text: "Vill du prova själv?"
       },
       {
         type: "cta",
