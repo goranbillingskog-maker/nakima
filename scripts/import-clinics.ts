@@ -102,7 +102,7 @@ async function run() {
       editors_pick_reason: row.editors_pick_reason || null,
       featured: row.featured === "true",
       specialties: row.specialties ? row.specialties.split("|").filter(Boolean) : [],
-      practitioners: row.practitioners ? row.practitioners.split("|").filter(Boolean) : [],
+      practitioners: (row.utövare || row.practitioners) ? (row.utövare || row.practitioners).split("|").filter(Boolean) : [],
       opening_hours_summary: row.opening_hours_summary || null,
       hours_mon: row.hours_mon || null,
       hours_tue: row.hours_tue || null,
