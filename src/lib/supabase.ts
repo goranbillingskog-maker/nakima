@@ -35,10 +35,13 @@ export interface DatabaseClinic {
   phone: string;
   website: string;
   booking_url: string | null;
+  bookingUrl?: string | null;
   booking_platform: string | null;
   rating: number;
   review_count: number;
+  reviewCount?: number;
   price_level: number | null;
+  priceLevel?: number | null;
   price_first_visit_sek: number | null;
   description: string;
   editors_pick_reason: string | null;

@@ -1,6 +1,16 @@
 import { supabase, type DatabaseClinic } from "./supabase";
 import { type CitySlug, type ServiceSlug } from "./clinics-data";
 
+function mapClinicFields(clinic: any): DatabaseClinic {
+  if (!clinic) return clinic;
+  return {
+    ...clinic,
+    reviewCount: clinic.review_count ?? clinic.reviewCount ?? 0,
+    priceLevel: clinic.price_level ?? clinic.priceLevel ?? null,
+    bookingUrl: clinic.booking_url ?? clinic.bookingUrl ?? null,
+  };
+}
+
 export async function fetchClinicsByCity(region: string, service: string): Promise<DatabaseClinic[]> {
   if (!supabase) {
     console.warn("Supabase client not initialized. Database queries skipped.");
@@ -24,7 +34,7 @@ export async function fetchClinicsByCity(region: string, service: string): Promi
   }
 
   // Sort: featured first, then rating descending
-  return (data as DatabaseClinic[]).sort((a, b) => {
+  return (data as DatabaseClinic[]).map(mapClinicFields).sort((a, b) => {
     if (a.featured && !b.featured) return -1;
     if (!a.featured && b.featured) return 1;
     return b.rating - a.rating;
@@ -48,7 +58,7 @@ export async function fetchClinicBySlug(region: string, slug: string): Promise<D
     return null;
   }
 
-  return data as DatabaseClinic | null;
+  return mapClinicFields(data as DatabaseClinic | null);
 }
 
 export async function fetchRelatedClinics(clinic: DatabaseClinic, limit = 3): Promise<DatabaseClinic[]> {
@@ -69,6 +79,7 @@ export async function fetchRelatedClinics(clinic: DatabaseClinic, limit = 3): Pr
   }
 
   return (data as DatabaseClinic[])
+    .map(mapClinicFields)
     .sort((a, b) => {
       // Prioritize same neighborhood
       const aSame = a.neighborhood === clinic.neighborhood ? 1 : 0;
@@ -120,5 +131,5 @@ export async function fetchAllClinicsForSitemap(): Promise<DatabaseClinic[]> {
     return [];
   }
 
-  return data as DatabaseClinic[];
+  return (data as DatabaseClinic[]).map(mapClinicFields);
 }

@@ -4,23 +4,49 @@ import heroClinic from "@/assets/hero-clinic.jpg";
 import { cities as allCities, getCityClinicCount } from "@/lib/clinics-data";
 import { articles } from "@/lib/articles-data";
 
+import { fetchCityClinicCount } from "@/lib/db";
+
 export const Route = createFileRoute("/")({
+  loader: async () => {
+    try {
+      const counts = await Promise.all(
+        allCities.map(async (c) => {
+          try {
+            const count = await fetchCityClinicCount(c.slug);
+            return { slug: c.slug, count };
+          } catch (e) {
+            console.error(`Failed to fetch count for ${c.slug}:`, e);
+            return { slug: c.slug, count: 0 };
+          }
+        })
+      );
+      return {
+        counts: Object.fromEntries(counts.map((x) => [x.slug, x.count])),
+      };
+    } catch (e) {
+      console.error("Failed to load city clinic counts:", e);
+      return { counts: {} as Record<string, number> };
+    }
+  },
   component: Home,
 });
-
-// Derive counts from the actual dataset so the homepage never drifts from
-// what /naprapat/$city renders.
-const cities = allCities.map((c) => ({
-  name: c.name,
-  slug: c.slug,
-  count: getCityClinicCount(c.slug),
-}));
-
 
 function Home() {
   const navigate = useNavigate();
   const [service, setService] = useState("naprapat");
   const [cityInput, setCityInput] = useState("");
+  const { counts } = Route.useLoaderData();
+
+  const cities = allCities.map((c) => {
+    const dbCount = counts[c.slug] ?? 0;
+    const staticCount = getCityClinicCount(c.slug);
+    return {
+      name: c.name,
+      slug: c.slug,
+      count: dbCount > 0 ? dbCount : staticCount,
+    };
+  });
+
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();

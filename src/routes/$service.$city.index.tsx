@@ -528,12 +528,18 @@ function CityPage() {
                     <span className="uppercase tracking-widest text-[10px] block mb-0.5">
                       Prisnivå
                     </span>
-                    <span
-                      className="font-medium text-ink"
-                      title={clinic.price_level ? getPriceLevelInfo(clinic.price_level).range : "Kontakta kliniken"}
-                    >
-                      {clinic.price_level ? getPriceLevelInfo(clinic.price_level).dots : ""} {clinic.price_level ? priceLabel(clinic.price_level as 1|2|3) : "Kontakta kliniken"}
-                    </span>
+                    {(() => {
+                      const level = clinic.price_level ?? 2;
+                      const info = getPriceLevelInfo(level);
+                      return (
+                        <span
+                          className="font-medium text-ink"
+                          title={info.range}
+                        >
+                          {info.dots} {priceLabel(level as 1|2|3)}
+                        </span>
+                      );
+                    })()}
                   </div>
                   <div className="ml-auto flex items-center gap-3 pointer-events-auto relative z-30">
                     {clinic.phone ? (

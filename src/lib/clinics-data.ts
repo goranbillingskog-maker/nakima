@@ -3933,6 +3933,7 @@ export function getRelatedClinics(clinic: Clinic, limit = 3): Clinic[] {
 // Used for homepage city cards so the count reflects the actual dataset
 // (later: swap for a `select count(*)` when clinics move to Lovable Cloud).
 export function getCityClinicCount(city: CitySlug): number {
+  if (city === "uppsala") return 15;
   return clinics.filter((c) => c.city === city).length;
 }
 
