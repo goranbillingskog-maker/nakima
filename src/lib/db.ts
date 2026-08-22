@@ -24,6 +24,8 @@ export async function fetchClinicsByCity(region: string, service: string): Promi
     query = query.eq("has_kiropraktor", true);
   } else if (service === "massage") {
     query = query.eq("has_massage", true);
+  } else if (service === "fysioterapeut") {
+    query = query.eq("has_fysioterapeut", true);
   }
 
   const { data, error } = await query;
@@ -106,6 +108,8 @@ export async function fetchCityClinicCount(region: string, service?: string): Pr
     query = query.eq("has_kiropraktor", true);
   } else if (service === "massage") {
     query = query.eq("has_massage", true);
+  } else if (service === "fysioterapeut") {
+    query = query.eq("has_fysioterapeut", true);
   }
 
   const { count, error } = await query;
@@ -124,7 +128,7 @@ export async function fetchAllClinicsForSitemap(): Promise<DatabaseClinic[]> {
   }
   const { data, error } = await supabase
     .from("clinics")
-    .select("slug, region, has_naprapat, has_kiropraktor, has_massage, last_verified_at");
+    .select("slug, region, has_naprapat, has_kiropraktor, has_massage, has_fysioterapeut, last_verified_at");
 
   if (error) {
     console.error("Error fetching sitemap clinics:", error);

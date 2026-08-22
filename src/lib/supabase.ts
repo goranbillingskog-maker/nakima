@@ -24,6 +24,7 @@ export interface DatabaseClinic {
   has_naprapat: boolean;
   has_kiropraktor: boolean;
   has_massage: boolean;
+  has_fysioterapeut: boolean;
   city: string;
   municipality: string;
   neighborhood: string;

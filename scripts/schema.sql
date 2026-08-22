@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS clinics (
   has_naprapat boolean NOT NULL DEFAULT false,
   has_kiropraktor boolean NOT NULL DEFAULT false,
   has_massage boolean NOT NULL DEFAULT false,
+  has_fysioterapeut boolean NOT NULL DEFAULT false,
   city text,
   municipality text,
   neighborhood text,
@@ -54,6 +55,7 @@ CREATE INDEX IF NOT EXISTS idx_clinics_region ON clinics(region);
 CREATE INDEX IF NOT EXISTS idx_clinics_has_naprapat ON clinics(has_naprapat) WHERE has_naprapat = true;
 CREATE INDEX IF NOT EXISTS idx_clinics_has_kiropraktor ON clinics(has_kiropraktor) WHERE has_kiropraktor = true;
 CREATE INDEX IF NOT EXISTS idx_clinics_has_massage ON clinics(has_massage) WHERE has_massage = true;
+CREATE INDEX IF NOT EXISTS idx_clinics_has_fysioterapeut ON clinics(has_fysioterapeut) WHERE has_fysioterapeut = true;
 CREATE INDEX IF NOT EXISTS idx_clinics_featured ON clinics(featured) WHERE featured = true;
 
 -- Enable Row Level Security (RLS)

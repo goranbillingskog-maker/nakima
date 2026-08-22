@@ -1,6 +1,6 @@
 import { createFileRoute, notFound, Outlet } from "@tanstack/react-router";
 
-const VALID_SERVICES = ["naprapat", "kiropraktor", "massage"];
+const VALID_SERVICES = ["naprapat", "kiropraktor", "massage", "fysioterapeut"];
 
 export const Route = createFileRoute("/$service/$city")({
   loader: ({ params }) => {

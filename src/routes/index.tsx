@@ -102,20 +102,21 @@ function Home() {
             Hitta din{" "}
             <span
               className="relative inline-block align-baseline overflow-hidden text-orange italic"
-              style={{ height: "1.05em", minWidth: "6.5ch" }}
-              aria-label="naprapat, kiropraktor eller massör"
+              style={{ paddingLeft: "0.4em", paddingRight: "0.15em", paddingBottom: "0.5em", marginBottom: "-0.5em", marginLeft: "-0.25em", minWidth: "7ch" }}
+              aria-label="naprapat, kiropraktor, massör eller fysioterapeut"
             >
-              <span className="nakima-word-1 absolute left-0 top-0 whitespace-nowrap">naprapat</span>
-              <span className="nakima-word-2 absolute left-0 top-0 whitespace-nowrap">kiropraktor</span>
-              <span className="nakima-word-3 absolute left-0 top-0 whitespace-nowrap">massage</span>
+              <span className="nakima-word-1 absolute left-[0.2em] top-[0.11em] pl-[0.2em] whitespace-nowrap">naprapat</span>
+              <span className="nakima-word-2 absolute left-[0.2em] top-[0.11em] pl-[0.2em] whitespace-nowrap">kiropraktor</span>
+              <span className="nakima-word-3 absolute left-[0.2em] top-[0.11em] pl-[0.2em] whitespace-nowrap">massage</span>
+              <span className="nakima-word-4 absolute left-[0.2em] top-[0.11em] pl-[0.2em] whitespace-nowrap">fysioterapeut</span>
               {/* Invisible sizer to reserve width for widest word */}
-              <span className="invisible whitespace-nowrap">kiropraktor</span>
+              <span className="invisible whitespace-nowrap">fysioterapeut</span>
             </span>
             <br />
             <span className="not-italic font-normal">nära dig.</span>
           </h1>
           <p className="text-lg text-ink-soft max-w-xl mb-10 leading-relaxed">
-            Nakima samlar granskade naprapater, kiropraktorer och massörer i Sverige – och hjälper dig förstå din kropp med tydliga, pålitliga guider. Hitta rätt hjälp när den strejkar.
+            Nakima samlar granskade naprapater, kiropraktorer, massörer och fysioterapeuter i Sverige – och hjälper dig förstå din kropp med tydliga, pålitliga guider. Hitta rätt hjälp när den strejkar.
           </p>
 
           {/* Search widget */}
@@ -132,6 +133,7 @@ function Home() {
                 <option value="naprapat">Naprapat</option>
                 <option value="kiropraktor">Kiropraktor</option>
                 <option value="massage">Massage</option>
+                <option value="fysioterapeut">Fysioterapeut</option>
               </select>
             </div>
             <div className="flex-1 px-4 py-3">
@@ -281,6 +283,7 @@ function Home() {
                 <li><Link to="/$service/$city" params={{ service: "naprapat", city: "stockholm" }} className="hover:text-paper transition-colors">Hitta naprapat</Link></li>
                 <li><Link to="/$service/$city" params={{ service: "kiropraktor", city: "stockholm" }} className="hover:text-paper transition-colors">Hitta kiropraktor</Link></li>
                 <li><Link to="/$service/$city" params={{ service: "massage", city: "stockholm" }} className="hover:text-paper transition-colors">Hitta massör</Link></li>
+                <li><Link to="/$service/$city" params={{ service: "fysioterapeut", city: "stockholm" }} className="hover:text-paper transition-colors">Hitta fysioterapeut</Link></li>
                 <li><span className="opacity-60 cursor-default" title="Kommer snart">För kliniker</span></li>
               </ul>
             </div>

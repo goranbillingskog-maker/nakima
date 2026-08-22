@@ -6,7 +6,7 @@
 // v1 scope: naprapat only, top 5 cities. Only Stockholm is populated with
 // clinics; other cities render an "kommer snart" state.
 
-export type ServiceSlug = "naprapat" | "kiropraktor" | "massage";
+export type ServiceSlug = "naprapat" | "kiropraktor" | "massage" | "fysioterapeut";
 
 export type CitySlug = "stockholm" | "goteborg" | "malmo" | "uppsala" | "vasteras";
 
@@ -104,6 +104,7 @@ export const serviceLabels: Record<ServiceSlug, { singular: string; plural: stri
   naprapat: { singular: "Naprapat", plural: "Naprapater" },
   kiropraktor: { singular: "Kiropraktor", plural: "Kiropraktorer" },
   massage: { singular: "Massör", plural: "Massörer" },
+  fysioterapeut: { singular: "Fysioterapeut", plural: "Fysioterapeuter" },
 };
 
 // Stockholm seed — imported from Hyperagent scrape (2026-07-01), 56 verified
@@ -4015,6 +4016,18 @@ export const treatmentDescriptions: Record<
       "Stress- och spänningsrelaterade besvär",
       "Träningsvärk och stel muskulatur",
       "Förebyggande underhåll för kontorsarbete",
+    ],
+  },
+  fysioterapeut: {
+    title: "Fysioterapi",
+    description:
+      "Fysioterapi (sjukgymnastik) är inriktad på att hjälpa människor att återfå, bibehålla eller förbättra sin rörelseförmåga och fysiska funktion. Behandlingen bygger på vetenskap och klinisk erfarenhet, med stort fokus på anpassad träning, ergonomi och manuella tekniker. Fysioterapeuter är legitimerade av Socialstyrelsen.",
+    treats: [
+      "Rehabilitering efter operation eller skada",
+      "Rygg- och nackbesvär",
+      "Led- och muskelsmärta (t.ex. artros)",
+      "Idrottsskador och överbelastningsbesvär",
+      "Långvarig eller kronisk smärta",
     ],
   },
 };

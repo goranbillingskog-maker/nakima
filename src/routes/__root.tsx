@@ -73,14 +73,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Nakima – hitta naprapat, kiropraktor & massör nära dig" },
+      { title: "Nakima – hitta naprapat, kiropraktor, massör & fysioterapeut nära dig" },
       {
         name: "description",
         content:
-          "Sveriges redaktionella guide till manuell medicin. Hitta legitimerade naprapater, kiropraktorer och massörer – och läs artiklar som hjälper dig förstå din kropp.",
+          "Sveriges redaktionella guide till manuell medicin. Hitta legitimerade naprapater, kiropraktorer, massörer och fysioterapeuter – och läs artiklar som hjälper dig förstå din kropp.",
       },
       { name: "author", content: "Nakima" },
-      { property: "og:title", content: "Nakima – hitta naprapat, kiropraktor & massör nära dig" },
+      { property: "og:title", content: "Nakima – hitta naprapat, kiropraktor, massör & fysioterapeut nära dig" },
       {
         property: "og:description",
         content:
@@ -112,7 +112,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               name: "Nakima",
               url: "/",
               description:
-                "Sveriges redaktionella guide till manuell medicin – naprapat, kiropraktor och massör.",
+                "Sveriges redaktionella guide till manuell medicin – naprapat, kiropraktor, massör och fysioterapeut.",
               inLanguage: "sv-SE",
               areaServed: "SE",
               parentOrganization: {

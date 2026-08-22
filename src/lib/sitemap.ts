@@ -46,7 +46,7 @@ export async function buildSitemapEntries(): Promise<SitemapEntry[]> {
     console.error("Failed to fetch clinics for sitemap, generating default pages only:", e);
   }
 
-  const services = ["naprapat", "kiropraktor", "massage"] as const;
+  const services = ["naprapat", "kiropraktor", "massage", "fysioterapeut"] as const;
 
   for (const service of services) {
     for (const city of cities) {
@@ -56,7 +56,8 @@ export async function buildSitemapEntries(): Promise<SitemapEntry[]> {
           c.region === city.slug &&
           ((service === "naprapat" && c.has_naprapat) ||
             (service === "kiropraktor" && c.has_kiropraktor) ||
-            (service === "massage" && c.has_massage))
+            (service === "massage" && c.has_massage) ||
+            (service === "fysioterapeut" && c.has_fysioterapeut))
       );
 
       if (!hasServiceInCity) continue;
@@ -66,7 +67,8 @@ export async function buildSitemapEntries(): Promise<SitemapEntry[]> {
           c.region === city.slug &&
           ((service === "naprapat" && c.has_naprapat) ||
             (service === "kiropraktor" && c.has_kiropraktor) ||
-            (service === "massage" && c.has_massage))
+            (service === "massage" && c.has_massage) ||
+            (service === "fysioterapeut" && c.has_fysioterapeut))
       );
 
       const cityLastmod =

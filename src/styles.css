@@ -123,17 +123,18 @@
    word slides in from below. Offsets stagger them so only one shows at a time. */
 @keyframes nakima-word-cycle {
   0%             { transform: translateY(100%);  opacity: 0; }
-  4%             { transform: translateY(0);     opacity: 1; }
-  29%            { transform: translateY(0);     opacity: 1; }
-  33%            { transform: translateY(-100%); opacity: 0; }
+  3%             { transform: translateY(0);     opacity: 1; }
+  22%            { transform: translateY(0);     opacity: 1; }
+  25%            { transform: translateY(-100%); opacity: 0; }
   100%           { transform: translateY(-100%); opacity: 0; }
 }
-.nakima-word-1 { animation: nakima-word-cycle 6s cubic-bezier(0.7, 0, 0.3, 1) infinite; animation-delay: 0s; }
-.nakima-word-2 { animation: nakima-word-cycle 6s cubic-bezier(0.7, 0, 0.3, 1) infinite; animation-delay: -4s; }
-.nakima-word-3 { animation: nakima-word-cycle 6s cubic-bezier(0.7, 0, 0.3, 1) infinite; animation-delay: -2s; }
+.nakima-word-1 { animation: nakima-word-cycle 8s cubic-bezier(0.7, 0, 0.3, 1) infinite; animation-delay: 0s; }
+.nakima-word-2 { animation: nakima-word-cycle 8s cubic-bezier(0.7, 0, 0.3, 1) infinite; animation-delay: -6s; }
+.nakima-word-3 { animation: nakima-word-cycle 8s cubic-bezier(0.7, 0, 0.3, 1) infinite; animation-delay: -4s; }
+.nakima-word-4 { animation: nakima-word-cycle 8s cubic-bezier(0.7, 0, 0.3, 1) infinite; animation-delay: -2s; }
 
 
 @media (prefers-reduced-motion: reduce) {
-  .nakima-word-1, .nakima-word-2, .nakima-word-3 { animation: none; }
-  .nakima-word-2, .nakima-word-3 { display: none; }
+  .nakima-word-1, .nakima-word-2, .nakima-word-3, .nakima-word-4 { animation: none; }
+  .nakima-word-2, .nakima-word-3, .nakima-word-4 { display: none; }
 }
