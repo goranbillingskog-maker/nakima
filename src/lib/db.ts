@@ -1,9 +1,28 @@
 import { supabase, type DatabaseClinic } from "./supabase";
 import { type CitySlug, type ServiceSlug } from "./clinics-data";
 
+function normalizeServices(rawServices: any): ServiceSlug[] {
+  if (!rawServices) return [];
+  let list: string[] = [];
+  if (Array.isArray(rawServices)) {
+    list = rawServices.flatMap(s => typeof s === "string" ? s.split(/[|,]/) : []);
+  } else if (typeof rawServices === "string") {
+    list = rawServices.split(/[|,]/);
+  }
+  const mapped = list.map(s => {
+    const clean = s.trim().toLowerCase();
+    if (clean.includes("naprapat")) return "naprapat";
+    if (clean.includes("kiroprakt")) return "kiropraktor";
+    if (clean.includes("massage") || clean.includes("massör")) return "massage";
+    if (clean.includes("fysiotera") || clean.includes("sjukgymnast") || clean.includes("fysio")) return "fysioterapeut";
+    return null;
+  }).filter((s): s is ServiceSlug => s !== null);
+  return Array.from(new Set(mapped));
+}
+
 function mapClinicFields(clinic: any): DatabaseClinic {
   if (!clinic) return clinic;
-  const services = (clinic.services ?? []).map((s: string) => s === "fysioterapi" ? "fysioterapeut" : s);
+  const services = normalizeServices(clinic.services);
   return {
     ...clinic,
     services,
