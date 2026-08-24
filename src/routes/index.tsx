@@ -70,6 +70,8 @@ function Home() {
       citySlug = "norrkoping";
     } else if (input.includes("linköping") || input.includes("linkoping")) {
       citySlug = "linkoping";
+    } else if (input.includes("helsingborg") || input.includes("hbg")) {
+      citySlug = "helsingborg";
     } else if (input.length > 0) {
       citySlug = "stockholm";
       queryParam = input;
