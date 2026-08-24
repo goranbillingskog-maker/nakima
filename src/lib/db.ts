@@ -3,8 +3,10 @@ import { type CitySlug, type ServiceSlug } from "./clinics-data";
 
 function mapClinicFields(clinic: any): DatabaseClinic {
   if (!clinic) return clinic;
+  const services = (clinic.services ?? []).map((s: string) => s === "fysioterapi" ? "fysioterapeut" : s);
   return {
     ...clinic,
+    services,
     reviewCount: clinic.review_count ?? clinic.reviewCount ?? 0,
     priceLevel: clinic.price_level ?? clinic.priceLevel ?? null,
     bookingUrl: clinic.booking_url ?? clinic.bookingUrl ?? null,

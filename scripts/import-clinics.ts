@@ -82,6 +82,7 @@ async function run() {
       has_naprapat: row.has_naprapat === "true",
       has_kiropraktor: row.has_kiropraktor === "true",
       has_massage: row.has_massage === "true",
+      has_fysioterapeut: row.services ? row.services.split("|").includes("fysioterapi") : false,
       city: row.city,
       municipality: row.municipality,
       neighborhood: row.neighborhood,
