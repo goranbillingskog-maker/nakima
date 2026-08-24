@@ -285,6 +285,19 @@ function CityPage() {
     return list;
   }, [withDistance, q, omrade, sort, userPos]);
 
+  const matchedCityName = useMemo(() => {
+    const input = q.trim().toLowerCase();
+    if (!input) return null;
+    if (input.includes("göteborg") || input.includes("goteborg") || input.includes("gbg")) return { slug: "goteborg", name: "Göteborg" };
+    if (input.includes("malmö") || input.includes("malmo")) return { slug: "malmo", name: "Malmö" };
+    if (input.includes("uppsala")) return { slug: "uppsala", name: "Uppsala" };
+    if (input.includes("västerås") || input.includes("vasteras")) return { slug: "vasteras", name: "Västerås" };
+    if (input.includes("örebro") || input.includes("orebro")) return { slug: "orebro", name: "Örebro" };
+    if (input.includes("norrköping") || input.includes("norrkoping")) return { slug: "norrkoping", name: "Norrköping" };
+    if (input.includes("stockholm")) return { slug: "stockholm", name: "Stockholm" };
+    return null;
+  }, [q]);
+
   const updateSearch = (patch: Partial<{ q: string; omrade: string; sort: (typeof sortOptions)[number] }>) => {
     navigate({
       search: (prev: { q: string; omrade: string; sort: (typeof sortOptions)[number] }) => ({ ...prev, ...patch }),
@@ -378,6 +391,16 @@ function CityPage() {
                 placeholder={`T.ex. ${neighborhoods[0] || 'Centrum'}, Götgatan, Klinikens namn…`}
                 value={q}
                 onChange={(e) => updateSearch({ q: e.target.value })}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" && matchedCityName && matchedCityName.slug !== city.slug) {
+                    e.preventDefault();
+                    navigate({
+                      to: "/$service/$city",
+                      params: { service, city: matchedCityName.slug },
+                      search: { q: "", omrade: "", sort: "rating" as const }
+                    });
+                  }
+                }}
                 className="w-full bg-paper border border-ink/20 px-4 py-2.5 text-sm text-ink placeholder:text-ink-soft/60 focus:outline-none focus:border-orange"
               />
             </label>
@@ -466,13 +489,29 @@ function CityPage() {
             <p className="text-ink-soft max-w-md mx-auto">
               Prova en annan stadsdel eller sökterm.
             </p>
-            <button
-              type="button"
-              onClick={resetFilters}
-              className="mt-6 inline-block border border-ink px-5 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-ink hover:text-paper transition-colors"
-            >
-              Rensa filter
-            </button>
+            {matchedCityName && matchedCityName.slug !== city.slug ? (
+              <div className="mt-8 p-6 bg-paper border border-orange/20 max-w-md mx-auto shadow-sm">
+                <p className="text-sm text-ink mb-4 font-medium">
+                  Vill du söka efter {label.plural.toLowerCase()} i {matchedCityName.name}?
+                </p>
+                <Link
+                  to="/$service/$city"
+                  params={{ service, city: matchedCityName.slug }}
+                  search={{ q: "", omrade: "", sort: "rating" as const }}
+                  className="inline-block bg-orange hover:bg-ink text-paper px-6 py-2.5 text-xs font-bold uppercase tracking-widest transition-colors"
+                >
+                  Visa kliniker i {matchedCityName.name}
+                </Link>
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={resetFilters}
+                className="mt-6 inline-block border border-ink px-5 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-ink hover:text-paper transition-colors"
+              >
+                Rensa filter
+              </button>
+            )}
           </div>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-ink/10 border border-ink/10">
