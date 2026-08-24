@@ -298,6 +298,7 @@ function CityPage() {
     if (input.includes("helsingborg") || input.includes("hbg")) return { slug: "helsingborg", name: "Helsingborg" };
     if (input.includes("jönköping") || input.includes("jonkoping") || input.includes("jkpg")) return { slug: "jonkoping", name: "Jönköping" };
     if (input.includes("umeå") || input.includes("umea")) return { slug: "umea", name: "Umeå" };
+    if (input.includes("borås") || input.includes("boras")) return { slug: "boras", name: "Borås" };
     if (input.includes("stockholm")) return { slug: "stockholm", name: "Stockholm" };
     return null;
   }, [q]);

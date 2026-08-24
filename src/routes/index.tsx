@@ -76,6 +76,8 @@ function Home() {
       citySlug = "jonkoping";
     } else if (input.includes("umeå") || input.includes("umea")) {
       citySlug = "umea";
+    } else if (input.includes("borås") || input.includes("boras")) {
+      citySlug = "boras";
     } else if (input.length > 0) {
       citySlug = "stockholm";
       queryParam = input;
