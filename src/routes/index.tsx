@@ -63,6 +63,8 @@ function Home() {
       citySlug = "uppsala";
     } else if (input.includes("västerås") || input.includes("vasteras")) {
       citySlug = "vasteras";
+    } else if (input.includes("örebro") || input.includes("orebro")) {
+      citySlug = "orebro";
     } else if (input.length > 0) {
       citySlug = "stockholm";
       queryParam = input;
