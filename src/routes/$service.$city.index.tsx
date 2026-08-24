@@ -275,12 +275,22 @@ function CityPage() {
         const bd = b.distance ?? Infinity;
         if (ad !== bd) return ad - bd;
       }
-      if (sort === "reviews") return b.clinic.reviewCount - a.clinic.reviewCount;
+      if (sort === "reviews") {
+        const ar = a.clinic.reviewCount ?? -1;
+        const br = b.clinic.reviewCount ?? -1;
+        return br - ar;
+      }
       if (sort === "name") return a.clinic.name.localeCompare(b.clinic.name, "sv");
       
       if (a.clinic.featured !== b.clinic.featured) return a.clinic.featured ? -1 : 1;
-      if (b.clinic.rating !== a.clinic.rating) return b.clinic.rating - a.clinic.rating;
-      return b.clinic.reviewCount - a.clinic.reviewCount;
+      
+      const arat = a.clinic.rating ?? -1;
+      const brat = b.clinic.rating ?? -1;
+      if (brat !== arat) return brat - arat;
+      
+      const arev = a.clinic.reviewCount ?? -1;
+      const brev = b.clinic.reviewCount ?? -1;
+      return brev - arev;
     });
     return list;
   }, [withDistance, q, omrade, sort, userPos]);
@@ -365,16 +375,19 @@ function CityPage() {
             <span className="font-serif text-3xl text-ink mr-2">{clinics.length}</span>
             listade kliniker
           </div>
-          <div>
-            <span className="font-serif text-3xl text-ink mr-2">
-              {clinics.length
-                ? (
-                    clinics.reduce((s: number, c: DatabaseClinic) => s + c.rating, 0) / clinics.length
-                  ).toFixed(1)
-                : "–"}
-            </span>
-            snittbetyg
-          </div>
+          {clinics.some(c => c.rating !== null && c.rating !== undefined) && (
+            <div>
+              <span className="font-serif text-3xl text-ink mr-2">
+                {(
+                  (() => {
+                    const ratedClinics = clinics.filter(c => c.rating !== null && c.rating !== undefined);
+                    return ratedClinics.reduce((s: number, c: DatabaseClinic) => s + (c.rating || 0), 0) / ratedClinics.length;
+                  })()
+                ).toFixed(1)}
+              </span>
+              snittbetyg
+            </div>
+          )}
           <div>
             <span className="font-serif text-3xl text-ink mr-2">{neighborhoods.length}</span>
             stadsdelar
@@ -554,10 +567,27 @@ function CityPage() {
                     </h2>
                   </div>
                   <div className="text-right shrink-0">
-                    <div className="font-serif text-2xl">{clinic.rating.toFixed(1)}</div>
-                    <div className="text-[10px] uppercase tracking-widest text-ink-soft">
-                      {clinic.reviewCount} omdömen
-                    </div>
+                    {clinic.rating !== null && clinic.reviewCount !== null && clinic.reviewCount > 0 ? (
+                      clinic.reviewCount >= 10 ? (
+                        <>
+                          <div className="font-serif text-2xl">★ {clinic.rating.toFixed(1)}</div>
+                          <div className="text-[10px] uppercase tracking-widest text-ink-soft">
+                            {clinic.reviewCount} omdömen {clinic.ratingSource ? `via ${clinic.ratingSource}` : ""}
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="font-serif text-2xl text-ink-soft">★ {clinic.rating.toFixed(1)}</div>
+                          <div className="text-[10px] uppercase tracking-widest text-ink-soft">
+                            få omdömen
+                          </div>
+                        </>
+                      )
+                    ) : (
+                      <div className="text-[10px] uppercase tracking-widest text-ink-soft italic mt-2">
+                        Inga omdömen
+                      </div>
+                    )}
                   </div>
                 </div>
 

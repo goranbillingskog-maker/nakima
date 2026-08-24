@@ -26,7 +26,8 @@ function mapClinicFields(clinic: any): DatabaseClinic {
   return {
     ...clinic,
     services,
-    reviewCount: clinic.review_count ?? clinic.reviewCount ?? 0,
+    reviewCount: clinic.review_count !== undefined && clinic.review_count !== null ? clinic.review_count : (clinic.reviewCount !== undefined && clinic.reviewCount !== null ? clinic.reviewCount : null),
+    ratingSource: clinic.rating_source ?? clinic.ratingSource ?? null,
     priceLevel: clinic.price_level ?? clinic.priceLevel ?? null,
     bookingUrl: clinic.booking_url ?? clinic.bookingUrl ?? null,
   };

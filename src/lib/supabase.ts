@@ -38,9 +38,11 @@ export interface DatabaseClinic {
   booking_url: string | null;
   bookingUrl?: string | null;
   booking_platform: string | null;
-  rating: number;
-  review_count: number;
-  reviewCount?: number;
+  rating: number | null;
+  review_count: number | null;
+  reviewCount?: number | null;
+  rating_source?: string | null;
+  ratingSource?: string | null;
   price_level: number | null;
   priceLevel?: number | null;
   price_first_visit_sek: number | null;

@@ -67,7 +67,10 @@ export const Route = createFileRoute("/$service/$city/$clinic")({
       .join(", ");
     
     const title = `${clinic.name} – ${label.singular.toLowerCase()} i ${clinic.neighborhood || city.name}, ${city.name} | Nakima`;
-    const description = `${clinic.name} är en ${label.singular.toLowerCase()}klinik på ${clinic.street}, ${clinic.neighborhood || city.name} i ${city.name}. Betyg ${clinic.rating.toFixed(1)}/5 (${clinic.reviewCount} omdömen). Erbjuder ${serviceList}. Boka tid, se priser och kontaktuppgifter.`;
+    const ratingStr = clinic.rating !== null && clinic.reviewCount !== null && clinic.reviewCount > 0
+      ? `Betyg ${clinic.rating.toFixed(1)}/5 (${clinic.reviewCount} omdömen). `
+      : "";
+    const description = `${clinic.name} är en ${label.singular.toLowerCase()}klinik på ${clinic.street}, ${clinic.neighborhood || city.name} i ${city.name}. ${ratingStr}Erbjuder ${serviceList}. Boka tid, se priser och kontaktuppgifter.`;
 
     const postalCode = clinic.postal ? clinic.postal.split(" ")[0] : "";
     const addressLocality = clinic.postal ? clinic.postal.split(" ").slice(1).join(" ") : city.name;
@@ -91,14 +94,17 @@ export const Route = createFileRoute("/$service/$city/$clinic")({
       },
       areaServed: { "@type": "City", name: city.name },
       medicalSpecialty: "PhysicalTherapy",
-      aggregateRating: {
+    };
+
+    if (clinic.rating !== null && clinic.reviewCount !== null && clinic.reviewCount > 0) {
+      medicalBusiness.aggregateRating = {
         "@type": "AggregateRating",
         ratingValue: clinic.rating,
         reviewCount: clinic.reviewCount,
         bestRating: 5,
         worstRating: 1,
-      },
-    };
+      };
+    }
     if (clinic.lat != null && clinic.lng != null) {
       medicalBusiness.geo = {
         "@type": "GeoCoordinates",
@@ -298,10 +304,30 @@ function ClinicPage() {
 
         <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm text-ink-soft border-t border-ink/10 pt-8">
           <div>
-            <div className="font-serif text-3xl text-ink">{clinic.rating.toFixed(1)}</div>
-            <div className="uppercase tracking-widest text-[10px]">
-              av 5 · {clinic.reviewCount} omdömen
-            </div>
+            {clinic.rating !== null && clinic.reviewCount !== null && clinic.reviewCount > 0 ? (
+              clinic.reviewCount >= 10 ? (
+                <>
+                  <div className="font-serif text-3xl text-ink">★ {clinic.rating.toFixed(1)}</div>
+                  <div className="uppercase tracking-widest text-[10px]">
+                    av 5 · {clinic.reviewCount} omdömen {clinic.ratingSource ? `via ${clinic.ratingSource}` : ""}
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="font-serif text-3xl text-ink-soft">★ {clinic.rating.toFixed(1)}</div>
+                  <div className="uppercase tracking-widest text-[10px]">
+                    få omdömen
+                  </div>
+                </>
+              )
+            ) : (
+              <>
+                <div className="font-serif text-3xl text-ink-soft">—</div>
+                <div className="uppercase tracking-widest text-[10px]">
+                  Inga omdömen ännu
+                </div>
+              </>
+            )}
           </div>
           <div>
             <div className="font-serif text-3xl text-ink">
@@ -628,7 +654,15 @@ function ClinicPage() {
                     {r.name}
                   </h3>
                   <div className="text-sm text-ink-soft">
-                    {r.rating.toFixed(1)} · {r.reviewCount} omdömen
+                    {r.rating !== null && r.reviewCount !== null && r.reviewCount > 0 ? (
+                      r.reviewCount >= 10 ? (
+                        `★ ${r.rating.toFixed(1)} · ${r.reviewCount} omdömen`
+                      ) : (
+                        `★ ${r.rating.toFixed(1)} · få omdömen`
+                      )
+                    ) : (
+                      "Inga omdömen"
+                    )}
                   </div>
                 </Link>
               ))}
