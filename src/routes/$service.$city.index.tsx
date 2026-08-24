@@ -297,6 +297,7 @@ function CityPage() {
     if (input.includes("linköping") || input.includes("linkoping")) return { slug: "linkoping", name: "Linköping" };
     if (input.includes("helsingborg") || input.includes("hbg")) return { slug: "helsingborg", name: "Helsingborg" };
     if (input.includes("jönköping") || input.includes("jonkoping") || input.includes("jkpg")) return { slug: "jonkoping", name: "Jönköping" };
+    if (input.includes("umeå") || input.includes("umea")) return { slug: "umea", name: "Umeå" };
     if (input.includes("stockholm")) return { slug: "stockholm", name: "Stockholm" };
     return null;
   }, [q]);
