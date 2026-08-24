@@ -294,6 +294,7 @@ function CityPage() {
     if (input.includes("västerås") || input.includes("vasteras")) return { slug: "vasteras", name: "Västerås" };
     if (input.includes("örebro") || input.includes("orebro")) return { slug: "orebro", name: "Örebro" };
     if (input.includes("norrköping") || input.includes("norrkoping")) return { slug: "norrkoping", name: "Norrköping" };
+    if (input.includes("linköping") || input.includes("linkoping")) return { slug: "linkoping", name: "Linköping" };
     if (input.includes("stockholm")) return { slug: "stockholm", name: "Stockholm" };
     return null;
   }, [q]);

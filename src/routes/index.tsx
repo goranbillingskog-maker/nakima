@@ -67,6 +67,8 @@ function Home() {
       citySlug = "orebro";
     } else if (input.includes("norrköping") || input.includes("norrkoping")) {
       citySlug = "norrkoping";
+    } else if (input.includes("linköping") || input.includes("linkoping")) {
+      citySlug = "linkoping";
     } else if (input.length > 0) {
       citySlug = "stockholm";
       queryParam = input;
