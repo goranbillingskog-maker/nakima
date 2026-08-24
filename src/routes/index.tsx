@@ -72,6 +72,8 @@ function Home() {
       citySlug = "linkoping";
     } else if (input.includes("helsingborg") || input.includes("hbg")) {
       citySlug = "helsingborg";
+    } else if (input.includes("jönköping") || input.includes("jonkoping") || input.includes("jkpg")) {
+      citySlug = "jonkoping";
     } else if (input.length > 0) {
       citySlug = "stockholm";
       queryParam = input;
