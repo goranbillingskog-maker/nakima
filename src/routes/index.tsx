@@ -35,6 +35,7 @@ function Home() {
   const navigate = useNavigate();
   const [service, setService] = useState("naprapat");
   const [cityInput, setCityInput] = useState("");
+  const [selectedCity, setSelectedCity] = useState<{ name: string; slug: string } | null>(null);
   const { counts } = Route.useLoaderData();
 
   const cities = allCities.map((c) => {
@@ -231,20 +232,68 @@ function Home() {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {cities.map((c) => (
-            <Link
-              to="/$service/$city"
-              params={{ service: "naprapat", city: c.slug }}
+            <button
+              onClick={() => setSelectedCity(c)}
               key={c.slug}
-              className="py-8 border border-border hover:border-orange hover:bg-orange/5 transition-all"
+              className="py-8 border border-border hover:border-orange hover:bg-orange/5 transition-all text-center w-full focus:outline-none"
             >
               <span className="block font-serif text-xl">{c.name}</span>
               <span className="text-[10px] text-muted-foreground uppercase tracking-wider">
                 {c.count > 0 ? `${c.count} kliniker` : "Kommer snart"}
               </span>
-            </Link>
+            </button>
           ))}
         </div>
 
+        {selectedCity && (
+          <div 
+            className="fixed inset-0 z-50 flex items-center justify-center bg-ink/30 backdrop-blur-xs transition-opacity"
+            onClick={() => setSelectedCity(null)}
+          >
+            <div 
+              className="bg-paper border border-ink/10 shadow-2xl p-8 max-w-sm w-full mx-4 relative text-left"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button 
+                onClick={() => setSelectedCity(null)}
+                className="absolute top-4 right-4 text-ink-soft hover:text-ink transition-colors"
+                aria-label="Stäng"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              {/* Title */}
+              <h3 className="font-serif text-2xl text-ink mb-6 text-center">
+                Välj i <span className="text-orange">{selectedCity.name}</span>
+              </h3>
+
+              {/* List of Disciplines */}
+              <div className="flex flex-col gap-3">
+                {[
+                  { name: "Naprapat", slug: "naprapat" },
+                  { name: "Kiropraktor", slug: "kiropraktor" },
+                  { name: "Massör", slug: "massage" },
+                  { name: "Fysioterapeut", slug: "fysioterapeut" }
+                ].map((discipline) => (
+                  <Link
+                    key={discipline.slug}
+                    to="/$service/$city"
+                    params={{ service: discipline.slug, city: selectedCity.slug }}
+                    className="flex items-center justify-between px-5 py-4 border border-ink/10 hover:border-orange hover:bg-orange/5 font-medium transition-all"
+                  >
+                    <span>{discipline.name}</span>
+                    <svg className="w-4 h-4 text-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* How it works */}
