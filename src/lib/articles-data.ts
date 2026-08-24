@@ -620,7 +620,7 @@ export const articles: Article[] = [
     tag: "Patientguide",
     excerpt: "Vad kostar en fysioterapeut, behöver du remiss och hur vet du att du valt rätt? Nakimas kompletta guide till fysioterapi i Sverige.",
     image: articlePris,
-    byline: "Senast granskad: 24 augusti 2026 av Rasmus Landby, leg. fysioterapeut",
+    byline: "Nakima redaktionen",
     datePublished: "2026-08-24",
     metaTitle: "Fysioterapeut i Sverige – kostnad, remiss & att välja rätt",
     metaDescription: "Vad kostar en fysioterapeut, behöver du remiss och hur vet du att du valt rätt? Nakimas kompletta guide till fysioterapi i Sverige – uppdaterad 2026.",
