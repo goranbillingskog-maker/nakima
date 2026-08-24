@@ -613,6 +613,153 @@ export const articles: Article[] = [
         text: "Hitta massör nära dig →"
       }
     ]
+  },
+  {
+    slug: "fysioterapeut-i-sverige",
+    title: "Fysioterapeut i Sverige – kostnad, remiss och hur du väljer rätt",
+    tag: "Patientguide",
+    excerpt: "Vad kostar en fysioterapeut, behöver du remiss och hur vet du att du valt rätt? Nakimas kompletta guide till fysioterapi i Sverige.",
+    image: articlePris,
+    byline: "Senast granskad: 24 augusti 2026 av Rasmus Landby, leg. fysioterapeut",
+    datePublished: "2026-08-24",
+    metaTitle: "Fysioterapeut i Sverige – kostnad, remiss & att välja rätt",
+    metaDescription: "Vad kostar en fysioterapeut, behöver du remiss och hur vet du att du valt rätt? Nakimas kompletta guide till fysioterapi i Sverige – uppdaterad 2026.",
+    faqs: [
+      {
+        q: "Är fysioterapeut samma sak som sjukgymnast?",
+        a: "Ja. Fysioterapeut är den nya, skyddade yrkestiteln sedan 2014. Sjukgymnast är den äldre benämningen för exakt samma legitimerade yrke."
+      },
+      {
+        q: "Kan jag boka fysioterapeut utan remiss?",
+        a: "I de flesta av fallen ja, om det gäller en vanlig primärvårdsansluten mottagning. Mer specialiserad fysioterapi kan kräva en egen vårdbegäran (egenremiss) som en läkare sedan bedömer."
+      },
+      {
+        q: "Räknas fysioterapi in i högkostnadsskyddet?",
+        a: "Ja, men bara besök hos vårdgivare med vårdavtal med din region. Besök hos privata kliniker utan avtal räknas inte in, oavsett hur bra behandlingen är."
+      },
+      {
+        q: "Hur vet jag att en fysioterapeut är legitimerad?",
+        a: "Sök på namnet i Socialstyrelsens register över legitimerad hälso- och sjukvårdspersonal. Det är gratis, tar en minut och gäller alla legitimerade yrken."
+      },
+      {
+        q: "Är fysioterapeut bättre än naprapat eller kiropraktor?",
+        a: "Ingen är generellt 'bättre' – de passar olika behov. Fysioterapeut har bredast metodfält och oftast bäst tillgång till subventionerat pris; naprapat och kiropraktor är mer renodlat manuella och i praktiken privatbetalda."
+      }
+    ],
+    content: [
+      {
+        type: "p",
+        text: "Ont i ryggen som inte släpper. En knäskada som inte läker som den ska. Återhämtning efter en operation. Oavsett anledning är fysioterapeut ofta den första och mest självklara vägen in i svensk rehabilitering – men det är också det av de fyra manuella vårdyrkena som flest har frågor om. Vad kostar det egentligen? Behöver du remiss? Och vad skiljer en fysioterapeut från en naprapat eller kiropraktor?"
+      },
+      {
+        type: "p",
+        text: "Den här guiden samlar svaren på ett ställe: vad yrket faktiskt innebär, vad ett besök kostar beroende på var du söker vård, hur remisser och egenremisser fungerar i praktiken, och hur du hittar en fysioterapeut du kan lita på."
+      },
+      {
+        type: "h2",
+        text: "Vad är en fysioterapeut?"
+      },
+      {
+        type: "p",
+        text: "Fysioterapeut är en skyddad yrkestitel, reglerad av Socialstyrelsen – sedan 2014 är det den officiella titeln för yrket som tidigare hette sjukgymnast. Bakom titeln ligger en tre-årig legitimationsgrundande utbildning, och precis som naprapater och kiropraktorer måste fysioterapeuter vara registrerade hos Socialstyrelsen för att få kalla sig det. Det kan du alltid kontrollera själv i Socialstyrelsens register över legitimerad vårdpersonal, oavsett vilken klinik du överväger."
+      },
+      {
+        type: "p",
+        text: "Till skillnad från naprapater och kiropraktorer, som i huvudsak arbetar manuellt med leder och muskler, har fysioterapeuter ett bredare fält: rörelseanalys, träningsbaserad rehabilitering, andningsvård, och behandling efter skador, operationer och sjukdom. Många vidareutbildar sig inom specialistområden som ortopedisk manuell terapi (OMT), idrottsmedicin eller andningsvård – vilket är värt att fråga om när du väljer klinik, särskilt om ditt besvär är specifikt."
+      },
+      {
+        type: "h2",
+        text: "Vad kostar en fysioterapeut?"
+      },
+      {
+        type: "p",
+        text: "Det här är den fråga där fysioterapeut faktiskt skiljer sig mest från naprapat, kiropraktor och massage – och det är sällan förklarat tydligt."
+      },
+      {
+        type: "p",
+        text: "Om kliniken har vårdavtal med din region betalar du en patientavgift, inte fullt marknadspris. Beloppet sätts av respektive region: i Region Stockholm är patientavgiften 275 kronor per besök (2026) för de flesta öppenvårdsbesök, oavsett om du träffar en läkare eller en fysioterapeut. Andra regioner sätter sina egna nivåer, ofta i ett liknande spann – kontrollera alltid din regions patientavgifter innan du bokar."
+      },
+      {
+        type: "p",
+        text: "Det här räknas dessutom in i högkostnadsskyddet: så fort dina sammanlagda avgifter för öppenvård når 1 450 kronor under en tolvmånadersperiod får du ett frikort, och resten av perioden är vården avgiftsfri. Det gäller enbart besök hos vårdgivare med regionavtal – ett besök hos en privat klinik utan avtal räknas inte in."
+      },
+      {
+        type: "p",
+        text: "Om kliniken är privat utan vårdavtal sätter den sitt eget pris, och då gäller inte patientavgift eller högkostnadsskydd. Ett förstabesök hos den typen av klinik ligger ofta i spannet 600–900 kronor, i linje med vad du ser hos privata naprapater och kiropraktorer."
+      },
+      {
+        type: "p",
+        text: "Kort sagt: samma yrkestitel kan kosta 275 kronor eller 800 kronor beroende på vilken typ av mottagning du väljer – och det är den enskilt vanligaste missuppfattningen om fysioterapi i Sverige. Fråga alltid kliniken rakt ut: \"Har ni vårdavtal med regionen?\""
+      },
+      {
+        type: "h2",
+        text: "Behöver du remiss?"
+      },
+      {
+        type: "p",
+        text: "Nej, oftast inte – men det beror på vad du söker vård för och var i landet du bor."
+      },
+      {
+        type: "p",
+        text: "För en vanlig, primärvårdsansluten fysioterapeut kan du i de allra flesta fall boka tid direkt, utan remiss från läkare. Vill du söka mer specialiserad fysioterapi, till exempel kopplad till ett sjukhus, kan du istället skicka en egen vårdbegäran (egenremiss) – ett brev eller formulär där du själv beskriver besvären, utan att först behöva träffa en läkare. En läkare gör sedan en medicinsk bedömning av begäran, vilket kan ta något längre tid än att gå via primärvården först."
+      },
+      {
+        type: "p",
+        text: "Exakt hur det fungerar varierar mellan regioner, så räkna med att dubbelkolla med din region eller direkt med kliniken innan du bokar – särskilt om du är osäker på om ditt besvär räknas som \"vanlig\" eller \"specialiserad\" fysioterapi."
+      },
+      {
+        type: "h2",
+        text: "Fysioterapeut, naprapat eller kiropraktor – vad är skillnaden?"
+      },
+      {
+        type: "p",
+        text: "Alla tre är legitimerade yrken som Socialstyrelsen reglerar, och alla tre kan hjälpa med smärta i rygg, nacke och leder. Den stora skillnaden är dels metod, dels tillgång:"
+      },
+      {
+        type: "list",
+        items: [
+          "Fysioterapeut – bredast fokus: rörelseanalys, träningsbaserad rehab, andningsvård, skade- och postoperativ vård. Enda yrket av de tre som ofta går att få via regionens vårdavtal till patientavgift.",
+          "Naprapat – manuell behandling av leder, muskler och nervsystem, ofta med inslag av massage och träningsråd. I praktiken nästan alltid privatbetalt.",
+          "Kiropraktor – manuell behandling med fokus på ledernas rörlighet, särskilt i ryggraden. Även det i praktiken nästan alltid privatbetalt."
+        ]
+      },
+      {
+        type: "p",
+        text: "Om du redan har koll på diagnosen och vill ha kroppsarbete, funkar ofta alla tre. Är du osäker på orsaken till besvären, eller vill du ha tillgång till subventionerat pris, är fysioterapeut oftast rätt startpunkt."
+      },
+      {
+        type: "h2",
+        text: "Så väljer du rätt fysioterapeut"
+      },
+      {
+        type: "list",
+        items: [
+          "Kontrollera legitimationen. Sök på namnet i Socialstyrelsens register – det tar en minut och är det enskilt bästa sättet att undvika oseriösa aktörer.",
+          "Fråga om vårdavtal, om priset spelar roll för dig. Det avgör om du betalar patientavgift eller fullt pris.",
+          "Leta efter specialisering som matchar ditt besvär – idrottsskada, graviditet, postoperativ rehab och kronisk smärta är olika fält, även inom samma yrkestitel.",
+          "Läs recensioner med rimlig skepsis. Många omdömen, konsekvent höga betyg över tid och specifika beskrivningar väger tyngre än enstaka femstjärniga korta omdömen.",
+          "Boka ett första besök som ett test. En bra fysioterapeut förklarar sin bedömning och sätter upp en tydlig plan – inte bara enstaka behandlingar utan mål."
+        ]
+      },
+      {
+        type: "h2",
+        text: "Vanliga anledningar att söka fysioterapeut"
+      },
+      {
+        type: "list",
+        items: [
+          "Rehabilitering efter operation – knä, axel, rygg och andra ingrepp där stegvis återuppbyggnad av rörlighet och styrka är avgörande.",
+          "Idrottsskador – löparknä, hälseneinflammation och andra belastningsskador.",
+          "Graviditet och bäckenbotten – ett område där fysioterapeuter har en specifik och ofta underskattad roll.",
+          "Kronisk smärta och långvariga besvär i rygg, nacke och axlar – ofta i kombination med FaR, fysisk aktivitet på recept.",
+          "Andningsbesvär och vård efter sjukdom, där fysioterapeuter arbetar tillsammans med annan vårdpersonal."
+        ]
+      },
+      {
+        type: "cta",
+        text: "Hitta fysioterapeut nära dig →"
+      }
+    ]
   }
 ];
 
