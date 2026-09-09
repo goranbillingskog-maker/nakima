@@ -96,15 +96,6 @@ export const Route = createFileRoute("/$service/$city/$clinic")({
       medicalSpecialty: "PhysicalTherapy",
     };
 
-    if (clinic.rating !== null && clinic.reviewCount !== null && clinic.reviewCount > 0) {
-      medicalBusiness.aggregateRating = {
-        "@type": "AggregateRating",
-        ratingValue: clinic.rating,
-        reviewCount: clinic.reviewCount,
-        bestRating: 5,
-        worstRating: 1,
-      };
-    }
     if (clinic.lat != null && clinic.lng != null) {
       medicalBusiness.geo = {
         "@type": "GeoCoordinates",

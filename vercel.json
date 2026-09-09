@@ -1,8 +1,20 @@
 {
   "outputDirectory": "dist/client",
+  "redirects": [
+    {
+      "source": "/magasin/vad-kostar-en-naprapat-2026",
+      "destination": "/magasin/vad-kostar-en-naprapat",
+      "permanent": true
+    },
+    {
+      "source": "/magasin/guide/naprapat-kiropraktor-eller-fysioterapeut",
+      "destination": "/magasin/naprapat-kiropraktor-eller-fysioterapeut",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
-      "source": "/((?!assets/|favicon.ico|robots.txt|llms.txt).*)",
+      "source": "/((?!assets/|images/|favicon.ico|favicon.png|robots.txt|llms.txt).*)",
       "destination": "/api/index"
     }
   ]

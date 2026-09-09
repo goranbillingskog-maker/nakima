@@ -4,6 +4,7 @@ import articlePris from "@/assets/article-pris.jpg";
 import massageClassic from "@/assets/massage-classic.jpg";
 import massagePrice from "@/assets/massage-price.jpg";
 import massageStress from "@/assets/massage-stress.jpg";
+import articlePelare from "@/assets/pelare-naprapat-hero.jpg";
 
 
 export interface ArticleFaq {
@@ -12,9 +13,19 @@ export interface ArticleFaq {
 }
 
 export interface ArticleContentSection {
-  type: "p" | "h2" | "list" | "cta";
+  type: "p" | "h2" | "h3" | "list" | "table" | "image" | "callout" | "cta";
   text?: string;
   items?: string[];
+  ordered?: boolean;
+  headers?: string[];
+  rows?: string[][];
+  src?: string;
+  alt?: string;
+  caption?: string;
+  title?: string;
+  variant?: "warning" | "info";
+  href?: string;
+  targetService?: string;
 }
 
 export interface Article {
@@ -25,6 +36,9 @@ export interface Article {
   image: string;
   byline: string;
   datePublished: string;
+  dateModified?: string;
+  updatedYear?: number;
+  reviewed?: boolean;
   metaTitle: string;
   metaDescription: string;
   faqs: ArticleFaq[];
@@ -32,6 +46,371 @@ export interface Article {
 }
 
 export const articles: Article[] = [
+  {
+    slug: "naprapat-kiropraktor-eller-fysioterapeut",
+    title: "Naprapat, kiropraktor eller fysioterapeut – så väljer du rätt",
+    tag: "Guide",
+    excerpt: "Både naprapater, kiropraktorer och fysioterapeuter behandlar ont i muskler och leder. Skillnaden sitter mer i arbetssätt än i titel – här är en tydlig guide till vem du ska boka, och när du inte ska boka alls.",
+    image: articlePelare,
+    byline: "Nakima redaktionen",
+    datePublished: "2026-09-09",
+    dateModified: "2026-09-09",
+    updatedYear: 2026,
+    reviewed: false,
+    metaTitle: "Skillnad naprapat, kiropraktor och fysioterapeut | Nakima",
+    metaDescription: "Vad är skillnaden mellan naprapat, kiropraktor, fysioterapeut och massör? Jämför utbildning, tekniker, pris, remiss och när du ska välja vem – plus när du ska till akuten.",
+    faqs: [
+      {
+        q: "Är naprapat eller kiropraktor bäst?",
+        a: "Varken eller som regel. Båda är legitimerade och behandlar liknande besvär. Välj efter arbetssätt, omdöme och tillgänglighet. Har du stark åsikt om justering – välj en terapeut som är tydlig med hur hen jobbar."
+      },
+      {
+        q: "Kan jag gå till både naprapat och kiropraktor?",
+        a: "Ja. Många testar en yrkesgrupp och byter om det inte ger effekt på tre till fem besök, eller kombinerar manuell behandling med fysioterapi för träning."
+      },
+      {
+        q: "Hur många gånger behöver jag gå?",
+        a: "Akuta, okomplicerade besvär viker ofta efter några gånger. Långvariga besvär kräver mer tid och egen träning. Misstänker terapeuten att du inte blir hjälpt ska hen säga det."
+      },
+      {
+        q: "Gör behandlingen ont?",
+        a: "Det kan vara ömt, särskilt vid triggerpunkter eller efter första justeringen. Det ska inte vara skrämmande. Säg till om något känns fel."
+      },
+      {
+        q: "Kan jag använda friskvårdsbidraget hos naprapat eller kiropraktor?",
+        a: "Ja om syftet är friskvård, inte behandling av en skada eller diagnos. Kliniken ska kunna förklara skillnaden."
+      },
+      {
+        q: "Behöver jag remiss?",
+        a: "Nej för privat naprapat, kiropraktor och massage. Privat fysioterapeut bokas i regel utan remiss. I regionens regi varierar direktaccess."
+      },
+      {
+        q: "Vad är skillnaden mellan naprapat och fysioterapeut?",
+        a: "Naprapaten arbetar oftare manuellt med muskler och leder. Fysioterapeuten lägger mer tid på tester, doserad träning och rehabilitering. Överlappet är stort."
+      }
+    ],
+    content: [
+      {
+        type: "p",
+        text: "**Kort svar:** Naprapater och kiropraktorer är båda legitimerade och jobbar manuellt med muskler och leder. Naprapaten har ofta en bredare verktygslåda mot mjukdelar. Kiropraktorn har ofta mer fokus på leder, ryggrad och nervfunktion. Fysioterapeuten lägger tyngdpunkten på undersökning, träning och rehabilitering. En massör behandlar spänningar men ställer inte medicinsk diagnos. I praktiken skiljer enskilda terapeuter mer än titlarna – jämför därför inriktning, inte bara yrke."
+      },
+      {
+        type: "p",
+        text: "Att förstå orsaken är första steget mot en smärtfri rygg. Den här guiden hjälper dig välja rätt dörr – och veta när dörren ska vara akuten i stället."
+      },
+      {
+        type: "h2",
+        text: "Så väljer du på 30 sekunder"
+      },
+      {
+        type: "p",
+        text: "Använd det här som start – inte som diagnos."
+      },
+      {
+        type: "list",
+        items: [
+          "**Stel, spänd, låst eller “skjuter till” i rygg eller nacke** och du vill ha händerna på plats: börja hos **naprapat eller kiropraktor**.",
+          "**Du vill framför allt få ett träningsprogram**, komma tillbaka efter skada eller operation, eller har en långvarig funktionsnedsättning: börja hos **fysioterapeut**.",
+          "**Du är öm och stressad** men har ingen tydlig skada: **massage** eller friskvårdande behandling.",
+          "**Domningar, svaghet, feber, trauma, oväntad viktnedgång, problem med urin eller avföring, eller smärta som inte liknar “vanlig rygg”:** kontakta **1177** eller sök akut vård. Boka inte förstahandsval hos manuell terapeut."
+        ]
+      },
+      {
+        type: "p",
+        text: "Många kliniker har flera yrkesgrupper under samma tak. Det är ofta den bästa lösningen – då kan du slussas rätt utan att börja om."
+      },
+      {
+        type: "image",
+        src: "/images/magasin/naprapat-kiropraktor-eller-fysioterapeut/02-tre-yrken-jamforelse.jpg",
+        alt: "Tre behandlingssituationer: mjukdelsbehandling, manuell ledbehandling och aktiv rehab med gummiband.",
+        caption: "Samma besvär kan mötas på tre sätt: mjukdelsbehandling, ledarbete och aktiv träning. Titeln säger mindre än vad som faktiskt händer i rummet."
+      },
+      {
+        type: "cta",
+        text: "Hitta behandlare nära dig →",
+        targetService: "all"
+      },
+      {
+        type: "h2",
+        text: "Jämförelse i tabell"
+      },
+      {
+        type: "p",
+        text: "Siffror och inriktning är typiska för Sverige 2026. Enskilda terapeuter vidareutbildar sig och överlappar varandra."
+      },
+      {
+        type: "table",
+        headers: ["", "Naprapat", "Kiropraktor", "Fysioterapeut", "Massör / massageterapeut"],
+        rows: [
+          ["Huvudfokus", "Muskler, leder och rörelse – hitta och behandla orsaken", "Ledfunktion, ofta ryggrad och nervsystem", "Funktion, träning och rehabilitering", "Spänning, cirkulation, återhämtning"],
+          ["Vanliga tekniker", "Massage, triggerpunkt, mobilisering, justering, stretch, rehab", "Justering/manipulation, mobilisering, mjukdel, övningar", "Träningsprogram, mobilisering, smärthantering, ibland manuell terapi", "Klassisk, idrott, djupvävnad, triggerpunkt"],
+          ["Typiska besvär", "Ryggskott, nackspärr, spänningshuvudvärk, idrotts- och kontorsbesvär", "Rygg, nacke, ischiasliknande besvär, ledbesvär", "Efter skada/operation, långvarig smärta, balans, styrka", "Stelhet, stress, träningsvärk"],
+          ["Utbildning i Sverige", "4 år + 1 års praktik", "5 år (Sverige eller utländsk examen som godkänns)", "3 år högskola/universitet", "Varierar; diplomerad utbildning, inte legitimationsyrke"],
+          ["Legitimation", "Ja, Socialstyrelsen", "Ja, Socialstyrelsen", "Ja, Socialstyrelsen", "Nej"],
+          ["Remiss", "Nej i privat vård", "Nej i privat vård", "Ofta nej privat; i offentlig vård varierar det per region", "Nej"],
+          ["Pris privat, riktmärke", "Cirka 700–950 kr", "Cirka 700–950 kr", "Cirka 600–1 000 kr privat; patientavgift vid regionavtal", "Cirka 500–900 kr / 50–60 min"],
+          ["Friskvårdsbidrag", "Ja, om behandlingen är friskvård – inte sjukvård av skada", "Samma princip", "Sällan för medicinsk rehab; vissa friskvårdande pass", "Oftast ja, när syftet är friskvård"]
+        ]
+      },
+      {
+        type: "p",
+        text: "Priserna varierar med stad, erfarenhet och om första besöket är längre. Se Nakimas prisguider för aktuella spann."
+      },
+      {
+        type: "h2",
+        text: "Vad gör en naprapat?"
+      },
+      {
+        type: "p",
+        text: "En naprapat är en legitimerad vårdgivare som undersöker, behandlar och rehabiliterar besvär i rörelseapparaten – muskler, leder, senor och nerver. Ordet kommer från tjeckiskans *napravit* (korrigera) och latinets *pathos* (lidande): att korrigera orsaken till lidandet."
+      },
+      {
+        type: "p",
+        text: "På ett första besök får du vanligtvis:"
+      },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "En genomgång av besväret, arbete, träning och tidigare skador.",
+          "Undersökning av rörlighet, styrka, smärta och neurologiska tecken.",
+          "En bedömning och en plan – inte bara “ett knäpp och hej då”.",
+          "Manuell behandling och ofta hemövningar."
+        ]
+      },
+      {
+        type: "p",
+        text: "Teknikerna blandas. Det kan vara mjukdelsbehandling, triggerpunkter, mobilisering, ledjustering, stretch och i vissa fall tillägg som dry needling eller stötvåg – om terapeuten är utbildad för det."
+      },
+      {
+        type: "p",
+        text: "Naprapati passar ofta när du vill ha **både händer och en förklaring**. Det är ett vanligt förstahandsval vid ryggskott, nackspärr, kontorsnacke och idrottsrelaterad överbelastning."
+      },
+      {
+        type: "image",
+        src: "/images/magasin/naprapat-kiropraktor-eller-fysioterapeut/03-manuell-behandling-nacke-rygg.jpg",
+        alt: "Närbild på terapeuthänder som behandlar övre ryggen på en brits i dagsljus.",
+        caption: "Manuell behandling är ett hantverk. Tryck, tempo och teknik anpassas efter vävnad – inte efter en standardmall."
+      },
+      {
+        type: "h2",
+        text: "Vad gör en kiropraktor?"
+      },
+      {
+        type: "p",
+        text: "En kiropraktor är också legitimerad och arbetar med besvär i rörelseapparaten, med särskilt intresse för hur leder – framför allt i ryggraden – påverkar funktion och nervsystem."
+      },
+      {
+        type: "p",
+        text: "Det de flesta förknippar med kiropraktik är **justeringen**: en snabb, precis rörelse i en led som ibland ger ett knäpp. Knäppet är gas som släpps i ledvätskan, inte ett ben som “går rätt”. Många moderna kiropraktorer kombinerar justering med mjukdelsbehandling och övningar. Vissa patienter föredrar mobilisering utan den snabba impulsen – säg till."
+      },
+      {
+        type: "p",
+        text: "Kiropraktik kan passa när besväret känns **låst**, när rörligheten i en led är nedsatt, eller när du tidigare blivit hjälpt av justering. Det är inte automatiskt “bättre för ryggraden än naprapati”. Det är ett annat grepp mot samma system."
+      },
+      {
+        type: "image",
+        src: "/images/magasin/naprapat-kiropraktor-eller-fysioterapeut/07-kiropraktik-behandling.jpg",
+        alt: "Kiropraktor undersöker och behandlar en patient i sidoläge på en behandlingsbänk.",
+        caption: "En justering ska kännas kontrollerad. Du ska alltid få veta vad som planeras – och kunna tacka nej till enskilda tekniker."
+      },
+      {
+        type: "h2",
+        text: "Vad gör en fysioterapeut?"
+      },
+      {
+        type: "p",
+        text: "Fysioterapeut – tidigare sjukgymnast – är det bredaste legitimationsyrket av de tre. I offentlig vård möter du fysioterapeuten efter operation, vid långvarig smärta, KOL, stroke, barnsjukvård och idrottsskador. I privat sektor jobbar många nära naprapater och kiropraktorer med precis samma vardagsbesvär: nacke, axel, ländrygg, knä."
+      },
+      {
+        type: "p",
+        text: "Skillnaden i rummet är oftast **tidsfördelningen**. Fysioterapeuten lägger mer tid på tester, doserad träning och att du själv ska kunna styra återhämtningen. Manuell behandling kan ingå, men är sällan hela besöket."
+      },
+      {
+        type: "p",
+        text: "Välj fysioterapeut när:"
+      },
+      {
+        type: "list",
+        items: [
+          "du behöver ett program att följa flera gånger i veckan",
+          "du är rädd för att röra dig och behöver guidning",
+          "du kommer från operation, gips eller en längre sjukskrivning",
+          "smärtan har pågått länge och “bara behandling på britsen” inte räcker"
+        ]
+      },
+      {
+        type: "image",
+        src: "/images/magasin/naprapat-kiropraktor-eller-fysioterapeut/04-fysioterapi-rehab.jpg",
+        alt: "Fysioterapeut guidar en patient i en kontrollerad övning på matta i ljust rehab rum.",
+        caption: "Långsiktig förändring sitter sällan i ett enda grepp. Den sitter i upprepningen du klarar att göra hemma."
+      },
+      {
+        type: "h2",
+        text: "Var passar massören in?"
+      },
+      {
+        type: "p",
+        text: "Massage är inte ett legitimationsyrke på samma sätt. En seriös massör eller massageterapeut har diplomerad utbildning och tydliga gränser: behandling av spänning, cirkulation och återhämtning – inte medicinsk utredning."
+      },
+      {
+        type: "p",
+        text: "Välj massage när målet är att slappna av, minska kontorsstelhet eller återhämta dig efter träning. Har du akut ryggskott med utstrålning, nedsatt kraft eller oklar smärta är naprapat, kiropraktor eller fysioterapeut rätt första steg."
+      },
+      {
+        type: "p",
+        text: "Läs mer i guiderna [Olika typer av massage](/magasin/olika-typer-av-massage-vilken-passar-dig) och [Vad kostar massage?](/magasin/vad-kostar-massage-2026)."
+      },
+      {
+        type: "h2",
+        text: "Utbildning, legitimation och titelskydd"
+      },
+      {
+        type: "p",
+        text: "Det här är den del många artiklar slarvar med."
+      },
+      {
+        type: "list",
+        items: [
+          "**Naprapat** utbildas i Sverige på Naprapathögskolan / NIMM i Stockholm, fyra år plus ett praktikår, därefter legitimation från Socialstyrelsen. Titeln är skyddad.",
+          "**Kiropraktor** har en femårig utbildning. I Sverige finns kiropraktorutbildning, och många har utländsk examen som prövas för svensk legitimation. Titeln är skyddad.",
+          "**Fysioterapeut** är en treårig högskoleutbildning och legitimationsyrke. Titeln sjukgymnast får fortfarande användas av den som har den äldre benämningen.",
+          "**Massör** saknar motsvarande statliga legitimation. Kvaliteten sitter i utbildning, försäkring, hygien och omdöme."
+        ]
+      },
+      {
+        type: "p",
+        text: "Kontrollera legitimation i Socialstyrelsens register om du är osäker. På Nakima samlar vi granskade kliniker just för att den kontrollen inte ska ligga på dig ensam."
+      },
+      {
+        type: "p",
+        text: "En viktig nyans: **skillnaden mellan två naprapater kan vara större än skillnaden mellan en naprapat och en kiropraktor.** En naprapat med idrottsprofil och en kiropraktor som jobbar mycket med mjukdelar kan behandla mer lika än deras titlar antyder."
+      },
+      {
+        type: "h2",
+        text: "Pris, remiss, försäkring och friskvård"
+      },
+      {
+        type: "h3",
+        text: "Behöver du remiss?"
+      },
+      {
+        type: "p",
+        text: "Nej för privat naprapat, kiropraktor och massage. För fysioterapi i regionens regi varierar direktaccess mellan regioner. Privat fysioterapeut bokar du i regel utan remiss."
+      },
+      {
+        type: "h3",
+        text: "Vad kostar det?"
+      },
+      {
+        type: "p",
+        text: "Ett privat första besök hos naprapat eller kiropraktor ligger ofta runt 700–950 kronor. Uppföljning kan vara något lägre. Massage prissätts per tid. Fysioterapi via regionen går på patientavgift och kan ingå i högkostnadsskyddet. Vissa naprapater har eller har haft vårdavtal – det är ovanligare och ska framgå på kliniken."
+      },
+      {
+        type: "p",
+        text: "Fördjupning: [Vad kostar en naprapat?](/magasin/vad-kostar-en-naprapat)."
+      },
+      {
+        type: "h3",
+        text: "Friskvårdsbidrag – ja och nej"
+      },
+      {
+        type: "p",
+        text: "Skatteverket skiljer på **friskvård** och **sjukvård**."
+      },
+      {
+        type: "list",
+        items: [
+          "Friskvård: förebygga stelhet, minska stress, underhålla rörlighet. Bidraget kan användas. Moms läggs på.",
+          "Sjukvård: behandla en skada, ett ryggskott, en diagnos. Bidraget ska inte användas. Ofta 0 % moms."
+        ]
+      },
+      {
+        type: "p",
+        text: "Samma terapeut kan alltså erbjuda båda – men du bokar olika tjänster. Sjukvårdsförsäkring täcker ibland naprapat, kiropraktor och fysioterapeut. Kolla villkor innan första besöket."
+      },
+      {
+        type: "h2",
+        text: "När ska du inte boka manuell terapi?"
+      },
+      {
+        type: "callout",
+        title: "Varningstecken – kontakta 1177 eller sök akut vård",
+        variant: "warning",
+        text: "Manuell terapi är inte förstahandsval vid varningssignaler. Kontakta 1177 eller sök akut vård vid bland annat:\n• Nytillkommen svaghet i arm eller ben\n• Domningar i ljumskar eller underliv, eller svårt att kontrollera urin och avföring\n• Ryggsmärta efter fall eller olycka\n• Smärta med feber, nattliga svettningar eller oförklarlig viktnedgång\n• Svår, annorlunda huvudvärk med nackstelhet och allmänt påverkat tillstånd\n• Känd benskörhet med plötslig stark ryggsmärta\n• Smärta som inte liknar tidigare “vanliga” rygg- eller nackbesvär och snabbt förvärras"
+      },
+      {
+        type: "p",
+        text: "En seriös terapeut ställer de här frågorna och hänvisar vidare. Om någon avfärdar dem – välj en annan klinik."
+      },
+      {
+        type: "image",
+        src: "/images/magasin/naprapat-kiropraktor-eller-fysioterapeut/05-kontorsnacke.jpg",
+        alt: "Kontorsarbetare med nackbesvär vid laptop i ett ljust hemma-kontor.",
+        caption: "Vanlig kontorsnacke är sällan farlig – men den blir långvarig om orsaken inte ändras. Behandling utan ergonomi och rörelse räcker sällan."
+      },
+      {
+        type: "p",
+        text: "Läs också [Därför får vi nacksmärta av kontorsarbete](/magasin/darfor-far-vi-nacksmarta-av-kontorsarbete) och [Ryggskott: När ska man söka hjälp?](/magasin/ryggskott-nar-ska-man-soka-hjalp)."
+      },
+      {
+        type: "h2",
+        text: "Så läser du en klinikprofil"
+      },
+      {
+        type: "p",
+        text: "När du väl vet ungefär vilken yrkesgrupp du vill träffa, jämför kliniken så här:"
+      },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "**Legitimation och titel** – framgår det vem som tar emot?",
+          "**Inriktning** – idrott, kontor, barn, långvarig smärta, graviditet?",
+          "**Tekniker** – bara justering, eller även rehab, stötvåg, dry needling?",
+          "**Tid och pris** – hur lång är första tiden, vad ingår?",
+          "**Betalning** – friskvård, försäkring, swish, ePassi, Benify?",
+          "**Omdömen** – läs de neutrala, inte bara femmorna.",
+          "**Logistik** – öppettider, drop-in, stadsdel, parkering."
+        ]
+      },
+      {
+        type: "p",
+        text: "Nakima är byggt för precis den jämförelsen. Filtrera på yrke och stad, läs profilen, boka där det känns rätt."
+      },
+      {
+        type: "image",
+        src: "/images/magasin/naprapat-kiropraktor-eller-fysioterapeut/06-hitta-klinik-nara.jpg",
+        alt: "Person letar upp en klinik i mobilen på en stilla stadsgata i höstljus."
+      },
+      {
+        type: "cta",
+        text: "Jämför kliniker på Nakima",
+        targetService: "naprapat"
+      },
+      {
+        type: "h2",
+        text: "Nästa steg"
+      },
+      {
+        type: "p",
+        text: "Du behöver inte välja perfekt första gången. Du behöver välja **tryggt**: legitimerad behandlare, tydlig plan, möjlighet att ompröva."
+      },
+      {
+        type: "list",
+        items: [
+          "Har du ont i ryggen? Börja med [Ryggskott: När ska man söka hjälp?](/magasin/ryggskott-nar-ska-man-soka-hjalp).",
+          "Har du kontorsnacke? Läs [Därför får vi nacksmärta av kontorsarbete](/magasin/darfor-far-vi-nacksmarta-av-kontorsarbete).",
+          "Vill du förstå priset innan du bokar? [Vad kostar en naprapat?](/magasin/vad-kostar-en-naprapat)."
+        ]
+      },
+      {
+        type: "cta",
+        text: "Hitta behandlare nära dig →",
+        targetService: "all"
+      }
+    ]
+  },
   {
     slug: "darfor-far-vi-nacksmarta-av-kontorsarbete",
     title: "Därför får vi nacksmärta av kontorsarbete",
@@ -125,7 +504,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "De flesta nackbesvär från kontorsarbete lindras med bättre ergonomi, rörelse och pauser inom några veckor. Men om smärtan är ihållande, sprider sig ner i armen, ger huvudvärk varje dag eller inte förbättras trots att du ändrat vanorna, kan det vara läge att låta en naprapat, kiropraktor eller fysioterapeut undersöka nacken. De kan identifiera vad som specifikt belastar just din nacke och ge en individanpassad behandlings- och träningsplan."
+        text: "De flesta nackbesvär från kontorsarbete lindras med bättre ergonomi, rörelse och pauser inom några veckor. Men om smärtan är ihållande, sprider sig ner i armen, ger huvudvärk varje dag eller inte förbättras trots att du ändrat vanorna, kan det vara läge att låta en naprapat, kiropraktor eller fysioterapeut undersöka nacken. De kan identifiera vad som specifikt belastar just din nacke och ge en individanpassad behandlings- och träningsplan. Läs vår guide om [naprapat, kiropraktor eller fysioterapeut – så väljer du rätt](/magasin/naprapat-kiropraktor-eller-fysioterapeut) för att välja rätt behandlare."
       },
       {
         type: "cta",
@@ -229,7 +608,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "Utanför de akuta varningstecknen ovan kan naprapater och kiropraktorer vara till stor hjälp för att lindra smärtan snabbare och komma igång med rörelse tryggt. Behandlingen kan innefatta mjukdelsbehandling, försiktig mobilisering och individuella råd om vilka rörelser som är säkra i just ditt skede av läkningen — samt ett upplägg för att minska risken att det händer igen."
+        text: "Utanför de akuta varningstecknen ovan kan naprapater och kiropraktorer vara till stor hjälp för att lindra smärtan snabbare och komma igång med rörelse tryggt. Behandlingen kan innefatta mjukdelsbehandling, försiktig mobilisering och individuella råd om vilka rörelser som är säkra i just ditt skede av läkningen — samt ett upplägg för att minska risken att det händer igen. Är du osäker på vilken yrkesgrupp som passar bäst? Läs vår jämförelse om [skillnaden mellan naprapat och kiropraktor](/magasin/naprapat-kiropraktor-eller-fysioterapeut)."
       },
       {
         type: "cta",
@@ -238,13 +617,15 @@ export const articles: Article[] = [
     ]
   },
   {
-    slug: "vad-kostar-en-naprapat-2026",
+    slug: "vad-kostar-en-naprapat",
     title: "Vad kostar en naprapat 2026?",
     tag: "Patientguide",
     excerpt: "Prisguide 2026: vad kostar första besöket och uppföljning hos naprapat, vad gäller för friskvårdsbidrag och försäkring — och vad påverkar priset.",
     image: articlePris,
     byline: "Nakima redaktionen",
     datePublished: "2026-08-13",
+    dateModified: "2026-08-13",
+    updatedYear: 2026,
     metaTitle: "Vad kostar en naprapat 2026? | Nakima",
     metaDescription: "Prisguide 2026: vad kostar första besöket och uppföljning hos naprapat, vad gäller för friskvårdsbidrag och försäkring — och vad påverkar priset.",
     faqs: [
@@ -258,7 +639,7 @@ export const articles: Article[] = [
       },
       {
         q: "Är naprapatbehandling dyrare än kiropraktik?",
-        a: "Prisnivåerna överlappar generellt — båda ligger oftast i samma spann (550–900 kr per besök). Skillnaden i pris beror mer på klinikens läge och utrustning än på behandlingsform."
+        a: "Prisnivåerna överlappar generellt — båda ligger oftast i samma spann (550–900 kr per besök). Skillnaden i pris beror mer på klinikens läge och utrustning än på behandlingsform. Se även vår kompletta guide [naprapat, kiropraktor eller fysioterapeut – så väljer du rätt](/magasin/naprapat-kiropraktor-eller-fysioterapeut)."
       },
       {
         q: "Varför kostar första besöket mer än uppföljningar?",

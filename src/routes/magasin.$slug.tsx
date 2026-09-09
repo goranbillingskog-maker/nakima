@@ -1,8 +1,21 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { articles } from "@/lib/articles-data";
+
+const LEGACY_SLUG_REDIRECTS: Record<string, string> = {
+  "vad-kostar-en-naprapat-2026": "vad-kostar-en-naprapat",
+};
 
 export const Route = createFileRoute("/magasin/$slug")({
   loader: ({ params }) => {
+    const targetSlug = LEGACY_SLUG_REDIRECTS[params.slug];
+    if (targetSlug) {
+      throw redirect({
+        to: "/magasin/$slug",
+        params: { slug: targetSlug },
+        statusCode: 301,
+      });
+    }
+
     const article = articles.find((a) => a.slug === params.slug);
     if (!article) {
       throw notFound();
@@ -14,15 +27,40 @@ export const Route = createFileRoute("/magasin/$slug")({
     const { article } = loaderData;
     const path = `/magasin/${article.slug}`;
 
-    const articleSchema = {
+    const isPillar = article.slug === "naprapat-kiropraktor-eller-fysioterapeut";
+    const articleSchema: Record<string, unknown> = {
       "@context": "https://schema.org",
-      "@type": "Article",
+      "@type": isPillar ? ["Article", "MedicalWebPage"] : "Article",
       "headline": article.title,
+      ...(isPillar ? { "alternativeHeadline": "Skillnad mellan naprapat, kiropraktor och fysioterapeut" } : {}),
       "description": article.metaDescription,
-      "image": `https://nakima.se${article.image}`,
-      "author": { "@type": "Organization", "name": "Nakima" },
-      "publisher": { "@type": "Organization", "name": "Nakima" },
+      "image": isPillar
+        ? [
+            "https://nakima.se/images/magasin/naprapat-kiropraktor-eller-fysioterapeut/01-hero-klinikmiljo.jpg",
+            "https://nakima.se/images/magasin/naprapat-kiropraktor-eller-fysioterapeut/02-tre-yrken-jamforelse.jpg"
+          ]
+        : `https://nakima.se${article.image}`,
+      "author": { "@type": "Organization", "name": "Nakima", "url": "https://nakima.se/" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Nakima",
+        "url": "https://nakima.se/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://nakima.se/favicon.png"
+        }
+      },
       "datePublished": article.datePublished,
+      ...(article.dateModified ? { "dateModified": article.dateModified } : {}),
+      ...(isPillar ? {
+        "about": [
+          { "@type": "Thing", "name": "Naprapati" },
+          { "@type": "Thing", "name": "Kiropraktik" },
+          { "@type": "Thing", "name": "Fysioterapi" },
+          { "@type": "Thing", "name": "Massage" }
+        ],
+        "keywords": "skillnad naprapat kiropraktor, naprapat eller kiropraktor, fysioterapeut, manuell terapi"
+      } : {}),
       "mainEntityOfPage": `https://nakima.se${path}`
     };
 
@@ -81,6 +119,68 @@ export const Route = createFileRoute("/magasin/$slug")({
   component: ArticlePage,
 });
 
+function renderFormattedText(text: string): React.ReactNode {
+  if (!text) return "";
+  const parts: React.ReactNode[] = [];
+  const regex = /(\[.*?\]\(.*?\)|\*\*.*?\*\*|\*.*?\*)/g;
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    const token = match[0];
+    if (token.startsWith("[") && token.includes("](")) {
+      const linkMatch = token.match(/\[(.*?)\]\((.*?)\)/);
+      if (linkMatch) {
+        const [, label, href] = linkMatch;
+        const isInternal = href.startsWith("/");
+        if (isInternal) {
+          parts.push(
+            <Link
+              key={match.index}
+              to={href}
+              className="text-ink font-semibold underline decoration-orange decoration-2 underline-offset-4 hover:text-orange transition-colors"
+            >
+              {label}
+            </Link>
+          );
+        } else {
+          parts.push(
+            <a
+              key={match.index}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-ink font-semibold underline decoration-orange decoration-2 underline-offset-4 hover:text-orange transition-colors"
+            >
+              {label}
+            </a>
+          );
+        }
+      }
+    } else if (token.startsWith("**") && token.endsWith("**")) {
+      parts.push(
+        <strong key={match.index} className="font-semibold text-ink">
+          {token.slice(2, -2)}
+        </strong>
+      );
+    } else if (token.startsWith("*") && token.endsWith("*")) {
+      parts.push(
+        <em key={match.index} className="italic">
+          {token.slice(1, -1)}
+        </em>
+      );
+    }
+    lastIndex = regex.lastIndex;
+  }
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+  return parts.length > 0 ? parts : text;
+}
+
 function ArticlePage() {
   const { article } = Route.useLoaderData();
 
@@ -112,10 +212,19 @@ function ArticlePage() {
 
       <article className="max-w-4xl mx-auto px-6 pt-12 pb-24">
         {/* Category & Date */}
-        <div className="flex items-center gap-4 mb-6 text-xs uppercase tracking-wider font-bold text-orange">
-          <span>{article.tag}</span>
+        <div className="flex flex-wrap items-center gap-3 mb-6 text-xs uppercase tracking-wider font-bold">
+          <span className="text-orange">{article.tag}</span>
           <span className="text-ink/20">•</span>
-          <span className="text-ink-soft font-normal">{article.datePublished}</span>
+          <span className="text-ink-soft font-normal">Publicerad {article.datePublished}</span>
+          {article.updatedYear && (
+            <>
+              <span className="text-ink/20">•</span>
+              <span className="inline-flex items-center gap-1.5 bg-paper border border-ink/15 px-2.5 py-0.5 text-ink text-[11px] font-semibold tracking-normal normal-case">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 inline-block" />
+                Uppdaterad för {article.updatedYear}
+              </span>
+            </>
+          )}
         </div>
 
         {/* Title */}
@@ -124,9 +233,16 @@ function ArticlePage() {
         </h1>
 
         {/* Byline */}
-        <p className="text-xs uppercase tracking-widest text-ink-soft mb-12">
+        <p className="text-xs uppercase tracking-widest text-ink-soft mb-8">
           Av: <span className="font-bold text-ink">{article.byline}</span>
         </p>
+
+        {article.reviewed === false && (
+          <div className="mb-10 p-4 bg-sage/30 border border-ink/10 text-xs text-ink-soft flex items-start gap-2.5">
+            <span className="font-bold text-ink whitespace-nowrap">ⓘ Redaktionell guide:</span>
+            <span>Denna artikel är under redaktionell framtagning och en medicinskt granskad version är på väg. Ersätter inte rådgivning eller diagnos från legitimerad vårdgivare.</span>
+          </div>
+        )}
 
         {/* Hero Image */}
         <div className="w-full aspect-[16/9] mb-12 overflow-hidden bg-sage">
@@ -144,25 +260,130 @@ function ArticlePage() {
           {article.content.map((section, idx) => {
             switch (section.type) {
               case "p":
-                return <p key={idx}>{section.text}</p>;
+                return <p key={idx}>{renderFormattedText(section.text || "")}</p>;
               case "h2":
                 return (
-                  <h2 key={idx} className="font-serif text-2xl md:text-3xl text-ink pt-6 mb-4">
+                  <h2 key={idx} className="font-serif text-2xl md:text-3xl text-ink pt-8 mb-4">
                     {section.text}
                   </h2>
                 );
-              case "list":
+              case "h3":
                 return (
+                  <h3 key={idx} className="font-serif text-xl md:text-2xl text-ink pt-6 mb-3 font-bold">
+                    {section.text}
+                  </h3>
+                );
+              case "list":
+                return section.ordered ? (
+                  <ol key={idx} className="list-decimal pl-6 space-y-3">
+                    {section.items?.map((item, itemIdx) => (
+                      <li key={itemIdx}>{renderFormattedText(item)}</li>
+                    ))}
+                  </ol>
+                ) : (
                   <ul key={idx} className="list-disc pl-6 space-y-3">
                     {section.items?.map((item, itemIdx) => (
-                      <li key={itemIdx}>{item}</li>
+                      <li key={itemIdx}>{renderFormattedText(item)}</li>
                     ))}
                   </ul>
                 );
+              case "table":
+                return (
+                  <div key={idx} className="my-10 overflow-x-auto -mx-6 px-6 sm:mx-0 sm:px-0">
+                    <div className="inline-block min-w-full align-middle border border-ink/20 bg-paper">
+                      <table className="min-w-full divide-y divide-ink/15 text-sm text-left">
+                        {section.headers && (
+                          <thead className="bg-sage/40">
+                            <tr>
+                              {section.headers.map((h, hIdx) => (
+                                <th
+                                  key={hIdx}
+                                  scope="col"
+                                  className="px-4 py-3.5 text-xs font-bold uppercase tracking-wider text-ink border-r border-ink/10 last:border-r-0 whitespace-nowrap"
+                                >
+                                  {h}
+                                </th>
+                              ))}
+                            </tr>
+                          </thead>
+                        )}
+                        <tbody className="divide-y divide-ink/10">
+                          {section.rows?.map((row, rIdx) => (
+                            <tr
+                              key={rIdx}
+                              className={rIdx % 2 === 0 ? "bg-paper" : "bg-sage/10 hover:bg-sage/20 transition-colors"}
+                            >
+                              {row.map((cell, cIdx) => (
+                                <td
+                                  key={cIdx}
+                                  className={`px-4 py-3 leading-relaxed border-r border-ink/10 last:border-r-0 ${
+                                    cIdx === 0 ? "font-semibold text-ink whitespace-nowrap bg-sage/20" : "text-ink-soft min-w-[170px]"
+                                  }`}
+                                >
+                                  {renderFormattedText(cell)}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    <p className="text-xs text-ink-soft/60 mt-2 sm:hidden italic">← Svep i sidled för att se hela tabellen →</p>
+                  </div>
+                );
+              case "image":
+                return (
+                  <figure key={idx} className="my-12">
+                    <div className="w-full aspect-[16/10] overflow-hidden bg-sage border border-ink/10">
+                      <img
+                        src={section.src}
+                        alt={section.alt || ""}
+                        width={1176}
+                        height={784}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    {section.caption && (
+                      <figcaption className="mt-3 text-xs md:text-sm text-ink-soft/80 italic text-center px-4">
+                        {section.caption}
+                      </figcaption>
+                    )}
+                  </figure>
+                );
+              case "callout":
+                return (
+                  <aside
+                    key={idx}
+                    className={`my-10 p-6 md:p-8 border-l-4 ${
+                      section.variant === "warning"
+                        ? "border-amber-600 bg-amber-50/75 dark:bg-amber-950/20 text-ink"
+                        : "border-orange bg-orange/5 text-ink"
+                    }`}
+                  >
+                    {section.title && (
+                      <h4 className="font-serif text-xl font-bold mb-3 flex items-center gap-2 text-ink">
+                        {section.variant === "warning" && <span className="text-amber-600 font-sans">⚠️</span>}
+                        {section.title}
+                      </h4>
+                    )}
+                    <div className="text-sm md:text-base leading-relaxed space-y-2">
+                      {section.text?.split("\n").map((line, lIdx) => (
+                        <p key={lIdx}>{renderFormattedText(line)}</p>
+                      ))}
+                    </div>
+                  </aside>
+                );
               case "cta": {
                 const isMassage = section.text?.toLowerCase().includes("massör") || section.text?.toLowerCase().includes("massage");
-                const targetService = isMassage ? "massage" : "naprapat";
-                const questionText = isMassage ? "Behöver du boka en massagebehandling?" : "Behöver du träffa en professionell terapeut?";
+                const isKiropraktor = section.text?.toLowerCase().includes("kiropraktor");
+                const isAll = section.targetService === "all" || section.text?.includes("behandlare") || section.text?.includes("Jämför");
+                const targetService = isAll ? "naprapat" : isMassage ? "massage" : isKiropraktor ? "kiropraktor" : "naprapat";
+                const questionText = isAll 
+                  ? "Behöver du hitta eller jämföra behandlare nära dig?"
+                  : isMassage 
+                  ? "Behöver du boka en massagebehandling?" 
+                  : "Behöver du träffa en professionell terapeut?";
                 return (
                   <div key={idx} className="my-10 p-8 border border-orange bg-orange/5 text-center">
                     <p className="font-serif text-xl text-ink mb-4">
@@ -202,7 +423,7 @@ function ArticlePage() {
           <p className="mb-2">
             <strong>Om innehållet:</strong> Den här artikeln är allmän hälsoinformation, framtagen redaktionellt av Nakima, och ersätter inte medicinsk rådgivning, diagnos eller behandling från läkare eller annan legitimerad vårdgivare. Reagera aldrig på egen hand vid akuta eller allvarliga symtom — kontakta 1177 för sjukvårdsrådgivning eller ring 112 vid livshotande tillstånd. Nakima ansvarar inte för beslut som fattas enbart baserat på innehållet i denna artikel.
           </p>
-          {article.slug === "vad-kostar-en-naprapat-2026" && (
+          {(article.slug === "vad-kostar-en-naprapat" || article.slug === "vad-kostar-en-naprapat-2026") && (
             <p>
               Prisuppgifter och skatteregler i denna artikel är vägledande och kan ändras. Kontrollera alltid aktuellt pris med kliniken och aktuella regler med Skatteverket eller din arbetsgivare innan du bokar.
             </p>

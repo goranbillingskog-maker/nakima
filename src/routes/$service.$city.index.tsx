@@ -108,11 +108,6 @@ export const Route = createFileRoute("/$service/$city/")({
                   addressCountry: "SE",
                 },
                 telephone: c.phone,
-                aggregateRating: {
-                  "@type": "AggregateRating",
-                  ratingValue: c.rating,
-                  reviewCount: c.reviewCount,
-                },
               },
             })),
           }),

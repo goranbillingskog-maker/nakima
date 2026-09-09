@@ -18,6 +18,7 @@ import { Route as MagasinIndexRouteImport } from './routes/magasin.index'
 import { Route as MagasinSlugRouteImport } from './routes/magasin.$slug'
 import { Route as ServiceCityIndexRouteImport } from './routes/$service.$city.index'
 import { Route as ServiceCityClinicRouteImport } from './routes/$service.$city.$clinic'
+import { Route as MagasinGuideSlugRouteImport } from './routes/magasin.guide.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -64,6 +65,11 @@ const ServiceCityClinicRoute = ServiceCityClinicRouteImport.update({
   path: '/$clinic',
   getParentRoute: () => ServiceCityRoute,
 } as any)
+const MagasinGuideSlugRoute = MagasinGuideSlugRouteImport.update({
+  id: '/magasin/guide/$slug',
+  path: '/magasin/guide/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -74,6 +80,7 @@ export interface FileRoutesByFullPath {
   '/magasin/$slug': typeof MagasinSlugRoute
   '/magasin/': typeof MagasinIndexRoute
   '/$service/$city/$clinic': typeof ServiceCityClinicRoute
+  '/magasin/guide/$slug': typeof MagasinGuideSlugRoute
   '/$service/$city/': typeof ServiceCityIndexRoute
 }
 export interface FileRoutesByTo {
@@ -84,6 +91,7 @@ export interface FileRoutesByTo {
   '/magasin/$slug': typeof MagasinSlugRoute
   '/magasin': typeof MagasinIndexRoute
   '/$service/$city/$clinic': typeof ServiceCityClinicRoute
+  '/magasin/guide/$slug': typeof MagasinGuideSlugRoute
   '/$service/$city': typeof ServiceCityIndexRoute
 }
 export interface FileRoutesById {
@@ -96,6 +104,7 @@ export interface FileRoutesById {
   '/magasin/$slug': typeof MagasinSlugRoute
   '/magasin/': typeof MagasinIndexRoute
   '/$service/$city/$clinic': typeof ServiceCityClinicRoute
+  '/magasin/guide/$slug': typeof MagasinGuideSlugRoute
   '/$service/$city/': typeof ServiceCityIndexRoute
 }
 export interface FileRouteTypes {
@@ -109,6 +118,7 @@ export interface FileRouteTypes {
     | '/magasin/$slug'
     | '/magasin/'
     | '/$service/$city/$clinic'
+    | '/magasin/guide/$slug'
     | '/$service/$city/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -119,6 +129,7 @@ export interface FileRouteTypes {
     | '/magasin/$slug'
     | '/magasin'
     | '/$service/$city/$clinic'
+    | '/magasin/guide/$slug'
     | '/$service/$city'
   id:
     | '__root__'
@@ -130,6 +141,7 @@ export interface FileRouteTypes {
     | '/magasin/$slug'
     | '/magasin/'
     | '/$service/$city/$clinic'
+    | '/magasin/guide/$slug'
     | '/$service/$city/'
   fileRoutesById: FileRoutesById
 }
@@ -141,6 +153,7 @@ export interface RootRouteChildren {
   ServiceCityRoute: typeof ServiceCityRouteWithChildren
   MagasinSlugRoute: typeof MagasinSlugRoute
   MagasinIndexRoute: typeof MagasinIndexRoute
+  MagasinGuideSlugRoute: typeof MagasinGuideSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -208,6 +221,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServiceCityClinicRouteImport
       parentRoute: typeof ServiceCityRoute
     }
+    '/magasin/guide/$slug': {
+      id: '/magasin/guide/$slug'
+      path: '/magasin/guide/$slug'
+      fullPath: '/magasin/guide/$slug'
+      preLoaderRoute: typeof MagasinGuideSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -233,6 +253,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServiceCityRoute: ServiceCityRouteWithChildren,
   MagasinSlugRoute: MagasinSlugRoute,
   MagasinIndexRoute: MagasinIndexRoute,
+  MagasinGuideSlugRoute: MagasinGuideSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
