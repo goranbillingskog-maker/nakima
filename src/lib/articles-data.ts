@@ -38,7 +38,6 @@ export interface Article {
   datePublished: string;
   dateModified?: string;
   updatedYear?: number;
-  reviewed?: boolean;
   metaTitle: string;
   metaDescription: string;
   faqs: ArticleFaq[];
@@ -56,7 +55,6 @@ export const articles: Article[] = [
     datePublished: "2026-09-09",
     dateModified: "2026-09-09",
     updatedYear: 2026,
-    reviewed: false,
     metaTitle: "Skillnad naprapat, kiropraktor och fysioterapeut | Nakima",
     metaDescription: "Vad är skillnaden mellan naprapat, kiropraktor, fysioterapeut och massör? Jämför utbildning, tekniker, pris, remiss och när du ska välja vem – plus när du ska till akuten.",
     faqs: [

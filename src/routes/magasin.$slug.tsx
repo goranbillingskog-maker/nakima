@@ -237,13 +237,6 @@ function ArticlePage() {
           Av: <span className="font-bold text-ink">{article.byline}</span>
         </p>
 
-        {article.reviewed === false && (
-          <div className="mb-10 p-4 bg-sage/30 border border-ink/10 text-xs text-ink-soft flex items-start gap-2.5">
-            <span className="font-bold text-ink whitespace-nowrap">ⓘ Redaktionell guide:</span>
-            <span>Denna artikel är under redaktionell framtagning och en medicinskt granskad version är på väg. Ersätter inte rådgivning eller diagnos från legitimerad vårdgivare.</span>
-          </div>
-        )}
-
         {/* Hero Image */}
         <div className="w-full aspect-[16/9] mb-12 overflow-hidden bg-sage">
           <img
@@ -421,7 +414,7 @@ function ArticlePage() {
         {/* Disclaimer */}
         <div className="mt-16 pt-8 border-t border-ink/10 text-xs text-ink-soft/80 leading-relaxed">
           <p className="mb-2">
-            <strong>Om innehållet:</strong> Den här artikeln är allmän hälsoinformation, framtagen redaktionellt av Nakima, och ersätter inte medicinsk rådgivning, diagnos eller behandling från läkare eller annan legitimerad vårdgivare. Reagera aldrig på egen hand vid akuta eller allvarliga symtom — kontakta 1177 för sjukvårdsrådgivning eller ring 112 vid livshotande tillstånd. Nakima ansvarar inte för beslut som fattas enbart baserat på innehållet i denna artikel.
+            <strong>Om innehållet:</strong> Innehållet är allmän information och ersätter inte rådgivning eller diagnos från legitimerad vårdgivare. Reagera aldrig på egen hand vid akuta eller allvarliga symtom — kontakta 1177 för sjukvårdsrådgivning eller ring 112 vid livshotande tillstånd. Nakima ansvarar inte för beslut som fattas enbart baserat på innehållet i denna artikel.
           </p>
           {(article.slug === "vad-kostar-en-naprapat" || article.slug === "vad-kostar-en-naprapat-2026") && (
             <p>
