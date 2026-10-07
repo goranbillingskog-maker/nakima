@@ -12,14 +12,15 @@ import {
   ChevronDown,
   HelpCircle,
 } from "lucide-react";
+import { z } from "zod";
 import { sendContactMessage, type ContactFormData } from "@/lib/contact";
 
+const kontaktSearchSchema = z.object({
+  amne: z.string().optional(),
+});
+
 export const Route = createFileRoute("/kontakt")({
-  validateSearch: (search: Record<string, unknown>) => {
-    return {
-      amne: typeof search.amne === "string" ? search.amne : undefined,
-    };
-  },
+  validateSearch: (search) => kontaktSearchSchema.parse(search),
   component: KontaktPage,
   head: () => ({
     meta: [
