@@ -1,5 +1,4 @@
 import { createServerFn } from "@tanstack/react-start";
-import nodemailer from "nodemailer";
 import { supabase } from "./supabase";
 
 export interface ContactFormData {
@@ -174,6 +173,7 @@ export const sendContactMessage = createServerFn({ method: "POST" })
 
     if (smtpPass) {
       try {
+        const nodemailer = (await import("nodemailer")).default || (await import("nodemailer"));
         const transporter = nodemailer.createTransport({
           host: smtpHost,
           port: smtpPort,
