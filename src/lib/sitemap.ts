@@ -27,6 +27,7 @@ export async function buildSitemapEntries(): Promise<SitemapEntry[]> {
     { path: "/magasin", lastmod: "2026-08-13", changefreq: "weekly", priority: "0.8" },
     { path: "/ansvarsfriskrivning", lastmod: "2026-08-13", changefreq: "monthly", priority: "0.4" },
     { path: "/integritetspolicy", lastmod: "2026-08-13", changefreq: "monthly", priority: "0.4" },
+    { path: "/kontakt", lastmod: "2026-08-13", changefreq: "monthly", priority: "0.5" },
   ];
 
   // Add magazine articles

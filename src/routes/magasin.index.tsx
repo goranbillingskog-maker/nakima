@@ -31,11 +31,11 @@ function MagasinIndex() {
         <div className="hidden md:flex items-center gap-10 text-sm font-medium uppercase tracking-widest">
           <Link to="/magasin" className="text-orange transition-colors">Magasin</Link>
           <a href="/#stader" className="hover:text-orange transition-colors">Sök klinik</a>
-          <span className="text-ink/50 cursor-default" title="Kommer snart">För kliniker</span>
+          <Link to="/kontakt" search={{ amne: "klinik" }} className="hover:text-orange transition-colors">För kliniker</Link>
         </div>
-        <span className="px-6 py-2 border border-ink/40 text-ink/60 text-xs font-bold uppercase tracking-widest cursor-default" title="Kommer snart">
-          Logga in
-        </span>
+        <Link to="/kontakt" className="px-6 py-2 border border-ink text-ink text-xs font-bold uppercase tracking-widest hover:bg-ink hover:text-paper transition-colors">
+          Kontakta oss
+        </Link>
       </nav>
 
       {/* Hero Header */}
@@ -111,7 +111,7 @@ function MagasinIndex() {
                 <li><Link to="/$service/$city" params={{ service: "naprapat", city: "stockholm" }} className="hover:text-paper transition-colors">Hitta naprapat</Link></li>
                 <li><Link to="/$service/$city" params={{ service: "kiropraktor", city: "stockholm" }} className="hover:text-paper transition-colors">Hitta kiropraktor</Link></li>
                 <li><Link to="/$service/$city" params={{ service: "massage", city: "stockholm" }} className="hover:text-paper transition-colors">Hitta massör</Link></li>
-                <li><span className="opacity-60 cursor-default" title="Kommer snart">För kliniker</span></li>
+                <li><Link to="/kontakt" search={{ amne: "klinik" }} className="hover:text-paper transition-colors">För kliniker</Link></li>
               </ul>
             </div>
             <div>
@@ -119,8 +119,7 @@ function MagasinIndex() {
                 Information
               </h4>
               <ul className="space-y-3 text-sm text-sage/80">
-                <li><span className="opacity-60 cursor-default" title="Kommer snart">Om Nakima</span></li>
-                <li><span className="opacity-60 cursor-default" title="Kommer snart">Kontakta oss</span></li>
+                <li><Link to="/kontakt" className="hover:text-paper transition-colors">Kontakta oss</Link></li>
                 <li><Link to="/integritetspolicy" className="hover:text-paper transition-colors">Integritetspolicy</Link></li>
                 <li><Link to="/ansvarsfriskrivning" className="hover:text-paper transition-colors">Ansvarsfriskrivning</Link></li>
               </ul>

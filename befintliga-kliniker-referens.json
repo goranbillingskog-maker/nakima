@@ -1,0 +1,3002 @@
+[
+  {
+    "slug": "stjarnkliniken-stockholm-city",
+    "name": "Stjärnkliniken Stockholm City",
+    "city": "Stockholm",
+    "address": "Klarabergsviadukten 70, 107 24 Stockholm"
+  },
+  {
+    "slug": "naprawell-naprapat-stockholm-city",
+    "name": "NapraWell - Naprapat Stockholm City",
+    "city": "Stockholm",
+    "address": "Kammakargatan 35a, 111 60 Stockholm"
+  },
+  {
+    "slug": "agilokliniken-naprapat-stockholm-city",
+    "name": "Agilokliniken - Naprapat Stockholm City",
+    "city": "Stockholm",
+    "address": "Västra Järnvägsgatan 13, 111 64 Stockholm"
+  },
+  {
+    "slug": "krafttaget",
+    "name": "Krafttaget",
+    "city": "Umeå",
+    "address": "Rådhusesplanaden 18C, 903 28 Umeå"
+  },
+  {
+    "slug": "meretes-massage-and-healing",
+    "name": "Meretes Massage & Healing",
+    "city": "Umeå",
+    "address": "Renmarkstorget 10, 903 26 Umeå"
+  },
+  {
+    "slug": "agilokliniken-hagastaden-torsplan",
+    "name": "Agilokliniken Hagastaden (Torsplan)",
+    "city": "Stockholm",
+    "address": "Solnavägen 3, G, 113 63 Stockholm"
+  },
+  {
+    "slug": "aktiv-halsa-naprapat-sollentuna-rackethall",
+    "name": "Aktiv Hälsa, Naprapat Sollentuna Rackethall",
+    "city": "Sollentuna",
+    "address": "Stubbhagsvägen 6, 192 51 Sollentuna"
+  },
+  {
+    "slug": "naprapatgruppen-08-solna",
+    "name": "Naprapatgruppen 08 Solna",
+    "city": "Solna",
+    "address": "Greta Garbos väg 11, 169 40 Solna"
+  },
+  {
+    "slug": "kroppex-solna-naprapat",
+    "name": "Kroppex Solna - Naprapat",
+    "city": "Solna",
+    "address": "Johan Enbergs väg 20, 171 61 Solna"
+  },
+  {
+    "slug": "nimm-nordiska-institutet-for-manuell-medicin",
+    "name": "NIMM - Nordiska Institutet för Manuell Medicin",
+    "city": "Stockholm",
+    "address": "Kräftriket 23A, 114 19 Stockholm"
+  },
+  {
+    "slug": "joylife-naprapati-chiropractic-and-massage",
+    "name": "Joylife Naprapati, Chiropractic and Massage",
+    "city": "Solna",
+    "address": "Dalvägen 24, 169 79 Solna"
+  },
+  {
+    "slug": "limbra-arenastaden",
+    "name": "Limbra Arenastaden",
+    "city": "Solna",
+    "address": "Evenemangsgatan 17, 169 79 Solna"
+  },
+  {
+    "slug": "bjrkstadens-massage-and-friskvrd",
+    "name": "Björkstadens Massage & Friskvård",
+    "city": "Umeå",
+    "address": "Utfartsvägen 8A, 903 54 Umeå"
+  },
+  {
+    "slug": "osteopatklinik-valiant-tidigare-rygg-och-muskelakuten",
+    "name": "Osteopatklinik Valiant (tidigare Rygg- och Muskelakuten)",
+    "city": "Umeå",
+    "address": "Kungsgatan 17 B, 903 25 Umeå"
+  },
+  {
+    "slug": "sundbybergs-naprapat-och-ryggklinik",
+    "name": "Sundbybergs Naprapat & Ryggklinik",
+    "city": "Sundbyberg",
+    "address": "Trädgårdsgatan 26, 172 38 Sundbyberg"
+  },
+  {
+    "slug": "stjarnkliniken-stockholm-soder",
+    "name": "Stjärnkliniken Stockholm Söder",
+    "city": "Stockholm",
+    "address": "Mariatorget 5, 118 48 Stockholm"
+  },
+  {
+    "slug": "athletic-medicine",
+    "name": "Athletic Medicine",
+    "city": "Stockholm",
+    "address": "Hornsgatan 74, 118 21 Stockholm"
+  },
+  {
+    "slug": "camilla-westling-leg-naprapat-ab",
+    "name": "Camilla Westling Leg Naprapat AB",
+    "city": "Stockholm",
+    "address": "Götgatan 60, 118 26 Stockholm"
+  },
+  {
+    "slug": "totalkropp-naprapat-peter-viklund",
+    "name": "Totalkropp / Naprapat Peter Viklund",
+    "city": "Stockholm",
+    "address": "Ingenjörsvägen 34, 117 59 Stockholm"
+  },
+  {
+    "slug": "formtoppen-hlsa",
+    "name": "Formtoppen Hälsa",
+    "city": "Umeå",
+    "address": "Norrlandsgatan 17, 903 29 Umeå"
+  },
+  {
+    "slug": "limbra-hornstull",
+    "name": "Limbra Hornstull",
+    "city": "Stockholm",
+    "address": "Verkstadsgatan 2, 117 28 Stockholm"
+  },
+  {
+    "slug": "limbra-sodermalm-sofo",
+    "name": "Limbra Södermalm SoFo",
+    "city": "Stockholm",
+    "address": "Kocksgatan 24, 116 24 Stockholm"
+  },
+  {
+    "slug": "naprapat-group-taby-centrum-ab",
+    "name": "Naprapat Group Täby Centrum AB",
+    "city": "Täby",
+    "address": "Stora Marknadsvägen 15, 183 34 Täby"
+  },
+  {
+    "slug": "roslagskliniken-naprapatklinik",
+    "name": "Roslagskliniken - Naprapatklinik",
+    "city": "Täby",
+    "address": "Eskadervägen 8, 183 54 Täby"
+  },
+  {
+    "slug": "naprapatcenter-ab-taby",
+    "name": "Naprapatcenter AB Täby",
+    "city": "Täby",
+    "address": "Värtavägen 53, 183 63 Täby"
+  },
+  {
+    "slug": "omega-naprapati-naprapat-taby",
+    "name": "Omega Naprapati / Naprapat Täby",
+    "city": "Täby",
+    "address": "Bergtorpsvägen 43B, 183 64 Täby"
+  },
+  {
+    "slug": "arninge-rehab-och-friskvard",
+    "name": "Arninge Rehab & Friskvård",
+    "city": "Täby",
+    "address": "Saluvägen 1, 187 66 Täby"
+  },
+  {
+    "slug": "kroppex-odenplan-naprapat",
+    "name": "Kroppex Odenplan - Naprapat",
+    "city": "Stockholm",
+    "address": "Odengatan 36, 113 51 Stockholm"
+  },
+  {
+    "slug": "city-naprapaterna",
+    "name": "City Naprapaterna",
+    "city": "Stockholm",
+    "address": "Västmannagatan 16, 113 60 Stockholm"
+  },
+  {
+    "slug": "behandling-a-o-naprapati",
+    "name": "Behandling A-Ö Naprapati",
+    "city": "Stockholm",
+    "address": "Odengatan 106, 113 22 Stockholm"
+  },
+  {
+    "slug": "adam-kotknackare-naprapat-stockholm",
+    "name": "Adam Kotknackare - Naprapat Stockholm",
+    "city": "Stockholm",
+    "address": "Torsgatan 36, 113 62 Stockholm"
+  },
+  {
+    "slug": "limbra-odenplan",
+    "name": "Limbra Odenplan",
+    "city": "Stockholm",
+    "address": "Norrtullsgatan 4, 113 29 Stockholm"
+  },
+  {
+    "slug": "sabbatsbergs-ryggcentrum-naprapat-stockholm",
+    "name": "Sabbatsbergs Ryggcentrum Naprapat Stockholm",
+    "city": "Stockholm",
+    "address": "Dalagatan 9B, 113 61 Stockholm"
+  },
+  {
+    "slug": "naprapatmastarna-naprapat-ostermalm-stockholm",
+    "name": "NAPRAPATMÄSTARNA – Naprapat Östermalm Stockholm",
+    "city": "Stockholm",
+    "address": "Sturegatan 34, Våning 1, 114 36 Stockholm"
+  },
+  {
+    "slug": "stjarnkliniken-stockholm-stureplan",
+    "name": "Stjärnkliniken Stockholm Stureplan",
+    "city": "Stockholm",
+    "address": "Sturegatan 16, 114 36 Stockholm"
+  },
+  {
+    "slug": "daniel-sjlander-fysioterapi-ab",
+    "name": "Daniel Sjölander fysioterapi AB",
+    "city": "Umeå",
+    "address": "Bruksvägen 13, 906 21 Umeå"
+  },
+  {
+    "slug": "limbra-ostermalm",
+    "name": "Limbra Östermalm",
+    "city": "Stockholm",
+    "address": "Sturegatan 64, 114 31 Stockholm"
+  },
+  {
+    "slug": "naprapatiska-institutet-ostermalm",
+    "name": "Naprapatiska Institutet Östermalm",
+    "city": "Stockholm",
+    "address": "Tyskbagargatan 4, 114 43 Stockholm"
+  },
+  {
+    "slug": "naprapatstudion",
+    "name": "Naprapatstudion",
+    "city": "Stockholm",
+    "address": "Engelbrektsgatan 35B, 114 32 Stockholm"
+  },
+  {
+    "slug": "sturenaprapaten-ab",
+    "name": "StureNaprapaten AB",
+    "city": "Stockholm",
+    "address": "Birger Jarlsgatan 34, 114 29 Stockholm"
+  },
+  {
+    "slug": "muskelakuten-ostermalm-naprapat-och-massage",
+    "name": "Muskelakuten Östermalm - Naprapat & Massage",
+    "city": "Stockholm",
+    "address": "Grev Turegatan 35, 114 47 Stockholm"
+  },
+  {
+    "slug": "nordic-kiropraktik-naprapati-och-massage-kista",
+    "name": "Nordic Kiropraktik Naprapati & Massage - Kista",
+    "city": "Kista",
+    "address": "Hanstavägen 55, 164 53 Kista"
+  },
+  {
+    "slug": "arena-med-naprapat-goteborg",
+    "name": "Arena MED - Naprapat Göteborg",
+    "city": "Göteborg",
+    "address": "Kungsportsavenyen 3, 411 36 Lorensberg"
+  },
+  {
+    "slug": "eriksbergs-halsoklinik",
+    "name": "Eriksbergs Hälsoklinik",
+    "city": "Göteborg",
+    "address": "Sjöporten 4, 417 64 Eriksberg"
+  },
+  {
+    "slug": "ryggakuten-centrum",
+    "name": "RyggAkuten Centrum",
+    "city": "Göteborg",
+    "address": "Norra Hamngatan 18, 411 06 Inom Vallgraven"
+  },
+  {
+    "slug": "naprapatkliniken-vast-ab",
+    "name": "Naprapatkliniken Väst AB",
+    "city": "Göteborg",
+    "address": "Ekonomivägen 6, 436 33 Askim"
+  },
+  {
+    "slug": "ryggakuten-hisingen",
+    "name": "RyggAkuten Hisingen",
+    "city": "Göteborg",
+    "address": "Hisingsgatan 28, 417 03 Lundby"
+  },
+  {
+    "slug": "ullevikliniken",
+    "name": "UlleviKliniken",
+    "city": "Göteborg",
+    "address": "Eva Rodhes Gata 8, 411 11 Ullevi"
+  },
+  {
+    "slug": "fysio-sara-knigsson-ab",
+    "name": "Fysio Sara Königsson AB",
+    "city": "Umeå",
+    "address": "Storgatan 115, 903 33 Umeå"
+  },
+  {
+    "slug": "rygg-och-ledkliniken-i-goteborg",
+    "name": "Rygg och Ledkliniken i Göteborg",
+    "city": "Göteborg",
+    "address": "Viktor Rydbergsgatan 10, 411 32 Lorensberg"
+  },
+  {
+    "slug": "smartcentralen-naprapat-goteborg",
+    "name": "Smärtcentralen - Naprapat Göteborg",
+    "city": "Göteborg",
+    "address": "Sjöporten 4, 417 64 Eriksberg"
+  },
+  {
+    "slug": "goteborgs-naprapat-och-idrottsskadeklinik-ab",
+    "name": "Göteborgs Naprapat & Idrottsskadeklinik AB",
+    "city": "Göteborg",
+    "address": "Parkgatan 17, 411 38 Heden"
+  },
+  {
+    "slug": "ryggakuten-sisjon",
+    "name": "RyggAkuten Sisjön",
+    "city": "Göteborg",
+    "address": "Datavägen 14B, 436 32 Sisjön"
+  },
+  {
+    "slug": "aktiv-halsa",
+    "name": "Aktiv Hälsa",
+    "city": "Göteborg",
+    "address": "Otterhällegatan 2, 411 18 Inom Vallgraven"
+  },
+  {
+    "slug": "limbra-goteborg-vasastan",
+    "name": "Limbra Göteborg Vasastan",
+    "city": "Göteborg",
+    "address": "Aschebergsgatan 25, 411 33 Vasastan"
+  },
+  {
+    "slug": "bodycheck-ab-naprapat-goteborg",
+    "name": "Bodycheck AB - Naprapat Göteborg",
+    "city": "Göteborg",
+    "address": "Erik Dahlbergsgatan 14, 411 26 Vasastan"
+  },
+  {
+    "slug": "care-of-spine-naprapatklinik",
+    "name": "Care of Spine - Naprapatklinik",
+    "city": "Göteborg",
+    "address": "Västergatan 4B, 411 23 Linné"
+  },
+  {
+    "slug": "ryggplus-naprapatklinik",
+    "name": "Ryggplus Naprapatklinik",
+    "city": "Göteborg",
+    "address": "Långedragsvägen 48, 426 71 Långedrag"
+  },
+  {
+    "slug": "akuta-ryggjouren",
+    "name": "Akuta Ryggjouren",
+    "city": "Göteborg",
+    "address": "Föreningsgatan 1A, 411 27 Vasastan"
+  },
+  {
+    "slug": "limbra-goteborg-nordstan",
+    "name": "Limbra Göteborg Nordstan",
+    "city": "Göteborg",
+    "address": "Östra Hamngatan 17, 411 10 Nordstan"
+  },
+  {
+    "slug": "idrottsnaprapaten-ab",
+    "name": "Idrottsnaprapaten AB",
+    "city": "Göteborg",
+    "address": "Västergatan 4B, 411 23 Linné"
+  },
+  {
+    "slug": "molndalsnaprapaten",
+    "name": "Mölndalsnaprapaten",
+    "city": "Mölndal",
+    "address": "Norra Ågatan 26C, 431 35 Mölndal centrum"
+  },
+  {
+    "slug": "team-halso-och-friskvard-i-goteborg-ab",
+    "name": "TEAM hälso & friskvård i Göteborg AB",
+    "city": "Mölndal",
+    "address": "Göteborgsvägen 97, 431 37 Mölndal"
+  },
+  {
+    "slug": "naprapat-i-vast",
+    "name": "Naprapat i Väst",
+    "city": "Mölnlycke",
+    "address": "Metallvägen 5, 435 33 Mölnlycke"
+  },
+  {
+    "slug": "rygg-och-ledkliniken-kungalv",
+    "name": "Rygg och Ledkliniken - Kungälv",
+    "city": "Kungälv",
+    "address": "Uddevallavägen 1, 442 30 Kungälv"
+  },
+  {
+    "slug": "inmotus-naprapatklinik",
+    "name": "InMotus Naprapatklinik",
+    "city": "Kungälv",
+    "address": "Dumpergatan 4A, 442 40 Kungälv"
+  },
+  {
+    "slug": "naprapat-karin-bromer",
+    "name": "Naprapat Karin Bromér",
+    "city": "Kungsbacka",
+    "address": "Bengtsgårdsgatan 9, 434 36 Kungsbacka"
+  },
+  {
+    "slug": "rygg-och-ledkliniken-i-kungsbacka",
+    "name": "Rygg och Ledkliniken i Kungsbacka",
+    "city": "Kungsbacka",
+    "address": "Kungsparksvägen 61, 434 39 Kungsbacka"
+  },
+  {
+    "slug": "kungskliniken",
+    "name": "Kungskliniken",
+    "city": "Kungsbacka",
+    "address": "Kungsparksvägen 83, 434 39 Kungsbacka"
+  },
+  {
+    "slug": "naprapathalsan-patrik-soderqvist-ab",
+    "name": "Naprapathälsan Patrik Söderqvist AB",
+    "city": "Lerum",
+    "address": "Frödingsvägen 4, 443 31 Lerum"
+  },
+  {
+    "slug": "naprapatsmedjan-ab",
+    "name": "Naprapatsmedjan AB",
+    "city": "Umeå",
+    "address": "Slöjdgatan 2, 903 25 Umeå"
+  },
+  {
+    "slug": "kroppex-norra-djurgardsstaden-naprapat",
+    "name": "Kroppex Norra Djurgårdsstaden - Naprapat",
+    "city": "Stockholm",
+    "address": "Bobergsgatan 57, 115 47 Stockholm"
+  },
+  {
+    "slug": "naprapat-karin-bromer-nol",
+    "name": "Naprapat Karin Bromér",
+    "city": "Ale",
+    "address": "Industrivägen 4, 449 44 Nol"
+  },
+  {
+    "slug": "fysiomedicinska-kliniken-malmo",
+    "name": "Fysiomedicinska kliniken (NaprapatMalmö)",
+    "city": "Malmö",
+    "address": "Kronborgsvägen 8, 217 42 Malmö"
+  },
+  {
+    "slug": "naprapatcentrum-malmo",
+    "name": "Naprapatcentrum Malmö",
+    "city": "Malmö",
+    "address": "Stora Kvarngatan 32 (hos ByAmi), 211 29 Malmö"
+  },
+  {
+    "slug": "malmo-city-naprapatiska",
+    "name": "Malmö City Naprapatiska",
+    "city": "Malmö",
+    "address": "Vendelsvägen 3, 217 63 Malmö (ny adress från 1 aug 2026)"
+  },
+  {
+    "slug": "kiropraktor-hans-andersson",
+    "name": "Kiropraktor Hans Andersson",
+    "city": "Umeå",
+    "address": "Brogatan 4B, 903 25 Umeå"
+  },
+  {
+    "slug": "ro-givande",
+    "name": "Ro-givande",
+    "city": "Umeå",
+    "address": "Klintvägen 19, 907 37 Umeå"
+  },
+  {
+    "slug": "joylife-fysioterapi-naprapat-och-kiropraktor-fridhemsplan",
+    "name": "Joylife Fysioterapi, Naprapat & Kiropraktor Fridhemsplan",
+    "city": "Stockholm",
+    "address": "Sankt Eriksgatan 50, 112 34 Stockholm"
+  },
+  {
+    "slug": "smood-city",
+    "name": "Smood City",
+    "city": "Malmö",
+    "address": "Föreningsgatan 26, 211 52 Malmö"
+  },
+  {
+    "slug": "smood-hyllie",
+    "name": "Smood Hyllie",
+    "city": "Malmö",
+    "address": "Hyllie Boulevard 21, 215 23 Malmö"
+  },
+  {
+    "slug": "the-clinic-nyhamnen",
+    "name": "The Clinic Malmö Nyhamnen",
+    "city": "Malmö",
+    "address": "Carlsgatan 14, 211 20 Malmö (ingång Mercuriigatan 2)"
+  },
+  {
+    "slug": "ryggakuten-malmo",
+    "name": "RyggAkuten Malmö",
+    "city": "Malmö",
+    "address": "Baltzarsgatan 25 4tr, 211 36 Malmö"
+  },
+  {
+    "slug": "ryggakuten-bors",
+    "name": "RyggAkuten Borås",
+    "city": "Borås",
+    "address": "Västerbrogatan 1, 503 30 Borås"
+  },
+  {
+    "slug": "naprapat-rehab",
+    "name": "Naprapat-Rehab",
+    "city": "Bromma",
+    "address": "Registervägen 28, 168 31 Bromma"
+  },
+  {
+    "slug": "naprapatimperiet-bromma-ab",
+    "name": "Naprapatimperiet Bromma AB",
+    "city": "Bromma",
+    "address": "Tummelisas gata 9, 168 72 Bromma"
+  },
+  {
+    "slug": "linus-och-marie-nilsson-leg-naprapater-ab",
+    "name": "Linus & Marie Nilsson Leg. Naprapater AB",
+    "city": "Göteborg",
+    "address": "Stora Åvägen 21, 436 34 Askim"
+  },
+  {
+    "slug": "kungsholmens-kiropraktik-rehab",
+    "name": "Kungsholmens Kiropraktik & Rehab",
+    "city": "Stockholm",
+    "address": "Sankt Eriksgatan 7, 112 39 Stockholm"
+  },
+  {
+    "slug": "naprapatspecialisten-hammarby-sjostad",
+    "name": "Naprapatspecialisten Hammarby Sjöstad",
+    "city": "Stockholm",
+    "address": "Lugnets Allé 48F, 120 66 Stockholm"
+  },
+  {
+    "slug": "the-clinic-kirseberg",
+    "name": "The Clinic Malmö Kirseberg",
+    "city": "Malmö",
+    "address": "Vattenverksvägen 47, 212 43 Malmö"
+  },
+  {
+    "slug": "citykiropraktikern",
+    "name": "Citykiropraktikern",
+    "city": "Malmö",
+    "address": "Föreningsgatan 26, våning 2, 211 52 Malmö"
+  },
+  {
+    "slug": "wagner-kiropraktik",
+    "name": "Wagner Kiropraktik & Hälsa",
+    "city": "Malmö",
+    "address": "Flaggskeppsgatan 8, 211 14 Malmö"
+  },
+  {
+    "slug": "pure-motion-naprapat-massage-och-rehab-hammarby-sjostad",
+    "name": "Pure Motion: Naprapat, Massage & Rehab Hammarby Sjöstad",
+    "city": "Stockholm",
+    "address": "Hammarby Kaj 52, 120 63 Stockholm"
+  },
+  {
+    "slug": "capio-rehab-selma",
+    "name": "Capio Rehab Selma",
+    "city": "Hisings Backa",
+    "address": "Selma Lagerlöfs Torg 1, 422 48 Hisings Backa"
+  },
+  {
+    "slug": "hand-om-halsa",
+    "name": "Hand om Hälsa din naprapat",
+    "city": "Malmö",
+    "address": "Västra Varvsgatan 11 b, 211 11 Malmö"
+  },
+  {
+    "slug": "malmo-kiropraktorklinik",
+    "name": "Malmö Kiropraktorklinik & Funktionell Kiropraktik",
+    "city": "Malmö",
+    "address": "Regementsgatan 14, 211 45 Malmö"
+  },
+  {
+    "slug": "rmv-kiropraktik",
+    "name": "RMV Kiropraktik",
+    "city": "Malmö",
+    "address": "Skeppsbron 5, 211 20 Malmö"
+  },
+  {
+    "slug": "marten-mulder-naprapatklinik",
+    "name": "Mårten Mulder Naprapatklinik",
+    "city": "Malmö",
+    "address": "Storgatan 5, 211 41 Malmö"
+  },
+  {
+    "slug": "the-clinic-hyllie",
+    "name": "The Clinic Malmö Hyllie (Eden)",
+    "city": "Malmö",
+    "address": "Hyllie Boulevard 53, 215 32 Malmö"
+  },
+  {
+    "slug": "kroppia",
+    "name": "Kroppia (Kiropraktor och Massage)",
+    "city": "Malmö",
+    "address": "Föreningsgatan 26 (Växthuset våning 2), 211 52 Malmö"
+  },
+  {
+    "slug": "tre-kotor-naprapatmottagning",
+    "name": "Tre Kotor Naprapatmottagning",
+    "city": "Malmö",
+    "address": "Celsiusgatan 31, 212 14 Malmö"
+  },
+  {
+    "slug": "bellevue-naprapatklinik",
+    "name": "Bellevue Naprapatklinik (Palmer Friskvård)",
+    "city": "Malmö",
+    "address": "Beritta Gurrisgatan 13, 217 74 Malmö"
+  },
+  {
+    "slug": "kiropraktorkliniken-laurin",
+    "name": "Kiropraktorkliniken Laurin",
+    "city": "Malmö",
+    "address": "Geijersgatan 8, 216 18 Limhamn"
+  },
+  {
+    "slug": "helanova-medicinsk-massage",
+    "name": "Helanova Medicinsk Massage",
+    "city": "Malmö",
+    "address": "CRC, Jan Waldenströms gata 35, Malmö"
+  },
+  {
+    "slug": "medickliniken-malmo",
+    "name": "Medickliniken",
+    "city": "Malmö",
+    "address": "Helmfeltsgatan 4, 211 48 Malmö"
+  },
+  {
+    "slug": "rct-kliniken",
+    "name": "RCT-Kliniken (RootCause Treatments)",
+    "city": "Malmö",
+    "address": "Regementsgatan 14, 211 45 Malmö"
+  },
+  {
+    "slug": "imc-idrottsmedicinskt-center",
+    "name": "IMC Idrottsmedicinskt Center",
+    "city": "Malmö",
+    "address": "Trollenäsgatan 2, 217 73 Malmö"
+  },
+  {
+    "slug": "kiropraktik-och-rehab",
+    "name": "Kiropraktik och Rehab",
+    "city": "Malmö",
+    "address": "Köpenhamnsvägen 43, 217 71 Malmö"
+  },
+  {
+    "slug": "malmo-medical-massage",
+    "name": "Malmö Medical Massage",
+    "city": "Malmö",
+    "address": "Norra Skolgatan 19, 211 52 Malmö"
+  },
+  {
+    "slug": "klassisk-massage-malmo",
+    "name": "Klassisk Massage Malmö (Fredrik Sandh)",
+    "city": "Malmö",
+    "address": "Spångatan 20 A (Terapi- och Friskvårdscentrum), 211 53 Malmö"
+  },
+  {
+    "slug": "fm-massage-malmo",
+    "name": "FM Massage Malmö",
+    "city": "Malmö",
+    "address": "Johanneslustgatan 12, 212 28 Malmö"
+  },
+  {
+    "slug": "massagerummet-malmo",
+    "name": "Massagerummet",
+    "city": "Malmö",
+    "address": "Stora Trädgårdsgatan 3D, 211 28 Malmö"
+  },
+  {
+    "slug": "strajv-halsostudio-limhamn",
+    "name": "Strajv Hälsostudio Limhamn",
+    "city": "Malmö",
+    "address": "Järnvägsgatan 24, 216 14 Limhamn"
+  },
+  {
+    "slug": "varkstan-malmo",
+    "name": "Värkstan (Prestation & Hälsa)",
+    "city": "Malmö",
+    "address": "World Trade Center, Skeppsgatan 19, 211 11 Malmö"
+  },
+  {
+    "slug": "redhawkskliniken-hyllie",
+    "name": "Redhawkskliniken Hyllie",
+    "city": "Malmö",
+    "address": "Hyllie Boulevard 22 (Malmö Arena-området), 215 32 Malmö"
+  },
+  {
+    "slug": "naprapaterna-kungsholmen",
+    "name": "Naprapaterna Kungsholmen",
+    "city": "Stockholm",
+    "address": "Kungsholmsgatan 32, 112 27 Stockholm"
+  },
+  {
+    "slug": "sodermalm-terapicenter-kiropraktik",
+    "name": "Kiropraktik Södermalm Terapicenter",
+    "city": "Stockholm",
+    "address": "Hornsgatan 108, 117 26 Stockholm"
+  },
+  {
+    "slug": "engelbrekts-kiropraktorcenter",
+    "name": "Engelbrekts Kiropraktorcenter",
+    "city": "Stockholm",
+    "address": "Engelbrektsgatan 39, 114 32 Stockholm"
+  },
+  {
+    "slug": "goteborgs-kiropraktorklinik",
+    "name": "Göteborgs Kiropraktorklinik",
+    "city": "Göteborg",
+    "address": "Åvägen 17C, 412 51 Göteborg"
+  },
+  {
+    "slug": "kiropraktorcentrum-goteborg",
+    "name": "KiropraktorCentrum Göteborg",
+    "city": "Göteborg",
+    "address": "Surbrunnsgatan 6, 411 19 Göteborg"
+  },
+  {
+    "slug": "goteborgs-massage-rehab-linnestaden",
+    "name": "Göteborgs Massage & Rehab – Linnéstaden",
+    "city": "Göteborg",
+    "address": "Tredje Långgatan 10, 413 03 Göteborg"
+  },
+  {
+    "slug": "massageterapeuten-goteborg",
+    "name": "Massageterapeuten Göteborg",
+    "city": "Göteborg",
+    "address": "Stigbergsliden 5, 414 63 Göteborg"
+  },
+  {
+    "slug": "kiropraktorklinik-patrik-erdegard",
+    "name": "Kiropraktorklinik Patrik Erdegard",
+    "city": "Göteborg",
+    "address": "Herkulesgatan 3D, 417 01 Göteborg"
+  },
+  {
+    "slug": "kan-kliniken-stockholm",
+    "name": "KAN-kliniken",
+    "city": "Stockholm",
+    "address": "Döbelnsgatan 57, 113 52 Stockholm"
+  },
+  {
+    "slug": "kiropraktorvard-stockholm-kungsholmen",
+    "name": "Kiropraktorvård Stockholm Kungsholmen",
+    "city": "Stockholm",
+    "address": "Sankt Eriksgatan 37A, 112 34 Stockholm"
+  },
+  {
+    "slug": "aktiv-fysio-alf-b-aktiv-fysio-ab",
+    "name": "Aktiv Fysio (Alf B Aktiv Fysio AB)",
+    "city": "Mölndal",
+    "address": "Brogatan 23, 431 30 Mölndal"
+  },
+  {
+    "slug": "halsa-i-kubik-ab",
+    "name": "Hälsa i Kubik AB",
+    "city": "Mölndal",
+    "address": "Åbäcksgatan 6 A, 431 67 Mölndal"
+  },
+  {
+    "slug": "fungra-goteborg-ab",
+    "name": "FUNGÉRA Göteborg AB",
+    "city": "Göteborg",
+    "address": "Gullbergs Strandgata 6, 411 04 Göteborg"
+  },
+  {
+    "slug": "ifk-kliniken-rehab",
+    "name": "IFK-kliniken Rehab",
+    "city": "Göteborg",
+    "address": "Töpelsgatan 7, 416 55 Göteborg"
+  },
+  {
+    "slug": "ortorehab",
+    "name": "OrtoRehab",
+    "city": "Göteborg",
+    "address": "Doktor Saléns gata 12, 413 22 Göteborg"
+  },
+  {
+    "slug": "fysio-nova-i-goteborg-ab",
+    "name": "Fysio Nova i Göteborg AB",
+    "city": "Göteborg",
+    "address": "Byfogdegatan 4, 415 05 Göteborg"
+  },
+  {
+    "slug": "i-rorelse-fysioterapi-i-goteborg-ab",
+    "name": "I Rörelse fysioterapi i Göteborg AB",
+    "city": "Göteborg",
+    "address": "Carlandersparken 1, 405 45 Göteborg"
+  },
+  {
+    "slug": "fysiohuset-goteborg-ab",
+    "name": "Fysiohuset Göteborg AB",
+    "city": "Göteborg",
+    "address": "Gibraltargatan 3, 412 58 Göteborg"
+  },
+  {
+    "slug": "masthugget-rehab-notkarnan",
+    "name": "Masthugget Rehab (Nötkärnan)",
+    "city": "Göteborg",
+    "address": "Andra Långgatan 46, 413 27 Göteborg"
+  },
+  {
+    "slug": "sportrehab-rpt-sportrehab-ab",
+    "name": "Sportrehab (RPT Sportrehab AB)",
+    "city": "Göteborg",
+    "address": "Stampgatan 14, 411 01 Göteborg"
+  },
+  {
+    "slug": "team-halsa-i-goteborg-ab",
+    "name": "TEAM Hälsa i Göteborg AB",
+    "city": "Mölndal",
+    "address": "Göteborgsvägen 97, 431 37 Mölndal"
+  },
+  {
+    "slug": "byberg-fysioterapi-om-fysiorehab",
+    "name": "Byberg Fysioterapi / OM Fysiorehab",
+    "city": "Mölnlycke",
+    "address": "Hönekullavägen 17, 435 44 Mölnlycke"
+  },
+  {
+    "slug": "torslanda-rehabcenter-ab",
+    "name": "Torslanda RehabCenter AB",
+    "city": "Torslanda",
+    "address": "Postflyget 4, 423 37 Torslanda"
+  },
+  {
+    "slug": "access-rehab-naprapat-och-sjukgymnast-i-hammarby-sjostad",
+    "name": "Access Rehab Naprapat & Sjukgymnast i Hammarby Sjöstad",
+    "city": "Stockholm",
+    "address": "Hammarby allé 150, 120 66 Stockholm"
+  },
+  {
+    "slug": "nic-yoga-kroppsterapi-medicinsk-massage",
+    "name": "NIC Yoga & Kroppsterapi – Medicinsk Massage",
+    "city": "Göteborg",
+    "address": "Prästgårdsängen 15, 412 71 Göteborg"
+  },
+  {
+    "slug": "suphan-medicinsk-massage",
+    "name": "Suphan Medicinsk Massage",
+    "city": "Göteborg",
+    "address": "Aschebergsgatan 21, 411 27 Göteborg"
+  },
+  {
+    "slug": "lina-roizman-medicinsk-massage-majorna",
+    "name": "Lina Roizman – Medicinsk Massage Majorna",
+    "city": "Göteborg",
+    "address": "Allmänna vägen 13, 414 60 Göteborg"
+  },
+  {
+    "slug": "gottoleva-massage-linne",
+    "name": "Gottoleva",
+    "city": "Göteborg",
+    "address": "Olivedalsgatan 1, 413 10 Göteborg"
+  },
+  {
+    "slug": "limbra-naprapatlandslaget-bors-eriks-naprapati",
+    "name": "Limbra / Naprapatlandslaget Borås (Eriks Naprapati)",
+    "city": "Borås",
+    "address": "Kungsgatan 29, 503 33 Borås"
+  },
+  {
+    "slug": "familjelakarna-i-molnlycke-rehab",
+    "name": "Familjeläkarna i Mölnlycke Rehab",
+    "city": "Mölnlycke",
+    "address": "Hönekullavägen 13, 435 44 Mölnlycke"
+  },
+  {
+    "slug": "sportsmed-rehab",
+    "name": "SportsMed Rehab",
+    "city": "Göteborg",
+    "address": "Carlandersplatsen 1, 412 55 Göteborg"
+  },
+  {
+    "slug": "villaval-sjukgymnastik-ab",
+    "name": "VillaVäl Sjukgymnastik AB",
+    "city": "Västra Frölunda",
+    "address": "Hängpilsgatan 10, 426 77 Västra Frölunda"
+  },
+  {
+    "slug": "sjukgymnast-goteborg-ab-ulf-aberg",
+    "name": "Sjukgymnast Göteborg AB (Ulf Åberg)",
+    "city": "Göteborg",
+    "address": "Marklandsgatan 35, 414 77 Göteborg"
+  },
+  {
+    "slug": "active-rehab-goteborg",
+    "name": "Active Rehab Göteborg",
+    "city": "Göteborg",
+    "address": "Kungsgatan 15, 411 19 Göteborg"
+  },
+  {
+    "slug": "ekelund-fysioterapi",
+    "name": "Ekelund Fysioterapi",
+    "city": "Göteborg",
+    "address": "Valhallagatan 3, 412 51 Göteborg"
+  },
+  {
+    "slug": "westergren-fysio-ab",
+    "name": "Westergren Fysio AB",
+    "city": "Göteborg",
+    "address": "Fjällbo Ängsväg 11, 415 74 Göteborg"
+  },
+  {
+    "slug": "regina-fysio-ab",
+    "name": "Regina Fysio AB",
+    "city": "Göteborg",
+    "address": "Lilla Kärralundsgatan 15 B, 416 56 Göteborg"
+  },
+  {
+    "slug": "wedberg-sjukgymnastik-rehab-ab",
+    "name": "Wedberg Sjukgymnastik & Rehab AB",
+    "city": "Göteborg",
+    "address": "Karin Boyes Gata 7, 411 11 Göteborg"
+  },
+  {
+    "slug": "kortedala-rehab-center",
+    "name": "Kortedala Rehab Center",
+    "city": "Göteborg",
+    "address": "Decembergata 21, 415 15 Göteborg"
+  },
+  {
+    "slug": "motivity-ab",
+    "name": "Motivity AB",
+    "city": "Stockholm",
+    "address": "Brahegatan 42, 114 37 Stockholm"
+  },
+  {
+    "slug": "physiotherapy-stockholm-anna-magnusson-sogell",
+    "name": "Physiotherapy Stockholm (Anna Magnusson Sogell)",
+    "city": "Stockholm",
+    "address": "Eriksbergsgatan 10B, 114 30 Stockholm"
+  },
+  {
+    "slug": "snapfys-snapfys-ab",
+    "name": "SNAPfys / Snapfys AB",
+    "city": "Stockholm",
+    "address": "Fleminggatan 65, 112 32 Stockholm"
+  },
+  {
+    "slug": "ortomed-sverige-ab",
+    "name": "Ortomed Sverige AB",
+    "city": "Stockholm",
+    "address": "Hälsingegatan 2, 113 23 Stockholm"
+  },
+  {
+    "slug": "fysioetana-ab",
+    "name": "FYSIOETANA AB",
+    "city": "Stockholm",
+    "address": "Kungsgatan 60, 111 22 Stockholm"
+  },
+  {
+    "slug": "taby-centrum-fysioterapi-ab",
+    "name": "Täby Centrum Fysioterapi AB",
+    "city": "Täby",
+    "address": "Biblioteksgången 10 / Esplanaden 9, 183 34 Täby"
+  },
+  {
+    "slug": "prima-fysik",
+    "name": "Prima Fysik",
+    "city": "Nacka",
+    "address": "Smedjegatan 14, 131 54 Nacka"
+  },
+  {
+    "slug": "sundbyberg-rehab-fysioterapi-center",
+    "name": "Sundbyberg Rehab & Fysioterapi Center",
+    "city": "Sundbyberg",
+    "address": "Prästgårdsgatan 30, 172 32 Sundbyberg"
+  },
+  {
+    "slug": "lidstrom-sjukgymnastik-ab",
+    "name": "Lidström Sjukgymnastik AB",
+    "city": "Vårby",
+    "address": "Botkyrkavägen 4, 143 30 Vårby"
+  },
+  {
+    "slug": "arena-motion-rehab",
+    "name": "Arena Motion & Rehab",
+    "city": "Nacka",
+    "address": "Smedjegatan 18, Nacka"
+  },
+  {
+    "slug": "fysioterapi-eva-h-gustafsson",
+    "name": "Fysioterapi Eva H Gustafsson",
+    "city": "Sollentuna",
+    "address": "Sollentunavägen 163 C, 191 47 Sollentuna"
+  },
+  {
+    "slug": "ab-fysiomotion-i-nacka",
+    "name": "AB Fysiomotion i Nacka",
+    "city": "Saltsjöbaden",
+    "address": "Bergandsgatan 35, 133 41 Saltsjöbaden"
+  },
+  {
+    "slug": "l-palmr-fysioterapi-ab",
+    "name": "L Palmér Fysioterapi AB",
+    "city": "Stockholm",
+    "address": "Dianavägen 22, 115 42 Stockholm"
+  },
+  {
+    "slug": "sax-fysioterapi-ab",
+    "name": "Sax Fysioterapi AB",
+    "city": "Täby",
+    "address": "Lövbrunnagränd 1, 187 53 Täby"
+  },
+  {
+    "slug": "nacka-fysioterapi-ab",
+    "name": "Nacka Fysioterapi AB",
+    "city": "Nacka",
+    "address": "Helgesons Väg 8, 131 37 Nacka"
+  },
+  {
+    "slug": "gustav-nordstrom-fysioterapi-ab",
+    "name": "Gustav Nordström Fysioterapi AB",
+    "city": "Solna",
+    "address": "Ingrid Bergmans Väg 19, 169 40 Solna"
+  },
+  {
+    "slug": "bc-fysio-ab",
+    "name": "BC Fysio AB",
+    "city": "Nacka",
+    "address": "Fasanvägen 31, 131 44 Nacka"
+  },
+  {
+    "slug": "lidingo-ortopedmedicinska-team-ab",
+    "name": "Lidingö Ortopedmedicinska Team AB",
+    "city": "Lidingö",
+    "address": "Lejonstigen 2, 181 32 Lidingö"
+  },
+  {
+    "slug": "furuhojden-rehabcenter",
+    "name": "Furuhöjden Rehabcenter",
+    "city": "Täby",
+    "address": "Enhagsvägen 16, 187 40 Täby"
+  },
+  {
+    "slug": "dinsjukgymnast-roslags-nasby-sjukgymnastik",
+    "name": "DinSjukgymnast / Roslags Näsby Sjukgymnastik",
+    "city": "Täby",
+    "address": "Kanalvägen 17, 183 38 Täby"
+  },
+  {
+    "slug": "taby-rehab-center",
+    "name": "Täby Rehab Center",
+    "city": "Täby",
+    "address": "null, Täby"
+  },
+  {
+    "slug": "fysiohalsan-taby-ab",
+    "name": "Fysiohälsan Täby AB",
+    "city": "Täby",
+    "address": "Vallarevägen 43, 183 51 Täby"
+  },
+  {
+    "slug": "helena-kall-fysioterapi-ab",
+    "name": "Helena Käll Fysioterapi AB",
+    "city": "Täby",
+    "address": "Margaretavägen 44, 187 74 Täby"
+  },
+  {
+    "slug": "anna-edstroms-fysioterapi-ab",
+    "name": "Anna Edströms Fysioterapi AB",
+    "city": "Täby",
+    "address": "Grindtorps Skolgränd 24, 183 47 Täby"
+  },
+  {
+    "slug": "louise-l-von-bergen-fysioterapi-ab",
+    "name": "Louise L von Bergen Fysioterapi AB",
+    "city": "Täby",
+    "address": "Södra Catalinagränd 35, 183 68 Täby"
+  },
+  {
+    "slug": "lidingo-fysioterapi-ab",
+    "name": "Lidingö Fysioterapi AB",
+    "city": "Lidingö",
+    "address": "Prismastigen 6, 181 55 Lidingö"
+  },
+  {
+    "slug": "medical-fysioterapi",
+    "name": "Medical Fysioterapi",
+    "city": "Stockholm",
+    "address": "Norrtullsgatan 33, 113 27 Stockholm"
+  },
+  {
+    "slug": "sabbatsbergs-fot-och-ryggcentrum",
+    "name": "Sabbatsbergs fot- och ryggcentrum",
+    "city": "Stockholm",
+    "address": "Dalagatan 9B, 113 61 Stockholm"
+  },
+  {
+    "slug": "stegkliniken-solna",
+    "name": "Stegkliniken Solna",
+    "city": "Solna",
+    "address": "Råsundavägen 170, Solna"
+  },
+  {
+    "slug": "friskispraktiken",
+    "name": "Friskispraktiken",
+    "city": "Stockholm",
+    "address": "Adolf Fredriks kyrkogata 2, 111 37 Stockholm"
+  },
+  {
+    "slug": "feelgood-fysioterapi-stockholm",
+    "name": "Feelgood Fysioterapi Stockholm",
+    "city": "Stockholm",
+    "address": "Grev Turegatan 34, Stockholm"
+  },
+  {
+    "slug": "friska-tag-fysio",
+    "name": "Friska Tag Fysio",
+    "city": "Stockholm",
+    "address": "Värtavägen 30, Stockholm"
+  },
+  {
+    "slug": "hela-kroppen-fysiocenter-sverige-ab",
+    "name": "Hela Kroppen Fysiocenter Sverige AB",
+    "city": "Stockholm",
+    "address": "Kapellgränd 13, 116 25 Stockholm"
+  },
+  {
+    "slug": "weidenius-leg-fysio-och-terapi-ab",
+    "name": "Weidenius Leg Fysio och Terapi AB",
+    "city": "Stockholm",
+    "address": "Essinge Brogata 8, 112 61 Stockholm"
+  },
+  {
+    "slug": "a-marklund-fysioterapi-ab",
+    "name": "A. Marklund Fysioterapi AB",
+    "city": "Stockholm",
+    "address": "Lustgårdsgatan 16, 112 51 Stockholm"
+  },
+  {
+    "slug": "peter-ehlin-fysioterapi-ab",
+    "name": "Peter Ehlin Fysioterapi AB",
+    "city": "Stockholm",
+    "address": "Fridhemsgatan 2, 112 40 Stockholm"
+  },
+  {
+    "slug": "ljusberg-fysioterapi-ab",
+    "name": "Ljusberg Fysioterapi AB",
+    "city": "Bromma",
+    "address": "Johannesfredsvägen 64, 168 68 Bromma"
+  },
+  {
+    "slug": "viktoria-astrom-fysioterapi-ab",
+    "name": "Viktoria Åström Fysioterapi AB",
+    "city": "Stockholm",
+    "address": "Hammarby Allé 119, 120 64 Stockholm"
+  },
+  {
+    "slug": "ea-fysio-ab",
+    "name": "EA Fysio AB",
+    "city": "Stockholm",
+    "address": "Korphoppsgatan 26, 120 65 Stockholm"
+  },
+  {
+    "slug": "wagndal-halsa-och-fysioterapi-ab",
+    "name": "Wagndal Hälsa och Fysioterapi AB",
+    "city": "Lidingö",
+    "address": "Sälgtunet 5, 181 48 Lidingö"
+  },
+  {
+    "slug": "lisa-hedberg-sjukgymnastik-ab",
+    "name": "Lisa Hedberg Sjukgymnastik AB",
+    "city": "Solna",
+    "address": "Hasselstigen 6, 169 38 Solna"
+  },
+  {
+    "slug": "viveka-nyman-fysioterapi-ab",
+    "name": "Viveka Nyman Fysioterapi AB",
+    "city": "Solna",
+    "address": "Hagavägen 18, 169 69 Solna"
+  },
+  {
+    "slug": "optima-rehab-in-scandinavia-ab",
+    "name": "Optima Rehab in Scandinavia AB",
+    "city": "Lidingö",
+    "address": "Ringvägen 2, 181 51 Lidingö"
+  },
+  {
+    "slug": "battr3-ab",
+    "name": "Bättr3 AB",
+    "city": "Lidingö",
+    "address": "Stockholmsvägen 97, 181 31 Lidingö"
+  },
+  {
+    "slug": "aba-fysioterapi-ab",
+    "name": "ABA Fysioterapi AB",
+    "city": "Sollentuna",
+    "address": "Edsviksvägen 110, 191 43 Sollentuna"
+  },
+  {
+    "slug": "fysiohallen-akt-ab",
+    "name": "Fysiohallen AKT AB",
+    "city": "Solna",
+    "address": "Svetsarvägen 22, 171 41 Solna"
+  },
+  {
+    "slug": "carlssons-fysioterapi",
+    "name": "Carlsson's Fysioterapi",
+    "city": "Stockholm",
+    "address": "Södermannagatan 62, 116 65 Stockholm"
+  },
+  {
+    "slug": "bertil-fysioterapeut-fysioteamet-stockholm",
+    "name": "Bertil Fysioterapeut / Fysioteamet Stockholm",
+    "city": "Johanneshov",
+    "address": "Slakthusplan 2, 121 62 Johanneshov"
+  },
+  {
+    "slug": "naprapat-of-stockholm-ab",
+    "name": "Naprapat of Stockholm AB",
+    "city": "Stockholm",
+    "address": "Kungsgatan 84, 112 27 Stockholm"
+  },
+  {
+    "slug": "touched-by-ebba-postural",
+    "name": "Touched By Ebba & Postural",
+    "city": "Göteborg",
+    "address": "Lilla Munkebäcksgatan 5, 416 72 Göteborg"
+  },
+  {
+    "slug": "limbra-uppsala-fyristorg",
+    "name": "Limbra Uppsala Fyristorg",
+    "city": "Uppsala",
+    "address": "Fyristorg 6, 753 10 Uppsala"
+  },
+  {
+    "slug": "limbra-uppsala-bjorkgatan",
+    "name": "Limbra Uppsala Björkgatan",
+    "city": "Uppsala",
+    "address": "Björkgatan 4, 753 28 Uppsala"
+  },
+  {
+    "slug": "hlsoresursen",
+    "name": "Hälsoresursen",
+    "city": "Jönköping",
+    "address": "Narvavägen 31, 554 48 Jönköping"
+  },
+  {
+    "slug": "uppsala-naprapati-rehab",
+    "name": "Uppsala Naprapati & Rehab",
+    "city": "Uppsala",
+    "address": "Fyrisvallsgatan 23, 752 28 Uppsala"
+  },
+  {
+    "slug": "uppsala-naprapatklinik",
+    "name": "Uppsala Naprapatklinik AB",
+    "city": "Uppsala",
+    "address": "Kungsängsgatan 39, 753 22 Uppsala"
+  },
+  {
+    "slug": "city-naprapaten-uppsala",
+    "name": "City Naprapaten Uppsala AB",
+    "city": "Uppsala",
+    "address": "Kungsgatan 64, 753 41 Uppsala"
+  },
+  {
+    "slug": "kiropraktorkliniken-uppsala",
+    "name": "Kiropraktorkliniken",
+    "city": "Uppsala",
+    "address": "Nymansgatan 6A, 753 23 Uppsala"
+  },
+  {
+    "slug": "trulssons-kiropraktik-uppsala",
+    "name": "Trulssons Kiropraktik",
+    "city": "Uppsala",
+    "address": "Kungsängsvägen 19A, 753 23 Uppsala"
+  },
+  {
+    "slug": "jacob-moe-kiropraktor-uppsala",
+    "name": "Jacob Moe Kiropraktor & Rehab",
+    "city": "Uppsala",
+    "address": "Vildrosgatan 9, 753 24 Uppsala"
+  },
+  {
+    "slug": "beautiwise-i-ume",
+    "name": "Beautiwise i Umeå",
+    "city": "Umeå",
+    "address": "Dunkersgatan 5, 903 27 Umeå"
+  },
+  {
+    "slug": "rosendal-kiropraktorklinik-uppsala",
+    "name": "Rosendal Kiropraktorklinik",
+    "city": "Uppsala",
+    "address": "Torgny Segerstedts Allé 21, 756 44 Uppsala"
+  },
+  {
+    "slug": "muskelvarkstan-uppsala",
+    "name": "Muskelvärkstan",
+    "city": "Uppsala",
+    "address": "Kungsängsgatan 39, 753 22 Uppsala"
+  },
+  {
+    "slug": "limbra-linkoping",
+    "name": "Limbra Linköping",
+    "city": "Linköping",
+    "address": "Drottninggatan 19, 582 25 Linköping"
+  },
+  {
+    "slug": "praxis-linkoping",
+    "name": "Praxis Naprapati, Kiropraktik och Friskvård",
+    "city": "Linköping",
+    "address": "Kungsgatan 41, 582 18 Linköping"
+  },
+  {
+    "slug": "kiropraktorakuten-linkoping",
+    "name": "Kiropraktorakuten Linköping",
+    "city": "Linköping",
+    "address": "Hospitalstorget 2A, 582 27 Linköping"
+  },
+  {
+    "slug": "kiropraxis-linkoping",
+    "name": "Kiropraxis",
+    "city": "Linköping",
+    "address": "Storgatan 66, 582 28 Linköping"
+  },
+  {
+    "slug": "kiropraktorhuset-linkoping",
+    "name": "Kiropraktorhuset Linköping",
+    "city": "Linköping",
+    "address": "Kungsgatan 26A, 582 18 Linköping"
+  },
+  {
+    "slug": "joylife-vsters",
+    "name": "Joylife Västerås",
+    "city": "Västerås",
+    "address": "Kaserngatan 30C, 722 12 Västerås"
+  },
+  {
+    "slug": "limbra-vsters-tidigare-muskelcentrum",
+    "name": "Limbra Västerås (tidigare Muskelcentrum)",
+    "city": "Västerås",
+    "address": "Vasagatan 34, 722 15 Västerås"
+  },
+  {
+    "slug": "stjrnkliniken-vsters",
+    "name": "Stjärnkliniken Västerås",
+    "city": "Västerås",
+    "address": "Köpingsvägen 40, 722 13 Västerås"
+  },
+  {
+    "slug": "vsters-naprapatiska-klinik-ab",
+    "name": "Västerås Naprapatiska Klinik AB",
+    "city": "Västerås",
+    "address": "Källgatan 14, 722 15 Västerås"
+  },
+  {
+    "slug": "aros-hlsoteam",
+    "name": "Aros Hälsoteam",
+    "city": "Västerås",
+    "address": "Farledsgatan 5, 722 10 Västerås"
+  },
+  {
+    "slug": "meliva-rehab-vsters",
+    "name": "Meliva Rehab Västerås",
+    "city": "Västerås",
+    "address": "Köpmangatan 12, 722 15 Västerås"
+  },
+  {
+    "slug": "christer-sahlberg-chiropraktik-ab",
+    "name": "Christer Sahlberg Chiropraktik AB",
+    "city": "Västerås",
+    "address": "Kopparbergsvägen 19, 722 13 Västerås"
+  },
+  {
+    "slug": "ramstrms-massageterapi-and-rehab",
+    "name": "Ramströms Massageterapi & Rehab",
+    "city": "Västerås",
+    "address": "Klockartorpsgatan 25, 723 44 Västerås"
+  },
+  {
+    "slug": "ryggakuten-sverige-ab",
+    "name": "Ryggakuten Sverige AB",
+    "city": "Västerås",
+    "address": "Skogsvägen 17, 722 17 Västerås"
+  },
+  {
+    "slug": "naprapat-schaulin-ab",
+    "name": "Naprapat Schaulin AB",
+    "city": "Västerås",
+    "address": "Hållgatan 4, 724 61 Västerås"
+  },
+  {
+    "slug": "clavells-kiropraktor-klinik-ab",
+    "name": "Clavells Kiropraktor Klinik AB",
+    "city": "Västerås",
+    "address": "Vargbogatan 4, 723 34 Västerås"
+  },
+  {
+    "slug": "djkne-massage-o-spa",
+    "name": "Djäkne Massage o SPA",
+    "city": "Västerås",
+    "address": "Kristinagatan 19, 724 61 Västerås"
+  },
+  {
+    "slug": "tp-thaimassage-vsters",
+    "name": "TP Thaimassage Västerås",
+    "city": "Västerås",
+    "address": "Narvavägen 23, 724 68 Västerås"
+  },
+  {
+    "slug": "city-kiropraktik-carl-uddn",
+    "name": "City Kiropraktik Carl Uddén",
+    "city": "Västerås",
+    "address": "Kopparbergsvägen 19, 722 13 Västerås"
+  },
+  {
+    "slug": "kiropraktorkompaniet-crn-ab",
+    "name": "KiropraktorKompaniet CRN AB",
+    "city": "Västerås",
+    "address": "Stenbygatan 3 D, 722 36 Västerås"
+  },
+  {
+    "slug": "idrottskliniken-vsters",
+    "name": "Idrottskliniken Västerås",
+    "city": "Västerås",
+    "address": "Friledningsgatan 3B, 721 37 Västerås"
+  },
+  {
+    "slug": "hlsorehab-fredrik-widn",
+    "name": "Hälsorehab (Fredrik Widén)",
+    "city": "Västerås",
+    "address": "Farledsgatan 5, 722 10 Västerås"
+  },
+  {
+    "slug": "kiropraktor-and-sjukgymnast-gunnar-renbro-ab",
+    "name": "Kiropraktor & Sjukgymnast Gunnar Renbro AB",
+    "city": "Västerås",
+    "address": "Legeringsgatan 2 B, 721 30 Västerås"
+  },
+  {
+    "slug": "topphlsan-kiropraktik-vsters",
+    "name": "ToppHälsan Kiropraktik Västerås",
+    "city": "Västerås",
+    "address": "Stora gatan 20, 722 12 Västerås"
+  },
+  {
+    "slug": "claes-ellefors-ce-alternativ-rehabilitering-ab",
+    "name": "Claes Ellefors CE Alternativ Rehabilitering AB",
+    "city": "Västerås",
+    "address": "Södra Billstagatan 26, 722 40 Västerås"
+  },
+  {
+    "slug": "rygg-and-idrottsskademottagningen-i-vsters-ab",
+    "name": "Rygg- & Idrottsskademottagningen i Västerås AB",
+    "city": "Västerås",
+    "address": "Legeringsgatan 2 B, 721 30 Västerås"
+  },
+  {
+    "slug": "free2be-naprapati-and-vlmende",
+    "name": "Free2be Naprapati & Välmående",
+    "city": "Västerås",
+    "address": "Bogvägen 1, 723 48 Västerås"
+  },
+  {
+    "slug": "christer-jakobsson-naprapat",
+    "name": "Christer Jakobsson - Naprapat",
+    "city": "Västerås",
+    "address": "Stålverksgatan 12, 721 36 Västerås"
+  },
+  {
+    "slug": "massage-i-vsters-city",
+    "name": "Massage i Västerås City",
+    "city": "Västerås",
+    "address": "Kopparbergsvägen 19, 722 13 Västerås"
+  },
+  {
+    "slug": "change-by-choice-sandra-olsson",
+    "name": "Change by Choice (Sandra Olsson)",
+    "city": "Västerås",
+    "address": "Vintervägen 19, 722 31 Västerås"
+  },
+  {
+    "slug": "apalby-friskcenter-sjukgymnastik",
+    "name": "Apalby Friskcenter Sjukgymnastik",
+    "city": "Västerås",
+    "address": "Apalbyvägen, 724 81 Västerås"
+  },
+  {
+    "slug": "fysiomedics-lkargruppen-fysioterapi",
+    "name": "Fysiomedics / Läkargruppen Fysioterapi",
+    "city": "Västerås",
+    "address": "Norra Källgatan 18, 722 15 Västerås"
+  },
+  {
+    "slug": "leg-naprapat-jeanette-bogthy",
+    "name": "Leg. Naprapat Jeanette Bogáthy",
+    "city": "Västerås",
+    "address": "Skultunavägen 1, 724 60 Västerås"
+  },
+  {
+    "slug": "naprapatklinik-018",
+    "name": "Naprapatklinik 018",
+    "city": "Uppsala",
+    "address": "Sleven Säfwenbergs väg 4B, 753 09 Uppsala"
+  },
+  {
+    "slug": "nova-naprapati",
+    "name": "Nova Naprapati",
+    "city": "Uppsala",
+    "address": "Bangårdsgatan 13, 753 20 Uppsala"
+  },
+  {
+    "slug": "napraparty",
+    "name": "Napraparty",
+    "city": "Stockholm",
+    "address": "Nybrogatan 71, 114 40 Stockholm"
+  },
+  {
+    "slug": "city-kiropraktik-magnus-eriksson",
+    "name": "City Kiropraktik Magnus Eriksson",
+    "city": "Uppsala",
+    "address": "Möllersvärdsgatan 12, 754 50 Uppsala"
+  },
+  {
+    "slug": "uppsala-kiropraktorklinik",
+    "name": "Uppsala Kiropraktorklinik",
+    "city": "Uppsala",
+    "address": "Kungsängsgatan 29, 753 22 Uppsala"
+  },
+  {
+    "slug": "uppsala-rehab-and-fysioterapi",
+    "name": "Uppsala Rehab & Fysioterapi",
+    "city": "Uppsala",
+    "address": "Norrtäljegatan 6A, 753 27 Uppsala"
+  },
+  {
+    "slug": "fysiaden-uppsala",
+    "name": "Fysiaden Uppsala",
+    "city": "Uppsala",
+    "address": "Artillerigatan 7, 752 37 Uppsala"
+  },
+  {
+    "slug": "uppsala-aktiv-rehab",
+    "name": "Uppsala Aktiv Rehab",
+    "city": "Uppsala",
+    "address": "Sjukhusvägen 2, 753 09 Uppsala"
+  },
+  {
+    "slug": "motoriken",
+    "name": "Motoriken",
+    "city": "Uppsala",
+    "address": "Götgatan 1, 753 15 Uppsala"
+  },
+  {
+    "slug": "fyris-massage",
+    "name": "Fyris Massage",
+    "city": "Uppsala",
+    "address": "Kålsängsgränd 10C, 753 19 Uppsala"
+  },
+  {
+    "slug": "robins-massage",
+    "name": "Robins Massage",
+    "city": "Uppsala",
+    "address": "Sparrisgatan 3B, 754 46 Uppsala"
+  },
+  {
+    "slug": "mishas-massage",
+    "name": "Mishas Massage",
+    "city": "Uppsala",
+    "address": "Centrala Uppsala, 753 20 Uppsala"
+  },
+  {
+    "slug": "optimal-naprapati",
+    "name": "Optimal Naprapati",
+    "city": "Stockholm",
+    "address": "Vidargatan 1, 113 27 Norrmalm"
+  },
+  {
+    "slug": "imt-idrott-massage-terapeuten",
+    "name": "I.M.T – Idrotts Massage Terapeuten",
+    "city": "Göteborg",
+    "address": "Danska vägen 84b, 416 59 Göteborg (c/o Kornbakks kiropraktik)"
+  },
+  {
+    "slug": "svea-naprapati-and-idrottsmedicin",
+    "name": "Svea Naprapati & Idrottsmedicin",
+    "city": "Stockholm",
+    "address": "Sveavägen 141 B, 113 46 Norrmalm"
+  },
+  {
+    "slug": "supermauro-naprapati",
+    "name": "SuperMauro Naprapati",
+    "city": "Stockholm",
+    "address": "Eriksbergsgatan 8B, 114 30 Norrmalm"
+  },
+  {
+    "slug": "garpenschld-kiropraktik",
+    "name": "Garpenschöld Kiropraktik",
+    "city": "Stockholm",
+    "address": "Stureplan 4, 114 35 Norrmalm"
+  },
+  {
+    "slug": "sthlm-fysioterapi",
+    "name": "STHLM Fysioterapi",
+    "city": "Stockholm",
+    "address": "Fleminggatan 65, 112 32 Norrmalm"
+  },
+  {
+    "slug": "sders-hlsocenter",
+    "name": "Söders Hälsocenter",
+    "city": "Stockholm",
+    "address": "Fatbursgatan 18A, 118 54 Norrmalm"
+  },
+  {
+    "slug": "stockholms-massageklinik",
+    "name": "Stockholms Massageklinik",
+    "city": "Stockholm",
+    "address": "Klara Norra Kyrkogata 20B, 111 22 Norrmalm"
+  },
+  {
+    "slug": "fysiohuset",
+    "name": "Fysiohuset",
+    "city": "Göteborg",
+    "address": "Gibraltargatan 3, 412 58 Lorensberg"
+  },
+  {
+    "slug": "kvarterskliniken-rehab-avenyn",
+    "name": "Kvarterskliniken Rehab Avenyn",
+    "city": "Göteborg",
+    "address": "Kungsportsavenyn 33, 411 36 Lorensberg"
+  },
+  {
+    "slug": "omi-massage-gteborg",
+    "name": "OMI Massage Göteborg",
+    "city": "Göteborg",
+    "address": "Södra Vägen 57, 412 54 Lorensberg"
+  },
+  {
+    "slug": "bona-curatio",
+    "name": "Bona Curatio",
+    "city": "Göteborg",
+    "address": "Virginsgatan 12, 416 54 Lorensberg"
+  },
+  {
+    "slug": "malm-idrottsklinik",
+    "name": "Malmö Idrottsklinik",
+    "city": "Malmö",
+    "address": "Kalendegatan 20, 211 35 Centrum"
+  },
+  {
+    "slug": "fysio-center",
+    "name": "Fysio Center",
+    "city": "Malmö",
+    "address": "Djäknegatan 2, 211 35 Centrum"
+  },
+  {
+    "slug": "kulan-idrottsskadecentrum",
+    "name": "Kulan Idrottsskadecentrum",
+    "city": "Malmö",
+    "address": "Eric Perssons väg 5, 217 62 Centrum"
+  },
+  {
+    "slug": "limbra-rebro-tidigare-naprapatlandslaget",
+    "name": "Limbra Örebro (tidigare Naprapatlandslaget)",
+    "city": "Örebro",
+    "address": "Oskarsparken 7, 702 12 Örebro"
+  },
+  {
+    "slug": "kroppshlsan-i-rebro",
+    "name": "Kroppshälsan i Örebro",
+    "city": "Örebro",
+    "address": "Olaigatan 34, 703 61 Örebro"
+  },
+  {
+    "slug": "rebro-kiropraktorklinik-mindfrid-kiropraktik-ab",
+    "name": "Örebro Kiropraktorklinik (Mindfrid Kiropraktik AB)",
+    "city": "Örebro",
+    "address": "Eklundavägen 21, 702 17 Örebro"
+  },
+  {
+    "slug": "aktiv-kiropraktik-full-potential-international-ab",
+    "name": "Aktiv Kiropraktik (Full Potential International AB)",
+    "city": "Örebro",
+    "address": "Drottninggatan 11, 702 10 Örebro"
+  },
+  {
+    "slug": "ryggcenter-rebro-ab",
+    "name": "Ryggcenter Örebro AB",
+    "city": "Örebro",
+    "address": "Vaktelvägen 2, 703 48 Örebro"
+  },
+  {
+    "slug": "hanser-kiropraktorklinik-ab",
+    "name": "Hanser Kiropraktorklinik AB",
+    "city": "Örebro",
+    "address": "Storgatan 6, 703 61 Örebro"
+  },
+  {
+    "slug": "monks-kiropraktik",
+    "name": "Monks Kiropraktik",
+    "city": "Örebro",
+    "address": "Norrgatan 44, 703 56 Örebro"
+  },
+  {
+    "slug": "rebro-fysio",
+    "name": "Örebro Fysio",
+    "city": "Örebro",
+    "address": "Markgatan 7, 703 55 Örebro"
+  },
+  {
+    "slug": "centrum-sjukgymnastik",
+    "name": "Centrum Sjukgymnastik",
+    "city": "Örebro",
+    "address": "Köpmangatan 62, 702 23 Örebro"
+  },
+  {
+    "slug": "medical-massage-clinic",
+    "name": "Medical Massage Clinic",
+    "city": "Örebro",
+    "address": "Kabingatan 2, 702 26 Örebro"
+  },
+  {
+    "slug": "performance-center-lindhagen-naprapatklinik",
+    "name": "Performance Center Lindhagen - Naprapatklinik",
+    "city": "Stockholm",
+    "address": "Lindhagensgatan 135A, 112 15 Stockholm"
+  },
+  {
+    "slug": "full-funktion-naprapatklinik",
+    "name": "Full Funktion - Naprapatklinik",
+    "city": "Stockholm",
+    "address": "Tegnérgatan 51, 111 61 Stockholm"
+  },
+  {
+    "slug": "stockholms-rehabklinik-city",
+    "name": "Stockholms RehabKlinik CITY",
+    "city": "Stockholm",
+    "address": "Kungsgatan 35, 111 56 Stockholm"
+  },
+  {
+    "slug": "massage-and-rehab-i-rebro-ab",
+    "name": "Massage & Rehab i Örebro AB",
+    "city": "Örebro",
+    "address": "Rynningegatan 27, 703 65 Örebro"
+  },
+  {
+    "slug": "napractiva-naprapat-julian-sollentuna",
+    "name": "Napractiva - Naprapat Julian Sollentuna",
+    "city": "Sollentuna",
+    "address": "Aniaraplatsen 2, 3tr, 191 47 Sollentuna"
+  },
+  {
+    "slug": "gunillas-massagebod-and-spa",
+    "name": "Gunillas MassageBod & Spa",
+    "city": "Örebro",
+    "address": "Näbbtorgsgatan 20, 702 23 Örebro"
+  },
+  {
+    "slug": "sundbybergs-halsocenter",
+    "name": "Sundbybergs Hälsocenter",
+    "city": "Sundbyberg",
+    "address": "Brunnsgatan 4A, 172 68 Sundbyberg"
+  },
+  {
+    "slug": "hummelgren-fysioterapi-ab",
+    "name": "Hummelgren Fysioterapi AB",
+    "city": "Örebro",
+    "address": "Idrottsvägen 31B, 702 32 Örebro"
+  },
+  {
+    "slug": "muskelakuten-sundbyberg-naprapat-och-massage",
+    "name": "Muskelakuten Sundbyberg - Naprapat & Massage",
+    "city": "Sundbyberg",
+    "address": "Gjuteribacken 13, 172 65 Sundbyberg"
+  },
+  {
+    "slug": "optimal-rehab-sodermalm",
+    "name": "Optimal Rehab Södermalm",
+    "city": "Stockholm",
+    "address": "Lundagatan 57, 117 29 Stockholm"
+  },
+  {
+    "slug": "muskelakuten-sodermalm-hornstull-naprapat-och-massage",
+    "name": "Muskelakuten Södermalm/Hornstull - Naprapat & Massage",
+    "city": "Stockholm",
+    "address": "Lundagatan 57, 117 28 Stockholm"
+  },
+  {
+    "slug": "naprapat-magnus-olympiokliniken-vasastan",
+    "name": "Naprapat Magnus - Olympiokliniken - Vasastan",
+    "city": "Stockholm",
+    "address": "Upplandsgatan 71, 113 28 Stockholm"
+  },
+  {
+    "slug": "city-kliniken-naprapat-goteborg",
+    "name": "City-Kliniken - Naprapat Göteborg",
+    "city": "Göteborg",
+    "address": "Östra Hamngatan 52, 411 09 Inom Vallgraven"
+  },
+  {
+    "slug": "eva-rytterlund-leg-naprapat",
+    "name": "Eva Rytterlund Leg. Naprapat",
+    "city": "Göteborg",
+    "address": "Wadmansgatan 9, 412 53 Lorensberg"
+  },
+  {
+    "slug": "smood-vastra-hamnen",
+    "name": "Smood Västra Hamnen",
+    "city": "Malmö",
+    "address": "Lovartsgatan 10, 211 19 Malmö"
+  },
+  {
+    "slug": "apex-rehab-limhamn",
+    "name": "Apex Rehab Limhamn",
+    "city": "Malmö",
+    "address": "Linnégatan 45, 216 14 Limhamn"
+  },
+  {
+    "slug": "claes-ellefors-ce-alternativ-rehabilitering",
+    "name": "Claes Ellefors CE Alternativ Rehabilitering",
+    "city": "Västerås",
+    "address": "Södra Billstagatan 26, 722 40 Västerås"
+  },
+  {
+    "slug": "goteborgs-massage-rehab-almedal",
+    "name": "Göteborgs Massage & Rehab – Almedal",
+    "city": "Göteborg",
+    "address": "Mölndalsvägen 23, 412 63 Göteborg"
+  },
+  {
+    "slug": "vastermalms-kiropraktik",
+    "name": "Västermalms Kiropraktik",
+    "city": "Stockholm",
+    "address": "Fleminggatan 15, 112 26 Stockholm"
+  },
+  {
+    "slug": "joylife-uppsala",
+    "name": "Joylife Uppsala",
+    "city": "Uppsala",
+    "address": "S:t Olofsgatan 11, 753 21 Uppsala"
+  },
+  {
+    "slug": "kiropraktorvard-uppsala",
+    "name": "Kiropraktorvård Uppsala",
+    "city": "Uppsala",
+    "address": "Sköldungagatan 57, 753 35 Uppsala"
+  },
+  {
+    "slug": "elitnaprapati-uppsala",
+    "name": "ElitNaprapati",
+    "city": "Uppsala",
+    "address": "Slottsgränd 2A, 753 09 Uppsala"
+  },
+  {
+    "slug": "prime-naprapati-uppsala",
+    "name": "Prime Naprapati",
+    "city": "Uppsala",
+    "address": "Kungsängsgatan 17, 753 22 Uppsala"
+  },
+  {
+    "slug": "idrottsskadecentrum-uppsala",
+    "name": "Idrottsskadecentrum Uppsala",
+    "city": "Uppsala",
+    "address": "Drottninggatan 1A, 753 10 Uppsala"
+  },
+  {
+    "slug": "jc-fysio-jenny-carlsson",
+    "name": "JC Fysio (Jenny Carlsson)",
+    "city": "Örebro",
+    "address": "Idrottsvägen 31B, 702 32 Örebro"
+  },
+  {
+    "slug": "naprapatdoktorerna-i-stockholm-hb",
+    "name": "Naprapatdoktorerna i Stockholm HB",
+    "city": "Bromma",
+    "address": "Abrahamsbergsvägen 31, 168 31 Bromma"
+  },
+  {
+    "slug": "goteborgs-massage-rehab-vasastaden",
+    "name": "Göteborgs Massage & Rehab – Vasastaden",
+    "city": "Göteborg",
+    "address": "Viktoriagatan 24, 411 25 Göteborg"
+  },
+  {
+    "slug": "tips-massage",
+    "name": "Tips Massage",
+    "city": "Västerås",
+    "address": "Haga parkgata 19, 723 36 Västerås"
+  },
+  {
+    "slug": "stjrnkliniken-rebro",
+    "name": "Stjärnkliniken Örebro",
+    "city": "Örebro",
+    "address": "Kungsgatan 32B, 702 24 Örebro"
+  },
+  {
+    "slug": "massageterapi-vivi",
+    "name": "Massageterapi ViVi",
+    "city": "Örebro",
+    "address": "Kungsgatan 60A, 702 24 Örebro"
+  },
+  {
+    "slug": "sportmassage-rebro-ab",
+    "name": "SportMassage Örebro AB",
+    "city": "Örebro",
+    "address": "Karlsdalsallén 56a, 702 18 Örebro"
+  },
+  {
+    "slug": "mbraverkstan-kropp-i-balans",
+    "name": "MåbraVerkstan - Kropp i balans",
+    "city": "Örebro",
+    "address": "Hagmarksgatan 19, 702 16 Örebro"
+  },
+  {
+    "slug": "naprapatjouren-eliasons",
+    "name": "Naprapatjouren (Eliasons)",
+    "city": "Örebro",
+    "address": "Våghustorget 3, 702 12 Örebro"
+  },
+  {
+    "slug": "anderson-chiropractic",
+    "name": "Anderson Chiropractic",
+    "city": "Örebro",
+    "address": "Angelgatan 11, 703 41 Örebro"
+  },
+  {
+    "slug": "arne-rydstrm-sjukgymnastik",
+    "name": "Arne Rydström Sjukgymnastik",
+    "city": "Örebro",
+    "address": "Järnvägsgatan 38, 703 62 Örebro"
+  },
+  {
+    "slug": "margit-bangshj-feldenkrais",
+    "name": "Margit Bangshöj (Feldenkrais)",
+    "city": "Örebro",
+    "address": "Storgatan 8a, 703 61 Örebro"
+  },
+  {
+    "slug": "handkraft-mia-lans",
+    "name": "Handkraft Mia Lans",
+    "city": "Örebro",
+    "address": "Drottninggatan 55, 702 22 Örebro"
+  },
+  {
+    "slug": "nyngens-hlsa",
+    "name": "Nyängens Hälsa",
+    "city": "Örebro",
+    "address": "Sturegatan 18, 702 14 Örebro"
+  },
+  {
+    "slug": "palmrothtraining",
+    "name": "PalmrothTraining",
+    "city": "Örebro",
+    "address": "Skottvägen 5, 703 69 Örebro"
+  },
+  {
+    "slug": "lagerberg-naprapati-och-hlsa-ab",
+    "name": "Lagerberg Naprapati och hälsa AB",
+    "city": "Örebro",
+    "address": "Vadstens gränd 11, 702 28 Örebro"
+  },
+  {
+    "slug": "limbra-norrkping-naprapatlandslaget",
+    "name": "Limbra Norrköping (Naprapatlandslaget)",
+    "city": "Norrköping",
+    "address": "Hantverkaregatan 45-47, 602 32 Norrköping"
+  },
+  {
+    "slug": "naprapateliten",
+    "name": "Naprapateliten",
+    "city": "Norrköping",
+    "address": "Lundatorpsvägen 3, 602 13 Norrköping"
+  },
+  {
+    "slug": "naprapatakuten",
+    "name": "Naprapatakuten",
+    "city": "Norrköping",
+    "address": "Södra Promenaden 32, 602 34 Norrköping"
+  },
+  {
+    "slug": "kiropraktorhuset-norrkping",
+    "name": "Kiropraktorhuset Norrköping",
+    "city": "Norrköping",
+    "address": "Lindövägen 17, 602 28 Norrköping"
+  },
+  {
+    "slug": "kiropraktor-mattias-ekstrm",
+    "name": "Kiropraktor Mattias Ekström",
+    "city": "Norrköping",
+    "address": "Lundatorpsvägen 9, 602 13 Norrköping"
+  },
+  {
+    "slug": "ryggakuten-kiropraktik",
+    "name": "Ryggakuten Kiropraktik",
+    "city": "Norrköping",
+    "address": "Repslagaregatan 15, 602 25 Norrköping"
+  },
+  {
+    "slug": "andrns-praktik",
+    "name": "Andréns Praktik",
+    "city": "Norrköping",
+    "address": "Linköpingsvägen 24, 603 36 Norrköping"
+  },
+  {
+    "slug": "norrkpings-kiropraktorklinik-moa-holdaj",
+    "name": "Norrköpings kiropraktorklinik (Moa Holdaj)",
+    "city": "Norrköping",
+    "address": "Ljunggatan 14, 603 36 Norrköping"
+  },
+  {
+    "slug": "fysett-rehab-and-trningscenter-ab",
+    "name": "FysEtt Rehab- & Träningscenter AB",
+    "city": "Norrköping",
+    "address": "Lundatorpsvägen 9, 602 13 Norrköping"
+  },
+  {
+    "slug": "norrkping-fysiocenter",
+    "name": "Norrköping FysioCenter",
+    "city": "Norrköping",
+    "address": "Skarphagsgatan 29, 603 64 Norrköping"
+  },
+  {
+    "slug": "omt-kliniken-cumhur-kaya",
+    "name": "OMT Kliniken (Cumhur Kaya)",
+    "city": "Norrköping",
+    "address": "S:t Persgatan 19, 601 86 Norrköping"
+  },
+  {
+    "slug": "fysioterapi-himmelstalund",
+    "name": "Fysioterapi Himmelstalund",
+    "city": "Norrköping",
+    "address": "Finspångsvägen 63, 602 13 Norrköping"
+  },
+  {
+    "slug": "anders-trsen",
+    "name": "Anders Töråsen",
+    "city": "Norrköping",
+    "address": "S:t Persgatan 19, 602 33 Norrköping"
+  },
+  {
+    "slug": "christer-jonsson-ifk-medical-and-performance-centre",
+    "name": "Christer Jonsson (IFK Medical & Performance Centre)",
+    "city": "Norrköping",
+    "address": "Södra Promenaden 32, 603 53 Norrköping"
+  },
+  {
+    "slug": "a-massage-terapi",
+    "name": "A Massage Terapi",
+    "city": "Örebro",
+    "address": "Bromsgatan 1B, 703 66 Örebro"
+  },
+  {
+    "slug": "maria-lundmark-naprapati-ab",
+    "name": "Maria Lundmark Naprapati AB",
+    "city": "Örebro",
+    "address": "Nygatan 16 B, 702 11 Örebro"
+  },
+  {
+    "slug": "strids-naprapatklinik-ab",
+    "name": "Strids Naprapatklinik AB",
+    "city": "Örebro",
+    "address": "Oskarsvägen 2, 702 14 Örebro"
+  },
+  {
+    "slug": "lisa-frick-sjukgymnastik-ab",
+    "name": "Lisa Frick Sjukgymnastik AB",
+    "city": "Örebro",
+    "address": "Järnvägsgatan 16A, 703 62 Örebro"
+  },
+  {
+    "slug": "rebro-sjukgymnastik",
+    "name": "Örebro Sjukgymnastik",
+    "city": "Örebro",
+    "address": "Trängkårsvägen 53, 703 57 Örebro"
+  },
+  {
+    "slug": "helenas-massageterapi",
+    "name": "Helenas Massageterapi",
+    "city": "Örebro",
+    "address": "Engelbrektsgatan 37, 702 13 Örebro"
+  },
+  {
+    "slug": "lindas-behandlingscenter",
+    "name": "Lindas Behandlingscenter",
+    "city": "Norrköping",
+    "address": "Generalsgatan 47, 602 31 Norrköping"
+  },
+  {
+    "slug": "ms-massage",
+    "name": "MS Massage",
+    "city": "Norrköping",
+    "address": "Stockholmsvägen 16, 602 17 Norrköping"
+  },
+  {
+    "slug": "pbm-massage-ab",
+    "name": "PBM Massage AB",
+    "city": "Norrköping",
+    "address": "Tunnbindaregatan 24, 602 21 Norrköping"
+  },
+  {
+    "slug": "naprapatkliniken-johan-paldanius",
+    "name": "Naprapatkliniken Johan Paldanius",
+    "city": "Norrköping",
+    "address": "Södra Promenaden 32, 603 53 Norrköping"
+  },
+  {
+    "slug": "jw-kliniken",
+    "name": "JW Kliniken",
+    "city": "Linköping",
+    "address": "Apotekaregatan 13E, 582 22 Linköping"
+  },
+  {
+    "slug": "zona-by-louise",
+    "name": "ZonA by Louise",
+    "city": "Norrköping",
+    "address": "Skarphagsgatan 29, 603 64 Norrköping"
+  },
+  {
+    "slug": "massage-akademin-i-norrkping",
+    "name": "Massage Akademin i Norrköping",
+    "city": "Norrköping",
+    "address": "Kabelvägen 2, 602 10 Norrköping"
+  },
+  {
+    "slug": "leo-massage",
+    "name": "Leo Massage",
+    "city": "Norrköping",
+    "address": "Repslagaregatan 15, 602 25 Norrköping"
+  },
+  {
+    "slug": "kellerkliniken",
+    "name": "Kellerkliniken",
+    "city": "Norrköping",
+    "address": "Nygatan 80B, 602 34 Norrköping"
+  },
+  {
+    "slug": "norrkping-master-massage-ab",
+    "name": "Norrköping Master Massage AB",
+    "city": "Norrköping",
+    "address": "Luntgatan 41, 602 19 Norrköping"
+  },
+  {
+    "slug": "massage-and-wellness-by-maria",
+    "name": "Massage and Wellness by Maria",
+    "city": "Norrköping",
+    "address": "Lidaleden 167, 603 81 Norrköping"
+  },
+  {
+    "slug": "tdhs-massage",
+    "name": "TDH´s Massage",
+    "city": "Norrköping",
+    "address": "Fjärilsgatan 21, 603 61 Norrköping"
+  },
+  {
+    "slug": "magges-massage",
+    "name": "Magges Massage",
+    "city": "Norrköping",
+    "address": "Vattenverksvägen 2, 603 36 Norrköping"
+  },
+  {
+    "slug": "hlsoboxen",
+    "name": "Hälsoboxen",
+    "city": "Norrköping",
+    "address": "Vattengränden 2b, 602 22 Norrköping"
+  },
+  {
+    "slug": "kiropraktorzonen-st-ab",
+    "name": "Kiropraktorzonen Öst AB",
+    "city": "Norrköping",
+    "address": "Skårvägen 16, 603 85 Norrköping"
+  },
+  {
+    "slug": "kaya-sjukgymnastik-och-rehab-ab",
+    "name": "Kaya Sjukgymnastik och Rehab AB",
+    "city": "Norrköping",
+    "address": "Knäppingsborgsgatan 14, 602 26 Norrköping"
+  },
+  {
+    "slug": "eric-hagelin-fysioterapi-ab",
+    "name": "Eric Hagelin Fysioterapi AB",
+    "city": "Norrköping",
+    "address": "Gråbergsgatan 1, 603 56 Norrköping"
+  },
+  {
+    "slug": "limbra-linkping-naprapatlandslaget",
+    "name": "Limbra Linköping (Naprapatlandslaget)",
+    "city": "Linköping",
+    "address": "Drottninggatan 19, 582 25 Linköping"
+  },
+  {
+    "slug": "praxis-naprapati-kiropraktik-och-friskvrd",
+    "name": "Praxis Naprapati, Kiropraktik och Friskvård",
+    "city": "Linköping",
+    "address": "Kungsgatan 41, 582 18 Linköping"
+  },
+  {
+    "slug": "curarehab-linkping",
+    "name": "CuraRehab Linköping",
+    "city": "Linköping",
+    "address": "Drottninggatan 43 N, 582 27 Linköping"
+  },
+  {
+    "slug": "kiropraktorakuten-i-linkping-ab",
+    "name": "Kiropraktorakuten i Linköping AB",
+    "city": "Linköping",
+    "address": "Hospitalstorget 2A, 582 27 Linköping"
+  },
+  {
+    "slug": "naprapat-service-i-linkping-ab",
+    "name": "Naprapat Service i Linköping AB",
+    "city": "Linköping",
+    "address": "Teknikringen 7, 583 30 Linköping"
+  },
+  {
+    "slug": "linkping-hlsocenter",
+    "name": "Linköping Hälsocenter",
+    "city": "Linköping",
+    "address": "Klostergatan 24, 582 23 Linköping"
+  },
+  {
+    "slug": "din-fysio",
+    "name": "Din Fysio",
+    "city": "Linköping",
+    "address": "Johanneborgsparken 1 (Valla Berså), 582 49 Linköping"
+  },
+  {
+    "slug": "hgre-funktion-c-bergqvist-sjukgymnastik-and-rehab",
+    "name": "Högre Funktion (C Bergqvist Sjukgymnastik & Rehab)",
+    "city": "Linköping",
+    "address": "Engelbrektsgatan 6, 582 21 Linköping"
+  },
+  {
+    "slug": "institutet-fr-sjukgymnastik-och-beteendemedicin",
+    "name": "Institutet för sjukgymnastik och beteendemedicin",
+    "city": "Linköping",
+    "address": "Ådalagatan 10, 582 26 Linköping"
+  },
+  {
+    "slug": "landerydskliniken",
+    "name": "Landerydskliniken",
+    "city": "Linköping",
+    "address": "Bogestad Gård, 585 93 Linköping"
+  },
+  {
+    "slug": "campushallen-ebbepark",
+    "name": "Campushallen Ebbepark",
+    "city": "Linköping",
+    "address": "Ebbegatan 11, 582 13 Linköping"
+  },
+  {
+    "slug": "linkping-health-care",
+    "name": "Linköping Health Care",
+    "city": "Linköping",
+    "address": "Torkelbergsgatan 14 B, 582 25 Linköping"
+  },
+  {
+    "slug": "mats-haglund-fysioterapi-campushallen-ebbepark",
+    "name": "Mats Haglund Fysioterapi / Campushallen Ebbepark",
+    "city": "Linköping",
+    "address": "Ebbegatan 11 (Campushallen Ebbepark), 582 13 Linköping"
+  },
+  {
+    "slug": "hammarlyck-rehab-aktiebolag",
+    "name": "Hammarlyck Rehab Aktiebolag",
+    "city": "Linköping",
+    "address": "Munkhagsgatan 98 E, 587 25 Linköping"
+  },
+  {
+    "slug": "kiropraktor-michael-eklund-ab",
+    "name": "Kiropraktor Michael Eklund AB",
+    "city": "Linköping",
+    "address": "Repslagaregatan 32 A, 582 22 Linköping"
+  },
+  {
+    "slug": "stjrnkliniken-linkping",
+    "name": "Stjärnkliniken Linköping",
+    "city": "Linköping",
+    "address": "Repslagaregatan 19, 582 22 Linköping"
+  },
+  {
+    "slug": "mariannes-massage-and-hlsa",
+    "name": "Mariannes Massage & Hälsa",
+    "city": "Linköping",
+    "address": "Hökaregatan 1, 582 46 Linköping"
+  },
+  {
+    "slug": "benitas-massage-and-hlsa",
+    "name": "Benita´s Massage & Hälsa",
+    "city": "Linköping",
+    "address": "Konsistoriegatan 10C, 582 34 Linköping"
+  },
+  {
+    "slug": "calma-massage",
+    "name": "Calma Massage",
+    "city": "Linköping",
+    "address": "Snickaregatan 50, 582 26 Linköping"
+  },
+  {
+    "slug": "timeas-massage",
+    "name": "Timeas Massage",
+    "city": "Linköping",
+    "address": "Linnégatan 17A, 582 25 Linköping"
+  },
+  {
+    "slug": "re-massage-ab",
+    "name": "RE Massage AB",
+    "city": "Linköping",
+    "address": "Brigadgatan 19, 587 58 Linköping"
+  },
+  {
+    "slug": "jonas-lwendahl-massage-och-friskvrd",
+    "name": "Jonas Löwendahl massage och friskvård",
+    "city": "Linköping",
+    "address": "Platensgatan 27, 582 20 Linköping"
+  },
+  {
+    "slug": "johanna-sandstrak-massage-and-friskvrd",
+    "name": "Johanna Sandstrak massage & friskvård",
+    "city": "Linköping",
+    "address": "Stövarevägen 3, 587 29 Linköping"
+  },
+  {
+    "slug": "beautiful-body-massage-maawell",
+    "name": "Beautiful Body Massage / Maawell",
+    "city": "Linköping",
+    "address": "Hertig Karlsgatan 2, 582 21 Linköping"
+  },
+  {
+    "slug": "meekam-spa-and-massage",
+    "name": "Meekam Spa & Massage",
+    "city": "Linköping",
+    "address": "Banérgatan 4A, 582 32 Linköping"
+  },
+  {
+    "slug": "thaichat-massage",
+    "name": "Thaichat massage",
+    "city": "Linköping",
+    "address": "Solängsvägen 5, 589 41 Linköping"
+  },
+  {
+    "slug": "lednra-kroppsvrd-co-friskhuset",
+    "name": "Lednära Kroppsvård c/o Friskhuset",
+    "city": "Linköping",
+    "address": "Engelbrektsgatan 31, 582 21 Linköping"
+  },
+  {
+    "slug": "edelman-kiropraktik",
+    "name": "Edelman Kiropraktik",
+    "city": "Helsingborg",
+    "address": "Stortorget 11, 252 20 Helsingborg"
+  },
+  {
+    "slug": "backe-kiropraktik-ab",
+    "name": "Backe Kiropraktik AB",
+    "city": "Helsingborg",
+    "address": "Drottninggatan 62, 252 21 Helsingborg"
+  },
+  {
+    "slug": "clinicus-kiropraktorklinik",
+    "name": "Clinicus Kiropraktorklinik",
+    "city": "Helsingborg",
+    "address": "Kapplöpningsgatan 14, 252 30 Helsingborg"
+  },
+  {
+    "slug": "curo-rehab",
+    "name": "Curo Rehab",
+    "city": "Helsingborg",
+    "address": "Simhallsbadet, Gustav Adolfs torg, 252 25 Helsingborg"
+  },
+  {
+    "slug": "helsingborgs-fysio-ab",
+    "name": "Helsingborgs Fysio AB",
+    "city": "Helsingborg",
+    "address": "Bergaliden 11, 252 23 Helsingborg"
+  },
+  {
+    "slug": "myofysio-helsingborg",
+    "name": "myoFysio Helsingborg",
+    "city": "Helsingborg",
+    "address": "Landskronavägen 23, 252 32 Helsingborg"
+  },
+  {
+    "slug": "thaimassage-helsingborg",
+    "name": "Thaimassage Helsingborg",
+    "city": "Helsingborg",
+    "address": "Drottninggatan 75, 254 33 Helsingborg"
+  },
+  {
+    "slug": "kroppsteamet-i-helsingborg",
+    "name": "KroppsTeamet i Helsingborg",
+    "city": "Helsingborg",
+    "address": "Magnoliagatan 3, 256 68 Helsingborg"
+  },
+  {
+    "slug": "massage-guldkant",
+    "name": "Massage Guldkant",
+    "city": "Helsingborg",
+    "address": "Bergaliden 11, 252 23 Helsingborg"
+  },
+  {
+    "slug": "sund-balans",
+    "name": "Sund Balans",
+    "city": "Helsingborg",
+    "address": "Carl Öhrns gata 2I, 254 43 Helsingborg"
+  },
+  {
+    "slug": "af-ekenstam-massage-och-hlsa",
+    "name": "af Ekenstam Massage och Hälsa",
+    "city": "Helsingborg",
+    "address": "Ängelholmsvägen 27, 254 53 Helsingborg"
+  },
+  {
+    "slug": "ryggwerket-wstfelt",
+    "name": "Ryggwerket Wästfelt",
+    "city": "Helsingborg",
+    "address": "S:t Peders gata 15, 252 26 Helsingborg"
+  },
+  {
+    "slug": "resundskliniken",
+    "name": "Öresundskliniken",
+    "city": "Helsingborg",
+    "address": "Karl X Gustavs gata 67A, 254 40 Helsingborg"
+  },
+  {
+    "slug": "aktiv-kiropraktik",
+    "name": "Aktiv Kiropraktik",
+    "city": "Helsingborg",
+    "address": "Kungshultsvägen 75, 254 50 Helsingborg"
+  },
+  {
+    "slug": "edenholm-sjukgymnastik-ab",
+    "name": "Edenholm Sjukgymnastik AB",
+    "city": "Linköping",
+    "address": "Hammarstigen 2, 582 22 Linköping"
+  },
+  {
+    "slug": "limbra-helsingborg",
+    "name": "Limbra Helsingborg",
+    "city": "Helsingborg",
+    "address": "Garnisonsgatan 23, 254 66 Helsingborg"
+  },
+  {
+    "slug": "naprapathlsan-helsingborg-ab",
+    "name": "Naprapathälsan Helsingborg AB",
+    "city": "Helsingborg",
+    "address": "Tågagatan 7, 252 22 Helsingborg"
+  },
+  {
+    "slug": "din-naprapat-helsingborg-ab",
+    "name": "Din Naprapat Helsingborg AB",
+    "city": "Helsingborg",
+    "address": "Ängelholmsvägen 27 (c/o FNF Functional Fitness), 254 53 Helsingborg"
+  },
+  {
+    "slug": "kvinnorehab-kliniken-frida-roos",
+    "name": "Kvinnorehab Kliniken Frida Roos",
+    "city": "Helsingborg",
+    "address": "Drottninggatan 13, 252 21 Helsingborg"
+  },
+  {
+    "slug": "orchid-terapi-thai-massage",
+    "name": "ORCHID TERAPI THAI MASSAGE",
+    "city": "Helsingborg",
+    "address": "Karl X Gustavs gata 30, 254 30 Helsingborg"
+  },
+  {
+    "slug": "ryggwerks-ryggakuten-helsingborg-nilohr",
+    "name": "RyggWerks (RyggAkuten Helsingborg - Nilohr)",
+    "city": "Helsingborg",
+    "address": "Berga Allé 1, 254 52 Helsingborg"
+  },
+  {
+    "slug": "feelgood-fysioterapi",
+    "name": "Feelgood Fysioterapi",
+    "city": "Stockholm",
+    "address": "Grev Turegatan 34, 114 38 Norrmalm"
+  },
+  {
+    "slug": "kornbakk-kiropraktik",
+    "name": "Kornbakk Kiropraktik",
+    "city": "Göteborg",
+    "address": "Danska vägen 84B, 416 59 Lorensberg"
+  },
+  {
+    "slug": "olympia-hlsoklinik",
+    "name": "Olympia Hälsoklinik",
+    "city": "Helsingborg",
+    "address": "Hövitsmansgatan 15, 252 22 Helsingborg"
+  },
+  {
+    "slug": "nordic-refit-helsingborg",
+    "name": "Nordic Refit Helsingborg",
+    "city": "Helsingborg",
+    "address": "Södra Tvärgången 3 (Studio Aktiverum), 254 52 Helsingborg"
+  },
+  {
+    "slug": "fysiokliniken-city-helen-strandqvist",
+    "name": "Fysiokliniken City Helen Strandqvist",
+    "city": "Helsingborg",
+    "address": "Södra Storgatan 23, 252 23 Helsingborg"
+  },
+  {
+    "slug": "physiocare",
+    "name": "PhysioCare",
+    "city": "Helsingborg",
+    "address": "Hortensiagatan 8 (Nordic Wellness), 256 68 Helsingborg"
+  },
+  {
+    "slug": "munkhammar-medicinsk-massage",
+    "name": "Munkhammar Medicinsk Massage",
+    "city": "Helsingborg",
+    "address": "Föreningsgatan 25A, 254 38 Helsingborg"
+  },
+  {
+    "slug": "parichat-massage-and-beauty",
+    "name": "Parichat Massage & Beauty",
+    "city": "Helsingborg",
+    "address": "Fågelsångsgatan 29, 252 20 Helsingborg"
+  },
+  {
+    "slug": "be-bees-mind-thai-spa",
+    "name": "BE BEE'S MIND THAI SPA",
+    "city": "Helsingborg",
+    "address": "Hövitsmansgatan 6B, 252 22 Helsingborg"
+  },
+  {
+    "slug": "anahatta-soul-spa",
+    "name": "ANAHATTA SOUL SPA",
+    "city": "Helsingborg",
+    "address": "Södra Strandgatan 7, 252 21 Helsingborg"
+  },
+  {
+    "slug": "emma-sthl-leg-naprapat",
+    "name": "Emma Ståhl - Leg. Naprapat",
+    "city": "Helsingborg",
+    "address": "Långgatan 34, Råå, 252 70 Helsingborg"
+  },
+  {
+    "slug": "caroline-engstrand-leg-naprapat",
+    "name": "Caroline Engstrand - Leg. Naprapat",
+    "city": "Helsingborg",
+    "address": "Landskronavägen 7A, 252 32 Helsingborg"
+  },
+  {
+    "slug": "balans-and-harmoni",
+    "name": "Balans & Harmoni",
+    "city": "Helsingborg",
+    "address": "Ängelholmsvägen 27, 254 53 Helsingborg"
+  },
+  {
+    "slug": "limbra-naprapatlandslaget-jnkping",
+    "name": "Limbra / Naprapatlandslaget Jönköping",
+    "city": "Jönköping",
+    "address": "Bygatan 10, 553 40 Jönköping"
+  },
+  {
+    "slug": "agilokliniken-jnkping",
+    "name": "Agilokliniken Jönköping",
+    "city": "Jönköping",
+    "address": "Västra Storgatan 19B, 553 16 Jönköping"
+  },
+  {
+    "slug": "plusrehab-din-naprapat-jnkping",
+    "name": "Plusrehab / Din Naprapat Jönköping",
+    "city": "Jönköping",
+    "address": "Huskvarnavägen 58 (c/o Speedcenter), 554 54 Jönköping"
+  },
+  {
+    "slug": "kiropraktorerna-i-jnkping-ab",
+    "name": "Kiropraktorerna i Jönköping AB",
+    "city": "Jönköping",
+    "address": "Östra Storgatan 8, 553 21 Jönköping"
+  },
+  {
+    "slug": "medicrehab-jnkping",
+    "name": "MedicRehab Jönköping",
+    "city": "Jönköping",
+    "address": "Huskvarnavägen 78, 554 54 Jönköping"
+  },
+  {
+    "slug": "omni-fysio-ab",
+    "name": "Omni Fysio AB",
+    "city": "Jönköping",
+    "address": "Västra Storgatan 6, 553 15 Jönköping"
+  },
+  {
+    "slug": "balansen-fysio",
+    "name": "Balansen Fysio",
+    "city": "Jönköping",
+    "address": "Östra Storgatan 34, 553 21 Jönköping"
+  },
+  {
+    "slug": "frostemark-rehab-and-idrottsmedicin",
+    "name": "Frostemark Rehab & Idrottsmedicin",
+    "city": "Jönköping",
+    "address": "Huskvarnavägen 58, 554 54 Jönköping"
+  },
+  {
+    "slug": "physioformance",
+    "name": "Physioformance",
+    "city": "Jönköping",
+    "address": "Mässvägen 6, 554 54 Jönköping"
+  },
+  {
+    "slug": "massageverkstan-i-jnkping-ab",
+    "name": "Massageverkstan i Jönköping AB",
+    "city": "Jönköping",
+    "address": "Trädgårdsgatan 12, 553 16 Jönköping"
+  },
+  {
+    "slug": "proffshnder-massage-jnkping",
+    "name": "Proffshänder Massage Jönköping",
+    "city": "Jönköping",
+    "address": "Skolgatan 13A, 553 16 Jönköping"
+  },
+  {
+    "slug": "kroppsterapi-i-centrum",
+    "name": "Kroppsterapi i centrum",
+    "city": "Jönköping",
+    "address": "Myntgatan 13, 553 32 Jönköping"
+  },
+  {
+    "slug": "massage-corner-sverige-ab",
+    "name": "Massage Corner Sverige AB",
+    "city": "Jönköping",
+    "address": "Skolgatan 13A, 553 16 Jönköping"
+  },
+  {
+    "slug": "hela-du",
+    "name": "Hela Du",
+    "city": "Jönköping",
+    "address": "Granatgatan 3, 554 53 Jönköping"
+  },
+  {
+    "slug": "naprapro-ab",
+    "name": "NAPRApro AB",
+    "city": "Jönköping",
+    "address": "Huskvarnavägen 78, 554 54 Jönköping"
+  },
+  {
+    "slug": "kiropraktik-re-ab-jnkping",
+    "name": "Kiropraktik Åre AB (Jönköping)",
+    "city": "Jönköping",
+    "address": "Batterigatan 11 (c/o Art Clinic), 553 05 Jönköping"
+  },
+  {
+    "slug": "naprapat-andreas-leijon-ab",
+    "name": "Naprapat Andreas Leijon AB",
+    "city": "Jönköping",
+    "address": "Huskvarnavägen 78 (MedicRehab), 554 54 Jönköping"
+  },
+  {
+    "slug": "rygg-och-idrottskliniken-jnkping",
+    "name": "Rygg- och Idrottskliniken Jönköping",
+    "city": "Jönköping",
+    "address": "Kungsängsvägen 7, 554 56 Jönköping"
+  },
+  {
+    "slug": "healing-bodywork-massage-jnkping",
+    "name": "Healing Bodywork Massage Jönköping",
+    "city": "Jönköping",
+    "address": "Klostergatan 6b, 553 17 Jönköping"
+  },
+  {
+    "slug": "randb-classic-massage",
+    "name": "R&B Classic Massage",
+    "city": "Jönköping",
+    "address": "Lovisagatan 27A, 554 72 Jönköping"
+  },
+  {
+    "slug": "harmony-wellness-massage-and-kroppsbalans",
+    "name": "Harmony Wellness - Massage & Kroppsbalans",
+    "city": "Jönköping",
+    "address": "Västra Storgatan 7, 553 15 Jönköping"
+  },
+  {
+    "slug": "sophie-massage-and-healing",
+    "name": "Sophie - Massage & Healing",
+    "city": "Jönköping",
+    "address": "Hermansvägen 118, 554 53 Jönköping"
+  },
+  {
+    "slug": "lpg-massage-studio",
+    "name": "LPG Massage Studio",
+    "city": "Jönköping",
+    "address": "Barnarpsgatan 19 (Novokliniken), 553 16 Jönköping"
+  },
+  {
+    "slug": "naprapatkliniken-helena-lundquist-ab",
+    "name": "Naprapatkliniken Helena Lundquist AB",
+    "city": "Jönköping",
+    "address": "Gillesgatan 13, Huskvarna, 561 30 Jönköping"
+  },
+  {
+    "slug": "zenpai-massage",
+    "name": "Zenpai Massage",
+    "city": "Jönköping",
+    "address": "Kungsgatan 3A, 553 31 Jönköping"
+  },
+  {
+    "slug": "mattias-andersson-naprapat-medicrehab",
+    "name": "Mattias Andersson Naprapat (MedicRehab)",
+    "city": "Jönköping",
+    "address": "Huskvarnavägen 78, 554 54 Jönköping"
+  },
+  {
+    "slug": "harmoni-massage-and-hlsa",
+    "name": "Harmoni-massage & hälsa",
+    "city": "Jönköping",
+    "address": "Huskvarnavägen 40, 554 54 Jönköping"
+  },
+  {
+    "slug": "rangstig-naprapati-and-rehab-ab",
+    "name": "Rangstig Naprapati & Rehab AB",
+    "city": "Jönköping",
+    "address": "Gillesgatan 13, Huskvarna, 561 30 Jönköping"
+  },
+  {
+    "slug": "naprapat-andreas-gustafsson",
+    "name": "Naprapat Andreas Gustafsson",
+    "city": "Jönköping",
+    "address": "Gillesgatan 13, Huskvarna, 561 30 Jönköping"
+  },
+  {
+    "slug": "limbra-naprapatlandslaget-ume",
+    "name": "Limbra / Naprapatlandslaget Umeå",
+    "city": "Umeå",
+    "address": "Renmarksesplanaden 3, 903 26 Umeå"
+  },
+  {
+    "slug": "ume-rygg-and-ledklinik",
+    "name": "Umeå Rygg & Ledklinik",
+    "city": "Umeå",
+    "address": "Kungsgatan 29, 903 21 Umeå"
+  },
+  {
+    "slug": "ume-kiropraktorklinik-bronemo",
+    "name": "Umeå Kiropraktorklinik (Bronemo)",
+    "city": "Umeå",
+    "address": "Rådhusesplanaden 17C, 903 28 Umeå"
+  },
+  {
+    "slug": "aktiv-naprapati-i-ume",
+    "name": "Aktiv Naprapati i Umeå",
+    "city": "Umeå",
+    "address": "Storgatan 115, 903 33 Umeå"
+  },
+  {
+    "slug": "naprapatkliniken-ke-hger-ab",
+    "name": "Naprapatkliniken Åke Häger AB",
+    "city": "Umeå",
+    "address": "Magasinsgatan 17, 903 27 Umeå"
+  },
+  {
+    "slug": "naprapatennu-anders-jakobsson",
+    "name": "naprapaten.nu (Anders Jakobsson)",
+    "city": "Umeå",
+    "address": "Mariehemsvägen 7D, 906 54 Umeå"
+  },
+  {
+    "slug": "sportakuten-ab",
+    "name": "Sportakuten AB",
+    "city": "Umeå",
+    "address": "Gammliavägen 5, 903 42 Umeå"
+  },
+  {
+    "slug": "fysiocenter-nord-ab",
+    "name": "Fysiocenter Nord AB",
+    "city": "Umeå",
+    "address": "Strömpilsplatsen 7, 907 43 Umeå"
+  },
+  {
+    "slug": "fysio-emma-sderstrm-ab",
+    "name": "Fysio Emma Söderström AB",
+    "city": "Umeå",
+    "address": "Storgatan 115, 903 33 Umeå"
+  },
+  {
+    "slug": "sjukgymnastkliniken-ume-ab",
+    "name": "Sjukgymnastkliniken Umeå AB",
+    "city": "Umeå",
+    "address": "Slöjdgatan 2, 903 25 Umeå"
+  },
+  {
+    "slug": "lvets-fysioterapi-ab",
+    "name": "Lövets Fysioterapi AB",
+    "city": "Umeå",
+    "address": "Storgatan 115, 903 33 Umeå"
+  },
+  {
+    "slug": "kallafysioclinic-ab",
+    "name": "KallafysioClinic AB",
+    "city": "Umeå",
+    "address": "Västra Kyrkogatan 6A, 903 29 Umeå"
+  },
+  {
+    "slug": "landby-fysioterapi",
+    "name": "Landby Fysioterapi",
+    "city": "Umeå",
+    "address": "Västra Norrlandsgatan 5C, 903 27 Umeå"
+  },
+  {
+    "slug": "papacosta-fysioterapi-och-idrottsmottagning",
+    "name": "Papacosta fysioterapi och idrottsmottagning",
+    "city": "Umeå",
+    "address": "Storgatan 115, 903 33 Umeå"
+  },
+  {
+    "slug": "peder-massr",
+    "name": "Peder Massör",
+    "city": "Umeå",
+    "address": "Pilgatan 16, 903 31 Umeå"
+  },
+  {
+    "slug": "peony-massage-and-friskvrd",
+    "name": "Peony Massage & Friskvård",
+    "city": "Umeå",
+    "address": "Storgatan 43, 903 26 Umeå"
+  },
+  {
+    "slug": "soul-body-and-mind",
+    "name": "Soul, body & mind",
+    "city": "Umeå",
+    "address": "Sveagatan 6, 903 27 Umeå"
+  },
+  {
+    "slug": "ume-muskelterapi-and-friskvrd",
+    "name": "Umeå Muskelterapi & Friskvård",
+    "city": "Umeå",
+    "address": "Rådhusesplanaden 16B, 903 28 Umeå"
+  },
+  {
+    "slug": "m-prima-massage-och-friskvrd-i-norr",
+    "name": "Må Prima Massage och Friskvård i Norr",
+    "city": "Umeå",
+    "address": "Skolgatan 24, 903 22 Umeå"
+  },
+  {
+    "slug": "naprapat-magnus-jansson",
+    "name": "Naprapat Magnus Jansson",
+    "city": "Borås",
+    "address": "Elinsdalsgatan 12, 504 33 Borås"
+  },
+  {
+    "slug": "aktivera-naprapati-andreas-berglund",
+    "name": "aktivERA naprapati (Andreas Berglund)",
+    "city": "Borås",
+    "address": "Elinsdalsgatan 12, 504 33 Borås"
+  },
+  {
+    "slug": "kiropraktor-bors-hans-johansson",
+    "name": "Kiropraktor Borås (Hans Johansson)",
+    "city": "Borås",
+    "address": "Företagsgatan 7, 504 64 Borås"
+  },
+  {
+    "slug": "citypraktiken",
+    "name": "Citypraktiken",
+    "city": "Borås",
+    "address": "Södra Kyrkogatan 31, 503 34 Borås"
+  },
+  {
+    "slug": "funktionsfabriken-emma-bengtsson",
+    "name": "Funktionsfabriken Emma Bengtsson",
+    "city": "Borås",
+    "address": "Mariedalsgatan 5, 503 38 Borås"
+  },
+  {
+    "slug": "meldo-and-geelnard-fysioterapi",
+    "name": "Meldo & Geelnard Fysioterapi",
+    "city": "Borås",
+    "address": "Yxhammarsgatan 8-10, 503 31 Borås"
+  },
+  {
+    "slug": "christinas-sjukgymnastik-and-fysioterapi",
+    "name": "Christinas Sjukgymnastik & Fysioterapi",
+    "city": "Borås",
+    "address": "Katrinedalsgatan 43, 504 51 Borås"
+  },
+  {
+    "slug": "rehab-direkt",
+    "name": "Rehab direkt",
+    "city": "Borås",
+    "address": "Kindsgatan 1 (Trandareds VC), 504 50 Borås"
+  },
+  {
+    "slug": "frisk-i-praktiken",
+    "name": "Frisk i Praktiken",
+    "city": "Borås",
+    "address": "Åsboholmsgatan 12, 504 51 Borås"
+  },
+  {
+    "slug": "helhetens-hus-ab",
+    "name": "Helhetens Hus AB",
+    "city": "Borås",
+    "address": "Brigadgatan 10A, 504 31 Borås"
+  },
+  {
+    "slug": "massagehlsan",
+    "name": "Massagehälsan",
+    "city": "Borås",
+    "address": "Kungsgatan 32, 503 33 Borås"
+  },
+  {
+    "slug": "pepis-clinic-and-massage",
+    "name": "Pepi`s Clinic & Massage",
+    "city": "Borås",
+    "address": "Södra Kyrkogatan 27B, 503 34 Borås"
+  },
+  {
+    "slug": "bodylife",
+    "name": "Bodylife",
+    "city": "Borås",
+    "address": "Albanoliden 1, 506 30 Borås"
+  },
+  {
+    "slug": "sukho-thaimassage",
+    "name": "Sukho thaimassage",
+    "city": "Borås",
+    "address": "Skaraborgsvägen 80, 506 30 Borås"
+  },
+  {
+    "slug": "osk-massage-and-wellness",
+    "name": "OSK Massage & Wellness",
+    "city": "Borås",
+    "address": "Fabriksgatan 11, 503 38 Borås"
+  },
+  {
+    "slug": "anna-redin-yoga-and-massage",
+    "name": "Anna Redin Yoga & Massage",
+    "city": "Borås",
+    "address": "Alingsåsvägen 97, 504 67 Borås"
+  },
+  {
+    "slug": "head-spa-sakura",
+    "name": "HEAD SPA SAKURA",
+    "city": "Borås",
+    "address": "Tredje Villagatan 17, 504 53 Borås"
+  },
+  {
+    "slug": "new-recovery-ab",
+    "name": "New Recovery AB",
+    "city": "Borås",
+    "address": "Österlånggatan 63, 503 37 Borås"
+  },
+  {
+    "slug": "leg-kiropraktor-peter-bjrkman",
+    "name": "Leg. Kiropraktor Peter Björkman",
+    "city": "Borås",
+    "address": "Österlånggatan 63, 503 37 Borås"
+  },
+  {
+    "slug": "rehab-och-fysexperten-i-sjuhrad-ab",
+    "name": "Rehab- och Fysexperten i Sjuhärad AB",
+    "city": "Borås",
+    "address": "Armbågavägen 6, 506 30 Borås"
+  },
+  {
+    "slug": "elisabeth-care",
+    "name": "Elisabeth Care",
+    "city": "Borås",
+    "address": "Källbäcksrydsgatan 9, 507 42 Borås"
+  },
+  {
+    "slug": "villastadens-zonterapi",
+    "name": "Villastadens Zonterapi",
+    "city": "Borås",
+    "address": "Övre Kvarngatan 39 A, 504 53 Borås"
+  },
+  {
+    "slug": "ec-naprapat-and-rehab-ab",
+    "name": "EC Naprapat & Rehab AB",
+    "city": "Borås",
+    "address": "Kungsgatan 29, 503 33 Borås"
+  },
+  {
+    "slug": "riddarhlsan-ab",
+    "name": "Riddarhälsan AB",
+    "city": "Borås",
+    "address": "Katrinebergsgatan 34, 504 51 Borås"
+  },
+  {
+    "slug": "amicus-rehab",
+    "name": "Amicus Rehab",
+    "city": "Borås",
+    "address": "Borås"
+  },
+  {
+    "slug": "stefans-kiropraktik",
+    "name": "Stefans Kiropraktik",
+    "city": "Borås",
+    "address": "Stora Vägen 31, 513 33 Borås"
+  },
+  {
+    "slug": "leg-kiropraktor-martina-barker-ab",
+    "name": "Leg. Kiropraktor Martina Barker AB",
+    "city": "Borås",
+    "address": "Lillsjövägen 1 A Borås"
+  },
+  {
+    "slug": "mwn-fysioterapi-ab",
+    "name": "MWN Fysioterapi AB",
+    "city": "Borås",
+    "address": "Vallstigen 8, 507 61 Borås"
+  }
+]

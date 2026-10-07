@@ -327,22 +327,26 @@ function CityPage() {
           Nakima<span className="text-orange">.</span>
         </Link>
         <div className="hidden md:flex items-center gap-10 text-sm font-medium uppercase tracking-widest">
-          <Link to="/" className="hover:text-orange transition-colors">
+          <Link to="/magasin" className="hover:text-orange transition-colors">
             Magasin
           </Link>
           <a href="#kliniker" className="hover:text-orange transition-colors">
             Sök klinik
           </a>
-          <span className="text-ink-soft cursor-default" title="Kommer snart">
+          <Link
+            to="/kontakt"
+            search={{ amne: "klinik" }}
+            className="hover:text-orange transition-colors"
+          >
             För kliniker
-          </span>
+          </Link>
         </div>
-        <span
-          className="border border-ink/40 text-ink-soft px-5 py-2 text-xs font-bold uppercase tracking-widest cursor-default"
-          title="Kommer snart"
+        <Link
+          to="/kontakt"
+          className="border border-ink text-ink px-5 py-2 text-xs font-bold uppercase tracking-widest hover:bg-ink hover:text-paper transition-colors"
         >
-          Logga in
-        </span>
+          Kontakta oss
+        </Link>
       </nav>
 
       {/* Breadcrumbs */}
@@ -694,10 +698,38 @@ function CityPage() {
                 ))}
               </ul>
             </div>
+            <div>
+              <div className="text-xs uppercase tracking-widest text-paper mb-3">
+                Information
+              </div>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/kontakt" className="hover:text-paper">
+                    Kontakta oss
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/kontakt" search={{ amne: "klinik" }} className="hover:text-paper">
+                    För kliniker
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/integritetspolicy" className="hover:text-paper">
+                    Integritetspolicy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/ansvarsfriskrivning" className="hover:text-paper">
+                    Ansvarsfriskrivning
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-paper/10 text-xs text-paper/50">
-          © {new Date().getFullYear()} Nakima – del av Billingskog.
+        <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-paper/10 text-xs text-paper/50 flex justify-between items-center">
+          <div>© {new Date().getFullYear()} Nakima – del av Billingskog.</div>
+          <a href="mailto:info@nakima.se" className="hover:text-paper transition-colors">info@nakima.se</a>
         </div>
       </footer>
     </div>
