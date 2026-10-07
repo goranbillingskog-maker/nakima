@@ -9,31 +9,21 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as KontaktRouteImport } from './routes/kontakt'
-import { Route as IntegritetspolicyRouteImport } from './routes/integritetspolicy'
-import { Route as AnsvarsfriskrivningRouteImport } from './routes/ansvarsfriskrivning'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AnsvarsfriskrivningRouteImport } from './routes/ansvarsfriskrivning'
+import { Route as IntegritetspolicyRouteImport } from './routes/integritetspolicy'
+import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ServiceCityRouteImport } from './routes/$service.$city'
 import { Route as MagasinIndexRouteImport } from './routes/magasin.index'
 import { Route as MagasinSlugRouteImport } from './routes/magasin.$slug'
-import { Route as ServiceCityRouteImport } from './routes/$service.$city'
 import { Route as ServiceCityIndexRouteImport } from './routes/$service.$city.index'
-import { Route as MagasinGuideSlugRouteImport } from './routes/magasin.guide.$slug'
 import { Route as ServiceCityClinicRouteImport } from './routes/$service.$city.$clinic'
+import { Route as MagasinGuideSlugRouteImport } from './routes/magasin.guide.$slug'
 
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const KontaktRoute = KontaktRouteImport.update({
-  id: '/kontakt',
-  path: '/kontakt',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IntegritetspolicyRoute = IntegritetspolicyRouteImport.update({
-  id: '/integritetspolicy',
-  path: '/integritetspolicy',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AnsvarsfriskrivningRoute = AnsvarsfriskrivningRouteImport.update({
@@ -41,9 +31,24 @@ const AnsvarsfriskrivningRoute = AnsvarsfriskrivningRouteImport.update({
   path: '/ansvarsfriskrivning',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const IntegritetspolicyRoute = IntegritetspolicyRouteImport.update({
+  id: '/integritetspolicy',
+  path: '/integritetspolicy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServiceCityRoute = ServiceCityRouteImport.update({
+  id: '/$service/$city',
+  path: '/$service/$city',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MagasinIndexRoute = MagasinIndexRouteImport.update({
@@ -56,25 +61,20 @@ const MagasinSlugRoute = MagasinSlugRouteImport.update({
   path: '/magasin/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServiceCityRoute = ServiceCityRouteImport.update({
-  id: '/$service/$city',
-  path: '/$service/$city',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ServiceCityIndexRoute = ServiceCityIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => ServiceCityRoute,
+} as any)
+const ServiceCityClinicRoute = ServiceCityClinicRouteImport.update({
+  id: '/$clinic',
+  path: '/$clinic',
   getParentRoute: () => ServiceCityRoute,
 } as any)
 const MagasinGuideSlugRoute = MagasinGuideSlugRouteImport.update({
   id: '/magasin/guide/$slug',
   path: '/magasin/guide/$slug',
   getParentRoute: () => rootRouteImport,
-} as any)
-const ServiceCityClinicRoute = ServiceCityClinicRouteImport.update({
-  id: '/$clinic',
-  path: '/$clinic',
-  getParentRoute: () => ServiceCityRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -171,25 +171,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/kontakt': {
-      id: '/kontakt'
-      path: '/kontakt'
-      fullPath: '/kontakt'
-      preLoaderRoute: typeof KontaktRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/integritetspolicy': {
-      id: '/integritetspolicy'
-      path: '/integritetspolicy'
-      fullPath: '/integritetspolicy'
-      preLoaderRoute: typeof IntegritetspolicyRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ansvarsfriskrivning': {
@@ -199,11 +185,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AnsvarsfriskrivningRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/integritetspolicy': {
+      id: '/integritetspolicy'
+      path: '/integritetspolicy'
+      fullPath: '/integritetspolicy'
+      preLoaderRoute: typeof IntegritetspolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$service/$city': {
+      id: '/$service/$city'
+      path: '/$service/$city'
+      fullPath: '/$service/$city'
+      preLoaderRoute: typeof ServiceCityRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/magasin/': {
@@ -220,18 +227,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MagasinSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/$service/$city': {
-      id: '/$service/$city'
-      path: '/$service/$city'
-      fullPath: '/$service/$city'
-      preLoaderRoute: typeof ServiceCityRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/$service/$city/': {
       id: '/$service/$city/'
       path: '/'
       fullPath: '/$service/$city/'
       preLoaderRoute: typeof ServiceCityIndexRouteImport
+      parentRoute: typeof ServiceCityRoute
+    }
+    '/$service/$city/$clinic': {
+      id: '/$service/$city/$clinic'
+      path: '/$clinic'
+      fullPath: '/$service/$city/$clinic'
+      preLoaderRoute: typeof ServiceCityClinicRouteImport
       parentRoute: typeof ServiceCityRoute
     }
     '/magasin/guide/$slug': {
@@ -240,13 +247,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/magasin/guide/$slug'
       preLoaderRoute: typeof MagasinGuideSlugRouteImport
       parentRoute: typeof rootRouteImport
-    }
-    '/$service/$city/$clinic': {
-      id: '/$service/$city/$clinic'
-      path: '/$clinic'
-      fullPath: '/$service/$city/$clinic'
-      preLoaderRoute: typeof ServiceCityClinicRouteImport
-      parentRoute: typeof ServiceCityRoute
     }
   }
 }
