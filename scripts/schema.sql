@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS clinics (
   lat double precision,
   lng double precision,
   phone text,
+  email text,
   website text,
   booking_url text,
   booking_platform text,

@@ -34,6 +34,7 @@ export interface DatabaseClinic {
   lat: number | null;
   lng: number | null;
   phone: string;
+  email?: string | null;
   website: string;
   booking_url: string | null;
   bookingUrl?: string | null;

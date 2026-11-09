@@ -52,32 +52,44 @@ function Home() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     const input = cityInput.trim().toLowerCase();
+    if (!input) return;
     
     let citySlug = "stockholm";
     let queryParam = "";
-    
-    if (input.includes("göteborg") || input.includes("goteborg") || input.includes("gbg")) {
-      citySlug = "goteborg";
-    } else if (input.includes("malmö") || input.includes("malmo")) {
-      citySlug = "malmo";
-    } else if (input.includes("uppsala")) {
-      citySlug = "uppsala";
-    } else if (input.includes("västerås") || input.includes("vasteras")) {
-      citySlug = "vasteras";
-    } else if (input.includes("örebro") || input.includes("orebro")) {
-      citySlug = "orebro";
-    } else if (input.includes("norrköping") || input.includes("norrkoping")) {
-      citySlug = "norrkoping";
-    } else if (input.includes("linköping") || input.includes("linkoping")) {
-      citySlug = "linkoping";
-    } else if (input.includes("helsingborg") || input.includes("hbg")) {
-      citySlug = "helsingborg";
-    } else if (input.includes("jönköping") || input.includes("jonkoping") || input.includes("jkpg")) {
-      citySlug = "jonkoping";
-    } else if (input.includes("umeå") || input.includes("umea")) {
-      citySlug = "umea";
-    } else if (input.includes("borås") || input.includes("boras")) {
-      citySlug = "boras";
+
+    const normalize = (s: string) => s.replace(/å|ä/g, "a").replace(/ö/g, "o");
+    const normInput = normalize(input);
+
+    // Common abbreviations
+    const aliases: Record<string, string> = {
+      gbg: "goteborg",
+      sthlm: "stockholm",
+      hbg: "helsingborg",
+      jkpg: "jonkoping",
+    };
+
+    // Check alias first
+    let matchedSlug = Object.entries(aliases).find(([alias]) => normInput.includes(alias))?.[1];
+
+    if (!matchedSlug) {
+      const found = allCities.find((c) => {
+        const cName = c.name.toLowerCase();
+        const cSlug = c.slug.toLowerCase();
+        const normName = normalize(cName);
+        return (
+          input.includes(cName) ||
+          input.includes(cSlug) ||
+          normInput.includes(normName) ||
+          normInput.includes(cSlug)
+        );
+      });
+      if (found) {
+        matchedSlug = found.slug;
+      }
+    }
+
+    if (matchedSlug) {
+      citySlug = matchedSlug;
     } else if (input.length > 0) {
       citySlug = "stockholm";
       queryParam = input;

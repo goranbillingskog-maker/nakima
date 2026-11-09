@@ -8,7 +8,39 @@
 
 export type ServiceSlug = "naprapat" | "kiropraktor" | "massage" | "fysioterapeut";
 
-export type CitySlug = "stockholm" | "goteborg" | "malmo" | "uppsala" | "vasteras" | "orebro" | "norrkoping" | "linkoping" | "helsingborg" | "jonkoping" | "umea" | "boras";
+export type CitySlug =
+  | "stockholm"
+  | "goteborg"
+  | "malmo"
+  | "uppsala"
+  | "vasteras"
+  | "orebro"
+  | "norrkoping"
+  | "linkoping"
+  | "helsingborg"
+  | "jonkoping"
+  | "umea"
+  | "boras"
+  | "lund"
+  | "halmstad"
+  | "eskilstuna"
+  | "gavle"
+  | "karlstad"
+  | "sundsvall"
+  | "varberg"
+  | "vaxjo"
+  | "kalmar"
+  | "skovde"
+  | "ostersund"
+  | "lulea"
+  | "kristianstad"
+  | "ystad"
+  | "falkenberg"
+  | "trelleborg"
+  | "angelholm"
+  | "trollhattan"
+  | "uddevalla"
+  | "landskrona";
 
 export interface City {
   slug: CitySlug;
@@ -37,6 +69,7 @@ export interface Clinic {
   // Public booking URL (affiliate slot). Null = "kontakta kliniken".
   bookingUrl: string | null;
   phone: string;
+  email?: string | null;
   // WGS84 coordinates (approx, from neighborhood centroid until per-clinic geocoding).
   lat?: number;
   lng?: number;
@@ -140,6 +173,126 @@ export const cities: City[] = [
     name: "Borås",
     region: "Västra Götalands län",
     intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Borås.",
+  },
+  {
+    slug: "lund",
+    name: "Lund",
+    region: "Skåne län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Lund och Öresundsregionen.",
+  },
+  {
+    slug: "halmstad",
+    name: "Halmstad",
+    region: "Hallands län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Halmstad.",
+  },
+  {
+    slug: "eskilstuna",
+    name: "Eskilstuna",
+    region: "Södermanlands län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Eskilstuna.",
+  },
+  {
+    slug: "gavle",
+    name: "Gävle",
+    region: "Gävleborgs län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Gävle.",
+  },
+  {
+    slug: "karlstad",
+    name: "Karlstad",
+    region: "Värmlands län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Karlstad.",
+  },
+  {
+    slug: "sundsvall",
+    name: "Sundsvall",
+    region: "Västernorrlands län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Sundsvall.",
+  },
+  {
+    slug: "varberg",
+    name: "Varberg",
+    region: "Hallands län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Varberg.",
+  },
+  {
+    slug: "vaxjo",
+    name: "Växjö",
+    region: "Kronobergs län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Växjö.",
+  },
+  {
+    slug: "kalmar",
+    name: "Kalmar",
+    region: "Kalmar län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Kalmar.",
+  },
+  {
+    slug: "skovde",
+    name: "Skövde",
+    region: "Västra Götalands län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Skövde.",
+  },
+  {
+    slug: "ostersund",
+    name: "Östersund",
+    region: "Jämtlands län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Östersund.",
+  },
+  {
+    slug: "lulea",
+    name: "Luleå",
+    region: "Norrbottens län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Luleå.",
+  },
+  {
+    slug: "kristianstad",
+    name: "Kristianstad",
+    region: "Skåne län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Kristianstad.",
+  },
+  {
+    slug: "ystad",
+    name: "Ystad",
+    region: "Skåne län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Ystad.",
+  },
+  {
+    slug: "falkenberg",
+    name: "Falkenberg",
+    region: "Hallands län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Falkenberg.",
+  },
+  {
+    slug: "trelleborg",
+    name: "Trelleborg",
+    region: "Skåne län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Trelleborg.",
+  },
+  {
+    slug: "angelholm",
+    name: "Ängelholm",
+    region: "Skåne län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Ängelholm.",
+  },
+  {
+    slug: "trollhattan",
+    name: "Trollhättan",
+    region: "Västra Götalands län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Trollhättan.",
+  },
+  {
+    slug: "uddevalla",
+    name: "Uddevalla",
+    region: "Västra Götalands län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Uddevalla.",
+  },
+  {
+    slug: "landskrona",
+    name: "Landskrona",
+    region: "Skåne län",
+    intro: "Hitta legitimerade naprapater, kiropraktorer, fysioterapeuter och certifierade massörer i Landskrona.",
   },
 ];
 

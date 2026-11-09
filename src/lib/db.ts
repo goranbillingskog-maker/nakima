@@ -23,8 +23,14 @@ function normalizeServices(rawServices: any): ServiceSlug[] {
 function mapClinicFields(clinic: any): DatabaseClinic {
   if (!clinic) return clinic;
   const services = normalizeServices(clinic.services);
+  let email = clinic.email || null;
+  if (!email && Array.isArray(clinic.practitioners)) {
+    const emailItem = clinic.practitioners.find((p: string) => typeof p === "string" && p.startsWith("email:"));
+    if (emailItem) email = emailItem.replace("email:", "").trim();
+  }
   return {
     ...clinic,
+    email,
     services,
     reviewCount: clinic.review_count !== undefined && clinic.review_count !== null ? clinic.review_count : (clinic.reviewCount !== undefined && clinic.reviewCount !== null ? clinic.reviewCount : null),
     ratingSource: clinic.rating_source ?? clinic.ratingSource ?? null,
@@ -148,14 +154,34 @@ export async function fetchAllClinicsForSitemap(): Promise<DatabaseClinic[]> {
     console.warn("Supabase client not initialized. Database queries skipped.");
     return [];
   }
-  const { data, error } = await supabase
-    .from("clinics")
-    .select("slug, region, has_naprapat, has_kiropraktor, has_massage, has_fysioterapeut, last_verified_at");
+  
+  const allRows: any[] = [];
+  const pageSize = 1000;
+  let from = 0;
+  let hasMore = true;
 
-  if (error) {
-    console.error("Error fetching sitemap clinics:", error);
-    return [];
+  while (hasMore) {
+    const { data, error } = await supabase
+      .from("clinics")
+      .select("slug, region, has_naprapat, has_kiropraktor, has_massage, has_fysioterapeut, last_verified_at")
+      .range(from, from + pageSize - 1);
+
+    if (error) {
+      console.error("Error fetching sitemap clinics:", error);
+      break;
+    }
+
+    if (data && data.length > 0) {
+      allRows.push(...data);
+      if (data.length < pageSize) {
+        hasMore = false;
+      } else {
+        from += pageSize;
+      }
+    } else {
+      hasMore = false;
+    }
   }
 
-  return (data as DatabaseClinic[]).map(mapClinicFields);
+  return (allRows as DatabaseClinic[]).map(mapClinicFields);
 }
