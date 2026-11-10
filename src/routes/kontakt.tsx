@@ -36,8 +36,9 @@ export const Route = createFileRoute("/kontakt")({
         content:
           "Kontakta oss på Nakima. Vi hjälper både patienter som söker vård och kliniker som vill synas.",
       },
+      { property: "og:url", content: "https://nakima.se/kontakt" },
     ],
-    links: [{ rel: "canonical", href: "/kontakt" }],
+    links: [{ rel: "canonical", href: "https://nakima.se/kontakt" }],
   }),
 });
 

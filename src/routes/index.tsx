@@ -28,6 +28,12 @@ export const Route = createFileRoute("/")({
       return { counts: {} as Record<string, number> };
     }
   },
+  head: () => ({
+    meta: [
+      { property: "og:url", content: "https://nakima.se/" },
+    ],
+    links: [{ rel: "canonical", href: "https://nakima.se/" }],
+  }),
   component: Home,
 });
 

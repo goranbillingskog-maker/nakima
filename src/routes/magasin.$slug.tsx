@@ -25,7 +25,7 @@ export const Route = createFileRoute("/magasin/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData) return {};
     const { article } = loaderData;
-    const path = `/magasin/${article.slug}`;
+    const canonicalUrl = `https://nakima.se/magasin/${article.slug}`;
 
     const isPillar = article.slug === "naprapat-kiropraktor-eller-fysioterapeut";
     const articleSchema: Record<string, unknown> = {
@@ -61,7 +61,7 @@ export const Route = createFileRoute("/magasin/$slug")({
         ],
         "keywords": "skillnad naprapat kiropraktor, naprapat eller kiropraktor, fysioterapeut, manuell terapi"
       } : {}),
-      "mainEntityOfPage": `https://nakima.se${path}`
+      "mainEntityOfPage": canonicalUrl
     };
 
     const faqSchema = {
@@ -81,9 +81,9 @@ export const Route = createFileRoute("/magasin/$slug")({
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Nakima", "item": "https://nakima.se" },
+        { "@type": "ListItem", "position": 1, "name": "Nakima", "item": "https://nakima.se/" },
         { "@type": "ListItem", "position": 2, "name": "Magasin", "item": "https://nakima.se/magasin" },
-        { "@type": "ListItem", "position": 3, "name": article.title, "item": `https://nakima.se${path}` }
+        { "@type": "ListItem", "position": 3, "name": article.title, "item": canonicalUrl }
       ]
     };
 
@@ -94,12 +94,12 @@ export const Route = createFileRoute("/magasin/$slug")({
         { property: "og:title", content: article.metaTitle },
         { property: "og:description", content: article.metaDescription },
         { property: "og:type", content: "article" },
-        { property: "og:url", content: `https://nakima.se${path}` },
+        { property: "og:url", content: canonicalUrl },
         { property: "og:image", content: `https://nakima.se${article.image}` },
         { property: "og:locale", content: "sv_SE" },
         { name: "twitter:card", content: "summary_large_image" },
       ],
-      links: [{ rel: "canonical", href: path }],
+      links: [{ rel: "canonical", href: canonicalUrl }],
       scripts: [
         {
           type: "application/ld+json",

@@ -52,14 +52,14 @@ export const Route = createFileRoute("/$service/$city/$clinic")({
       priceLevel: (clinic.price_level ?? 2) as 1 | 2 | 3,
       services: clinic.services as ServiceSlug[],
     };
-    const faq = getClinicFaq(legacyClinicCompat, city);
+    const faq = getClinicFaq(legacyClinicCompat as any, city);
     
     return { city, clinic, mappedClinic, related, faq, service: serviceSlug };
   },
   head: ({ loaderData, params }) => {
     if (!loaderData) return {};
     const { city, clinic, faq, service } = loaderData;
-    const path = `/${service}/${params.city}/${params.clinic}`;
+    const canonicalUrl = `https://nakima.se/${service}/${params.city}/${params.clinic}`;
     
     const label = serviceLabels[service];
     const serviceList = clinic.services
@@ -67,7 +67,7 @@ export const Route = createFileRoute("/$service/$city/$clinic")({
       .join(", ");
     
     const title = `${clinic.name} – ${label.singular.toLowerCase()} i ${clinic.neighborhood || city.name}, ${city.name} | Nakima`;
-    const ratingStr = clinic.rating !== null && clinic.reviewCount !== null && clinic.reviewCount > 0
+    const ratingStr = clinic.rating !== null && clinic.reviewCount != null && clinic.reviewCount > 0
       ? `Betyg ${clinic.rating.toFixed(1)}/5 (${clinic.reviewCount} omdömen). `
       : "";
     const description = `${clinic.name} är en ${label.singular.toLowerCase()}klinik på ${clinic.street}, ${clinic.neighborhood || city.name} i ${city.name}. ${ratingStr}Erbjuder ${serviceList}. Boka tid, se priser och kontaktuppgifter.`;
@@ -78,10 +78,10 @@ export const Route = createFileRoute("/$service/$city/$clinic")({
     const medicalBusiness: Record<string, unknown> = {
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
-      "@id": path,
+      "@id": canonicalUrl,
       name: clinic.name,
       description: clinic.description,
-      url: path,
+      url: canonicalUrl,
       ...(clinic.phone ? { telephone: clinic.phone } : {}),
       priceRange: "$".repeat(clinic.price_level ?? 2),
       address: {
@@ -158,11 +158,11 @@ export const Route = createFileRoute("/$service/$city/$clinic")({
         { property: "og:title", content: title },
         { property: "og:description", content: description },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: path },
+        { property: "og:url", content: canonicalUrl },
         { property: "og:locale", content: "sv_SE" },
         { name: "twitter:card", content: "summary_large_image" },
       ],
-      links: [{ rel: "canonical", href: path }],
+      links: [{ rel: "canonical", href: canonicalUrl }],
       scripts: [
         {
           type: "application/ld+json",
@@ -178,10 +178,10 @@ export const Route = createFileRoute("/$service/$city/$clinic")({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Nakima", item: "/" },
-              { "@type": "ListItem", position: 2, name: label.singular, item: `/${service}` },
-              { "@type": "ListItem", position: 3, name: city.name, item: `/${service}/${params.city}` },
-              { "@type": "ListItem", position: 4, name: clinic.name, item: path },
+              { "@type": "ListItem", position: 1, name: "Nakima", item: "https://nakima.se/" },
+              { "@type": "ListItem", position: 2, name: label.singular, item: `https://nakima.se/${service}/${params.city}` },
+              { "@type": "ListItem", position: 3, name: city.name, item: `https://nakima.se/${service}/${params.city}` },
+              { "@type": "ListItem", position: 4, name: clinic.name, item: canonicalUrl },
             ],
           }),
         },
@@ -189,11 +189,11 @@ export const Route = createFileRoute("/$service/$city/$clinic")({
     };
   },
   component: ClinicPage,
-  errorComponent: ({ error }) => (
+  errorComponent: ({ error }: { error: any }) => (
     <div className="min-h-screen bg-paper text-ink flex items-center justify-center px-6">
       <div className="max-w-md text-center">
         <h1 className="font-serif text-3xl mb-3">Något gick fel</h1>
-        <p className="text-ink-soft">{error.message}</p>
+        <p className="text-ink-soft">{error?.message || "Ett fel uppstod"}</p>
       </div>
     </div>
   ),
@@ -299,8 +299,8 @@ function ClinicPage() {
 
         <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm text-ink-soft border-t border-ink/10 pt-8">
           <div>
-            {clinic.rating !== null && clinic.reviewCount !== null && clinic.reviewCount > 0 ? (
-              clinic.reviewCount >= 10 ? (
+            {clinic.rating !== null && clinic.reviewCount != null && clinic.reviewCount > 0 ? (
+              (clinic.reviewCount ?? 0) >= 10 ? (
                 <>
                   <div className="font-serif text-3xl text-ink">★ {clinic.rating.toFixed(1)}</div>
                   <div className="uppercase tracking-widest text-[10px]">
@@ -649,8 +649,8 @@ function ClinicPage() {
                     {r.name}
                   </h3>
                   <div className="text-sm text-ink-soft">
-                    {r.rating !== null && r.reviewCount !== null && r.reviewCount > 0 ? (
-                      r.reviewCount >= 10 ? (
+                    {r.rating !== null && r.reviewCount != null && r.reviewCount > 0 ? (
+                      (r.reviewCount ?? 0) >= 10 ? (
                         `★ ${r.rating.toFixed(1)} · ${r.reviewCount} omdömen`
                       ) : (
                         `★ ${r.rating.toFixed(1)} · få omdömen`

@@ -9,8 +9,14 @@ export const Route = createFileRoute("/integritetspolicy")({
         name: "description",
         content: "Integritetspolicy och information om hur vi hanterar dina personuppgifter på Nakima.",
       },
+      { property: "og:title", content: "Integritetspolicy | Nakima" },
+      {
+        property: "og:description",
+        content: "Integritetspolicy och information om hur vi hanterar dina personuppgifter på Nakima.",
+      },
+      { property: "og:url", content: "https://nakima.se/integritetspolicy" },
     ],
-    links: [{ rel: "canonical", href: "/integritetspolicy" }],
+    links: [{ rel: "canonical", href: "https://nakima.se/integritetspolicy" }],
   }),
 });
 

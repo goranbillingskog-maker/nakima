@@ -9630,7 +9630,7 @@ export function getClinicsByCity(city: CitySlug, service: ServiceSlug): Clinic[]
     .sort((a, b) => {
       if (a.featured && !b.featured) return -1;
       if (!a.featured && b.featured) return 1;
-      return b.rating - a.rating;
+      return (b.rating ?? 0) - (a.rating ?? 0);
     });
 }
 
@@ -9654,7 +9654,7 @@ export function getRelatedClinics(clinic: Clinic, limit = 3): Clinic[] {
       const aSame = a.neighborhood === clinic.neighborhood ? 1 : 0;
       const bSame = b.neighborhood === clinic.neighborhood ? 1 : 0;
       if (aSame !== bSame) return bSame - aSame;
-      return b.rating - a.rating;
+      return (b.rating ?? 0) - (a.rating ?? 0);
     })
     .slice(0, limit);
 }

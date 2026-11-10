@@ -33,7 +33,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: { error: any; reset: () => void }) {
   console.error(error);
   const router = useRouter();
 
@@ -108,9 +108,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@graph": [
             {
               "@type": "Organization",
-              "@id": "/#organization",
+              "@id": "https://nakima.se/#organization",
               name: "Nakima",
-              url: "/",
+              url: "https://nakima.se/",
               description:
                 "Sveriges redaktionella guide till manuell medicin – naprapat, kiropraktor, massör och fysioterapeut.",
               inLanguage: "sv-SE",
@@ -123,14 +123,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             },
             {
               "@type": "WebSite",
-              "@id": "/#website",
-              url: "/",
+              "@id": "https://nakima.se/#website",
+              url: "https://nakima.se/",
               name: "Nakima",
               inLanguage: "sv-SE",
-              publisher: { "@id": "/#organization" },
+              publisher: { "@id": "https://nakima.se/#organization" },
               potentialAction: {
                 "@type": "SearchAction",
-                target: "/naprapat/stockholm?q={search_term_string}",
+                target: "https://nakima.se/naprapat/stockholm?q={search_term_string}",
                 "query-input": "required name=search_term_string",
               },
             },
@@ -150,6 +150,12 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="sv">
       <head>
         <HeadContent />
+        <script
+          id="domain-lock"
+          dangerouslySetInnerHTML={{
+            __html: `try{var host=window.location.hostname;var isAllowed=(host==='nakima.se'||host==='www.nakima.se'||host==='localhost'||host==='127.0.0.1'||host.endsWith('.vercel.app')||host.endsWith('.local'));if(!isAllowed){window.location.replace('https://nakima.se'+window.location.pathname+window.location.search);}}catch(e){}`,
+          }}
+        />
       </head>
       <body>
         {children}

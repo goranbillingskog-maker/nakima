@@ -15,8 +15,9 @@ export const Route = createFileRoute("/magasin/")({
         property: "og:description",
         content: "Djuplodande hälsojournalistik och expertartiklar om ryggskott, ergonomi, priser för naprapater och mycket mer.",
       },
+      { property: "og:url", content: "https://nakima.se/magasin" },
     ],
-    links: [{ rel: "canonical", href: "/magasin" }],
+    links: [{ rel: "canonical", href: "https://nakima.se/magasin" }],
   }),
 });
 

@@ -41,7 +41,7 @@ export async function buildSitemapEntries(): Promise<SitemapEntry[]> {
   }
 
   // Try to load clinics from Supabase
-  let dbClinics = [];
+  let dbClinics: any[] = [];
   try {
     dbClinics = await fetchAllClinicsForSitemap();
   } catch (e) {

@@ -1,36 +1,129 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /portal/
+Disallow: /webhooks/
 
-# Explicit allow for major LLM crawlers
+# Major Search Crawlers
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /portal/
+Disallow: /webhooks/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /portal/
+Disallow: /webhooks/
+
+# Major LLM & Search Agents
 User-agent: GPTBot
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /portal/
+Disallow: /webhooks/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /portal/
+Disallow: /webhooks/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /portal/
+Disallow: /webhooks/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /portal/
+Disallow: /webhooks/
 
 User-agent: Perplexity-User
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /portal/
+Disallow: /webhooks/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /portal/
+Disallow: /webhooks/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /portal/
+Disallow: /webhooks/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /portal/
+Disallow: /webhooks/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /portal/
+Disallow: /webhooks/
 
 User-agent: Bytespider
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /portal/
+Disallow: /webhooks/
 
 User-agent: CCBot
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login/
+Disallow: /portal/
+Disallow: /webhooks/
+
+Sitemap: https://nakima.se/sitemap.xml

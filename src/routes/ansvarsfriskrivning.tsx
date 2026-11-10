@@ -9,8 +9,14 @@ export const Route = createFileRoute("/ansvarsfriskrivning")({
         name: "description",
         content: "Ansvarsfriskrivning och villkor för användning av Nakimas redaktionella guider och klinikkatalog.",
       },
+      { property: "og:title", content: "Ansvarsfriskrivning | Nakima" },
+      {
+        property: "og:description",
+        content: "Ansvarsfriskrivning och villkor för användning av Nakimas redaktionella guider och klinikkatalog.",
+      },
+      { property: "og:url", content: "https://nakima.se/ansvarsfriskrivning" },
     ],
-    links: [{ rel: "canonical", href: "/ansvarsfriskrivning" }],
+    links: [{ rel: "canonical", href: "https://nakima.se/ansvarsfriskrivning" }],
   }),
 });
 

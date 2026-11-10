@@ -74,6 +74,9 @@ export default async function handler(req, res) {
     for (const [key, value] of response.headers.entries()) {
       res.setHeader(key, value);
     }
+    res.setHeader("X-Frame-Options", "SAMEORIGIN");
+    res.setHeader("X-Content-Type-Options", "nosniff");
+    res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
     const resBody = await response.arrayBuffer();
     res.end(Buffer.from(resBody));
   } catch (err) {

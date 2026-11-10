@@ -69,7 +69,7 @@ export const Route = createFileRoute("/$service/$city/")({
     if (!loaderData) return {};
     const { city, clinics, service } = loaderData;
     const label = serviceLabels[service];
-    const path = `/${service}/${city.slug}`;
+    const canonicalUrl = `https://nakima.se/${service}/${city.slug}`;
     const title = `${label.plural} i ${city.name} – ${clinics.length} kliniker | Nakima`;
     const description = `Hitta ${label.singular.toLowerCase()} i ${city.name}. ${clinics.length} redaktionellt granskade kliniker med betyg, priser och direktbokning. Uppdaterad ${new Date().getFullYear()}.`;
     const faqs = getCityFaqs(city.name, label.singular);
@@ -81,11 +81,11 @@ export const Route = createFileRoute("/$service/$city/")({
         { property: "og:title", content: title },
         { property: "og:description", content: description },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: path },
+        { property: "og:url", content: canonicalUrl },
         { property: "og:locale", content: "sv_SE" },
         { name: "twitter:card", content: "summary_large_image" },
       ],
-      links: [{ rel: "canonical", href: path }],
+      links: [{ rel: "canonical", href: canonicalUrl }],
       scripts: [
         {
           type: "application/ld+json",
@@ -99,7 +99,9 @@ export const Route = createFileRoute("/$service/$city/")({
               position: i + 1,
               item: {
                 "@type": "MedicalBusiness",
+                "@id": `https://nakima.se/${service}/${city.slug}/${c.slug}`,
                 name: c.name,
+                url: `https://nakima.se/${service}/${city.slug}/${c.slug}`,
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: c.street,
@@ -118,9 +120,9 @@ export const Route = createFileRoute("/$service/$city/")({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Nakima", item: "/" },
-              { "@type": "ListItem", position: 2, name: label.singular, item: `/${service}` },
-              { "@type": "ListItem", position: 3, name: city.name, item: path },
+              { "@type": "ListItem", position: 1, name: "Nakima", item: "https://nakima.se/" },
+              { "@type": "ListItem", position: 2, name: label.singular, item: canonicalUrl },
+              { "@type": "ListItem", position: 3, name: city.name, item: canonicalUrl },
             ],
           }),
         },
@@ -140,11 +142,11 @@ export const Route = createFileRoute("/$service/$city/")({
     };
   },
   component: CityPage,
-  errorComponent: ({ error }) => (
+  errorComponent: ({ error }: { error: any }) => (
     <div className="min-h-screen bg-paper text-ink flex items-center justify-center px-6">
       <div className="max-w-md text-center">
         <h1 className="font-serif text-3xl mb-3">Något gick fel</h1>
-        <p className="text-ink-soft">{error.message}</p>
+        <p className="text-ink-soft">{error?.message || "Ett fel uppstod"}</p>
       </div>
     </div>
   ),
@@ -566,8 +568,8 @@ function CityPage() {
                     </h2>
                   </div>
                   <div className="text-right shrink-0">
-                    {clinic.rating !== null && clinic.reviewCount !== null && clinic.reviewCount > 0 ? (
-                      clinic.reviewCount >= 10 ? (
+                    {clinic.rating !== null && clinic.reviewCount != null && clinic.reviewCount > 0 ? (
+                      (clinic.reviewCount ?? 0) >= 10 ? (
                         <>
                           <div className="font-serif text-2xl">★ {clinic.rating.toFixed(1)}</div>
                           <div className="text-[10px] uppercase tracking-widest text-ink-soft">

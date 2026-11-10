@@ -67,7 +67,7 @@ export async function fetchClinicsByCity(region: string, service: string): Promi
   return (data as DatabaseClinic[]).map(mapClinicFields).sort((a, b) => {
     if (a.featured && !b.featured) return -1;
     if (!a.featured && b.featured) return 1;
-    return b.rating - a.rating;
+    return (b.rating ?? 0) - (a.rating ?? 0);
   });
 }
 
@@ -115,7 +115,7 @@ export async function fetchRelatedClinics(clinic: DatabaseClinic, limit = 3): Pr
       const aSame = a.neighborhood === clinic.neighborhood ? 1 : 0;
       const bSame = b.neighborhood === clinic.neighborhood ? 1 : 0;
       if (aSame !== bSame) return bSame - aSame;
-      return b.rating - a.rating;
+      return (b.rating ?? 0) - (a.rating ?? 0);
     })
     .slice(0, limit);
 }
